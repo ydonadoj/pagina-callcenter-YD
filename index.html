@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexCall — Contact Center Profesional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #0a0a0f;
+      --paper: #f5f3ee;
+      --accent: #e8500a;
+      --accent2: #1a3a5c;
+      --muted: #8a8a8a;
+      --light: #ede9e0;
+      --white: #ffffff;
+      --card-bg: #ffffff;
+      --border: rgba(10,10,15,0.1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      overflow-x: hidden;
+    }
+
+    /* ── NOISE TEXTURE ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.4;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 3rem;
+      background: rgba(245,243,238,0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links a:hover { opacity: 1; }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 0.55rem 1.3rem;
+      border-radius: 100px;
+      opacity: 1 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: #c44008 !important; }
+
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--ink);
+      transition: all 0.3s;
+    }
+
+    /* ── HERO ── */
+    #inicio {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 8rem 3rem 4rem;
+      gap: 4rem;
+      position: relative;
+    }
+
+    .hero-bg-shape {
+      position: absolute;
+      top: 0; right: 0;
+      width: 55%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--accent2) 0%, #0d2238 100%);
+      clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 2rem;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--ink);
+      opacity: 0.7;
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      padding: 0.85rem 2rem;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover { background: #c44008; transform: translateY(-2px); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--ink);
+      padding: 0.85rem 2rem;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1.5px solid var(--border);
+      letter-spacing: 0.02em;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .btn-outline:hover { border-color: var(--ink); transform: translateY(-2px); }
+
+    /* Hero image side */
+    .hero-visual {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 1rem;
+      display: block;
+    }
+
+    /* Stats bar */
+    .stats-bar {
+      background: var(--white);
+      border-radius: 1rem;
+      padding: 2rem 3rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 0 3rem;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.07);
+      position: relative;
+      z-index: 3;
+      margin-top: -2rem;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 0.5rem 1rem;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat-item:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.03em;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── BADGES ── */
+    .badges-strip {
+      background: var(--ink);
+      color: var(--white);
+      padding: 1rem 3rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .badges-track {
+      display: flex;
+      gap: 3rem;
+      animation: ticker 20s linear infinite;
+      width: max-content;
+    }
+
+    .badge-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      opacity: 0.8;
+    }
+
+    .badge-item .dot { color: var(--accent); font-size: 1.2rem; }
+
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ── SECTIONS COMMON ── */
+    section { padding: 6rem 3rem; }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 1.5rem;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 3rem;
+    }
+
+    h2 em { font-style: normal; color: var(--accent); }
+
+    /* ── SERVICIOS ── */
+    #servicios { background: var(--paper); }
+
+    .section-header {
+      max-width: 600px;
+      margin-bottom: 3.5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 1.2rem;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 12px 40px rgba(232,80,10,0.12);
+      transform: translateY(-4px);
+    }
+
+    .service-card:hover::after { transform: scaleX(1); }
+
+    .service-tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(232,80,10,0.1);
+      color: var(--accent);
+      padding: 0.25rem 0.6rem;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+    }
+
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .service-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.02em;
+    }
+
+    .service-card p {
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .service-link {
+      display: inline-block;
+      margin-top: 1.2rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── INDUSTRIAS ── */
+    #campanas { background: var(--ink); color: var(--white); }
+    #campanas h2 { color: var(--white); }
+    #campanas .section-label { color: var(--accent); }
+
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 1.2rem;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .industry-card {
+      background: var(--ink);
+      padding: 2rem;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    .industry-card:hover { background: rgba(232,80,10,0.15); }
+
+    .industry-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .industry-card h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--white);
+    }
+
+    .industry-card p {
+      font-size: 0.83rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .industry-link {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* ── OPERACIONES ── */
+    #operaciones {
+      background: var(--light);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .ops-steps { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .ops-step {
+      display: grid;
+      grid-template-columns: 3rem 1fr;
+      gap: 1.2rem;
+      align-items: start;
+    }
+
+    .step-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      padding-top: 0.3rem;
+    }
+
+    .step-body h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.02em;
+    }
+
+    .step-body p {
+      font-size: 0.87rem;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .ops-visual { position: relative; }
+
+    .ops-img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      border-radius: 1.2rem;
+      display: block;
+    }
+
+    .ops-metrics {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      right: 1.5rem;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 0.8rem;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .metric { text-align: center; flex: 1; }
+
+    .metric-val {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .metric-name {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 0.2rem;
+    }
+
+    /* ── TECNOLOGÍA ── */
+    #tecnologia { background: var(--paper); }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .tech-card {
+      background: var(--white);
+      border-radius: 1.2rem;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 3rem 1fr;
+      gap: 1.2rem;
+      align-items: start;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .tech-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+    }
+
+    .tech-icon-box {
+      width: 3rem;
+      height: 3rem;
+      background: rgba(232,80,10,0.1);
+      border-radius: 0.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .tech-card h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.02em;
+    }
+
+    .tech-card p {
+      font-size: 0.87rem;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    /* ── CONTACTO ── */
+    #contacto {
+      background: var(--ink);
+      color: var(--white);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    #contacto h2 { color: var(--white); }
+
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+
+    .contact-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .contact-icon-box {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: rgba(232,80,10,0.2);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-block h5 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .contact-block p {
+      font-size: 0.95rem;
+      color: var(--white);
+    }
+
+    /* Form */
+    .contact-form {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 1.2rem;
+      padding: 2.5rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 0.6rem;
+      padding: 0.75rem 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: var(--white);
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    .form-group input::placeholder { color: rgba(255,255,255,0.3); }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: var(--accent);
+    }
+
+    .form-group select option { background: var(--ink); }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      padding: 1rem;
+      border-radius: 0.6rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-submit:hover { background: #c44008; transform: translateY(-1px); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #060609;
+      color: rgba(255,255,255,0.5);
+      padding: 3rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand .logo { color: var(--white); font-size: 1.2rem; }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      margin-top: 1rem;
+      max-width: 260px;
+    }
+
+    .footer-col h5 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .footer-col a {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover { color: var(--white); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    /* ── ANIMATIONS ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── MOBILE NAV OVERLAY ── */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--paper);
+      z-index: 850;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .mobile-nav.open { display: flex; }
+
+    .mobile-nav a {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+
+    .mobile-nav a:hover { color: var(--accent); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      #inicio {
+        grid-template-columns: 1fr;
+        padding: 7rem 1.5rem 3rem;
+        gap: 2rem;
+      }
+
+      .hero-bg-shape { display: none; }
+
+      .stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 1.5rem;
+      }
+
+      .stat-item:nth-child(2) { border-right: none; }
+
+      section { padding: 4rem 1.5rem; }
+
+      .services-grid { grid-template-columns: 1fr; }
+      .industries-grid { grid-template-columns: 1fr; }
+      .tech-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+
+      #operaciones,
+      #contacto {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 4rem 1.5rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#inicio" class="logo">Nex<span>Call</span></a>
+  <ul class="nav-links">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#campanas">Industrias</a></li>
+    <li><a href="#operaciones">Operación</a></li>
+    <li><a href="#tecnologia">Tecnología</a></li>
+    <li><a href="#contacto" class="nav-cta">Solicitar propuesta</a></li>
+  </ul>
+  <button class="hamburger" id="menuBtn" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#inicio" onclick="closeMobile()">Inicio</a>
+  <a href="#servicios" onclick="closeMobile()">Servicios</a>
+  <a href="#campanas" onclick="closeMobile()">Industrias</a>
+  <a href="#operaciones" onclick="closeMobile()">Operación</a>
+  <a href="#tecnologia" onclick="closeMobile()">Tecnología</a>
+  <a href="#contacto" onclick="closeMobile()" style="color:var(--accent)">Solicitar propuesta →</a>
+</div>
+
+<!-- HERO -->
+<section id="inicio">
+  <div class="hero-bg-shape"></div>
+
+  <div class="hero-content fade-up">
+    <div class="hero-eyebrow">BPO · Contact Center · CX</div>
+    <h1>Tu operación<br>de clientes en<br>manos <em>de expertos</em></h1>
+    <p class="hero-desc">Gestionamos campañas de atención al cliente, ventas, cobranza y soporte para empresas líderes. Operación 24/7 con calidad garantizada y tecnología de punta.</p>
+    <div class="hero-buttons">
+      <a href="#contacto" class="btn-primary">Solicitar propuesta →</a>
+      <a href="#servicios" class="btn-outline">Ver servicios</a>
+    </div>
+  </div>
+
+  <div class="hero-visual fade-up" style="transition-delay:0.2s">
+    <img
+      class="hero-img"
+      src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&auto=format&fit=crop&q=80"
+      alt="Agentes contact center"
+    />
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar fade-up">
+  <div class="stat-item">
+    <div class="stat-num">+10M</div>
+    <div class="stat-label">Interacciones / año</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">96%</div>
+    <div class="stat-label">Nivel de servicio</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">24/7</div>
+    <div class="stat-label">Disponibilidad</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">500+</div>
+    <div class="stat-label">Agentes certificados</div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="badges-strip">
+  <div class="badges-track">
+    <span class="badge-item"><span class="dot">●</span> Certificación ISO 9001</span>
+    <span class="badge-item"><span class="dot">●</span> Habeas Data — Ley 1581</span>
+    <span class="badge-item"><span class="dot">●</span> Cobertura Nacional</span>
+    <span class="badge-item"><span class="dot">●</span> NPS Corporativo: 74</span>
+    <span class="badge-item"><span class="dot">●</span> +80 Clientes Corporativos</span>
+    <span class="badge-item"><span class="dot">●</span> First Call Resolution 88.1%</span>
+    <span class="badge-item"><span class="dot">●</span> Certificación ISO 9001</span>
+    <span class="badge-item"><span class="dot">●</span> Habeas Data — Ley 1581</span>
+    <span class="badge-item"><span class="dot">●</span> Cobertura Nacional</span>
+    <span class="badge-item"><span class="dot">●</span> NPS Corporativo: 74</span>
+    <span class="badge-item"><span class="dot">●</span> +80 Clientes Corporativos</span>
+    <span class="badge-item"><span class="dot">●</span> First Call Resolution 88.1%</span>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="section-header fade-up">
+    <div class="section-label">Lo que hacemos</div>
+    <h2>Servicios del<br>Contact Center</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-up">
+      <span class="service-tag">Más solicitado</span>
+      <span class="service-icon">🎧</span>
+      <h3>Atención al Cliente</h3>
+      <p>Gestión de llamadas entrantes, resolución de dudas, quejas, garantías y soporte postventa. El primer contacto que define la lealtad.</p>
+      <a class="service-link" href="#contacto">Ver detalle →</a>
+    </div>
+    <div class="service-card fade-up" style="transition-delay:0.1s">
+      <span class="service-icon">📈</span>
+      <h3>Ventas y Telemarketing</h3>
+      <p>Campañas outbound de venta directa, cross-selling y up-selling con guiones optimizados y agentes especializados en cierre.</p>
+      <a class="service-link" href="#contacto">Ver detalle →</a>
+    </div>
+    <div class="service-card fade-up" style="transition-delay:0.2s">
+      <span class="service-icon">💰</span>
+      <h3>Cobranza y Cartera</h3>
+      <p>Gestión de cartera temprana, tardía y prejurídica con protocolos éticos y maximización de la tasa de recuperación.</p>
+      <a class="service-link" href="#contacto">Ver detalle →</a>
+    </div>
+    <div class="service-card fade-up" style="transition-delay:0.3s">
+      <span class="service-icon">🔧</span>
+      <h3>Soporte Técnico</h3>
+      <p>Mesa de ayuda Nivel 1 y 2 para productos tecnológicos, aplicaciones y servicios digitales. Alta resolución en primera llamada.</p>
+      <a class="service-link" href="#contacto">Ver detalle →</a>
+    </div>
+    <div class="service-card fade-up" style="transition-delay:0.4s">
+      <span class="service-icon">📅</span>
+      <h3>Agendamiento y Citas</h3>
+      <p>Coordinación de citas, confirmaciones y recordatorios para salud, banca, seguros y servicios profesionales.</p>
+      <a class="service-link" href="#contacto">Ver detalle →</a>
+    </div>
+    <div class="service-card fade-up" style="transition-delay:0.5s">
+      <span class="service-icon">💬</span>
+      <h3>Encuestas y Fidelización</h3>
+      <p>Medición de NPS, CSAT y CES. Campañas de retención y fidelización de clientes en riesgo de abandono.</p>
+      <a class="service-link" href="#contacto">Ver detalle →</a>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIAS -->
+<section id="campanas">
+  <div class="section-header fade-up">
+    <div class="section-label">Sectores que atendemos</div>
+    <h2>Industrias donde<br><em>operamos con expertos</em></h2>
+  </div>
+  <div class="industries-grid fade-up">
+    <div class="industry-card">
+      <div class="industry-icon">🏥</div>
+      <h4>Salud</h4>
+      <p>Clínicas, EPS, hospitales y laboratorios. Agendamiento, orientación y gestión de autorizaciones.</p>
+      <a class="industry-link" href="#contacto">Ver campaña →</a>
+    </div>
+    <div class="industry-card">
+      <div class="industry-icon">🏦</div>
+      <h4>Banca y Finanzas</h4>
+      <p>Bancos, cooperativas y fintechs. Atención al cliente, soporte de productos y cobranza especializada.</p>
+      <a class="industry-link" href="#contacto">Ver campaña →</a>
+    </div>
+    <div class="industry-card">
+      <div class="industry-icon">🛡️</div>
+      <h4>Seguros</h4>
+      <p>Aseguradoras y corredores. Cotizaciones, renovaciones, siniestros y retención de clientes.</p>
+      <a class="industry-link" href="#contacto">Ver campaña →</a>
+    </div>
+    <div class="industry-card">
+      <div class="industry-icon">🛒</div>
+      <h4>Retail y E-commerce</h4>
+      <p>Tiendas físicas y virtuales. Rastreo de pedidos, devoluciones, garantías y soporte de compra.</p>
+      <a class="industry-link" href="#contacto">Ver campaña →</a>
+    </div>
+    <div class="industry-card">
+      <div class="industry-icon">📡</div>
+      <h4>Telecomunicaciones</h4>
+      <p>Operadores móviles e ISP. Soporte técnico, facturación, portabilidad y retención activa.</p>
+      <a class="industry-link" href="#contacto">Ver campaña →</a>
+    </div>
+    <div class="industry-card">
+      <div class="industry-icon">🏛️</div>
+      <h4>Gobierno y Servicios Públicos</h4>
+      <p>Entidades públicas y empresas de servicios. Líneas de información ciudadana y PQRS.</p>
+      <a class="industry-link" href="#contacto">Ver campaña →</a>
+    </div>
+  </div>
+</section>
+
+<!-- OPERACIONES -->
+<section id="operaciones">
+  <div>
+    <div class="section-label fade-up">Cómo operamos</div>
+    <h2 class="fade-up">Operación de<br>clase <em>mundial en CX</em></h2>
+    <div class="ops-steps">
+      <div class="ops-step fade-up">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h4>Onboarding especializado</h4>
+          <p>Cada cliente recibe un proceso de inducción de 2 a 4 semanas donde los agentes aprenden el producto, tono de marca y protocolos específicos.</p>
+        </div>
+      </div>
+      <div class="ops-step fade-up" style="transition-delay:0.1s">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h4>Calidad y monitoreo continuo</h4>
+          <p>El 100% de las llamadas se graba. Nuestro equipo de QA evalúa el 15% diario con matrices de calidad personalizadas por campaña.</p>
+        </div>
+      </div>
+      <div class="ops-step fade-up" style="transition-delay:0.2s">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h4>Gestión de SLAs en tiempo real</h4>
+          <p>Supervisores con dashboards live intervienen de inmediato cuando algún indicador amenaza el nivel de servicio acordado.</p>
+        </div>
+      </div>
+      <div class="ops-step fade-up" style="transition-delay:0.3s">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <h4>Plan de continuidad BCP</h4>
+          <p>Infraestructura redundante de energía, conectividad y sistemas para garantizar operación ininterrumpida ante cualquier contingencia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ops-visual fade-up" style="transition-delay:0.2s">
+    <img
+      class="ops-img"
+      src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop&q=80"
+      alt="Agente en operación"
+    />
+    <div class="ops-metrics">
+      <div class="metric">
+        <div class="metric-val">4:10</div>
+        <div class="metric-name">TMO Promedio</div>
+      </div>
+      <div class="metric" style="border-left:1px solid rgba(255,255,255,0.1)">
+        <div class="metric-val">88.1%</div>
+        <div class="metric-name">First Call Resolution</div>
+      </div>
+      <div class="metric" style="border-left:1px solid rgba(255,255,255,0.1)">
+        <div class="metric-val">96%</div>
+        <div class="metric-name">Nivel de Servicio</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECNOLOGÍA -->
+<section id="tecnologia">
+  <div class="section-header fade-up">
+    <div class="section-label">Plataforma tecnológica</div>
+    <h2>Tecnología que potencia<br>cada <em>interacción</em></h2>
+  </div>
+  <div class="tech-grid">
+    <div class="tech-card fade-up">
+      <div class="tech-icon-box">🖥️</div>
+      <div>
+        <h4>CRM Integrado</h4>
+        <p>Vista 360° del cliente durante la llamada. Compatible con Salesforce, HubSpot, SAP y sistemas propietarios vía API.</p>
+      </div>
+    </div>
+    <div class="tech-card fade-up" style="transition-delay:0.1s">
+      <div class="tech-icon-box">📱</div>
+      <div>
+        <h4>Omnicanalidad</h4>
+        <p>Atención unificada por voz, WhatsApp, chat web, correo y redes sociales desde una sola plataforma para el agente.</p>
+      </div>
+    </div>
+    <div class="tech-card fade-up" style="transition-delay:0.2s">
+      <div class="tech-icon-box">📊</div>
+      <div>
+        <h4>Workforce Management</h4>
+        <p>Proyección de demanda y programación automática de turnos para garantizar el nivel de servicio en cada hora del día.</p>
+      </div>
+    </div>
+    <div class="tech-card fade-up" style="transition-delay:0.3s">
+      <div class="tech-icon-box">📈</div>
+      <div>
+        <h4>Reportería en Tiempo Real</h4>
+        <p>Portal exclusivo para cada cliente con dashboards de KPIs: AHT, FCR, NSA, abandono y CSAT actualizados al minuto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div>
+    <div class="section-label fade-up">Hablemos</div>
+    <h2 class="fade-up">¿Listo para escalar<br><em>tu operación?</em></h2>
+    <p class="fade-up" style="font-size:0.95rem;line-height:1.7;opacity:0.6;margin-bottom:2.5rem;max-width:400px">Cuéntanos tu campaña y en menos de 24 horas te contactamos con una propuesta técnica y económica a la medida.</p>
+    <div class="contact-info">
+      <div class="contact-block fade-up">
+        <div class="contact-icon-box">📞</div>
+        <div>
+          <h5>Línea comercial</h5>
+          <p>(xxx) xxx-xxxx</p>
+        </div>
+      </div>
+      <div class="contact-block fade-up" style="transition-delay:0.1s">
+        <div class="contact-icon-box">✉️</div>
+        <div>
+          <h5>Correo</h5>
+          <p>contacto@nexcall.com.co</p>
+        </div>
+      </div>
+      <div class="contact-block fade-up" style="transition-delay:0.2s">
+        <div class="contact-icon-box">📍</div>
+        <div>
+          <h5>Oficina principal</h5>
+          <p>Dirección, Ciudad, Colombia</p>
+        </div>
+      </div>
+      <div class="contact-block fade-up" style="transition-delay:0.3s">
+        <div class="contact-icon-box">🕐</div>
+        <div>
+          <h5>Horario comercial</h5>
+          <p>Lun–Vie 8:00am – 6:00pm</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form fade-up" style="transition-delay:0.2s">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" placeholder="Tu nombre" />
+      </div>
+      <div class="form-group">
+        <label>Cargo</label>
+        <input type="text" placeholder="Tu cargo" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Empresa</label>
+        <input type="text" placeholder="Nombre de la empresa" />
+      </div>
+      <div class="form-group">
+        <label>Correo corporativo</label>
+        <input type="email" placeholder="correo@empresa.com" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Tipo de campaña</label>
+      <select>
+        <option value="">Selecciona una opción</option>
+        <option>Atención al Cliente (Inbound)</option>
+        <option>Ventas y Telemarketing (Outbound)</option>
+        <option>Cobranza y Cartera</option>
+        <option>Soporte Técnico</option>
+        <option>Agendamiento de Citas</option>
+        <option>Encuestas y Fidelización</option>
+        <option>Múltiples campañas / BPO completo</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Volumen estimado de interacciones/mes</label>
+      <select>
+        <option value="">Selecciona un rango</option>
+        <option>Menos de 5,000</option>
+        <option>5,000 – 30,000</option>
+        <option>30,000 – 100,000</option>
+        <option>Más de 100,000</option>
+      </select>
+    </div>
+    <button class="btn-submit">Enviar solicitud →</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#inicio" class="logo">Nex<span style="color:var(--accent)">Call</span></a>
+      <p>Contact Center y BPO profesional. Gestionamos la experiencia de tus clientes con personas, procesos y tecnología de clase mundial.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Servicios</h5>
+      <ul>
+        <li><a href="#servicios">Atención al Cliente</a></li>
+        <li><a href="#servicios">Ventas y Telemarketing</a></li>
+        <li><a href="#servicios">Cobranza y Cartera</a></li>
+        <li><a href="#servicios">Soporte Técnico</a></li>
+        <li><a href="#servicios">Agendamiento</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Empresa</h5>
+      <ul>
+        <li><a href="#">Sobre NexCall</a></li>
+        <li><a href="#campanas">Nuestras campañas</a></li>
+        <li><a href="#">Noticias</a></li>
+        <li><a href="#contacto">Trabaja con nosotros</a></li>
+        <li><a href="#">Certificaciones</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="#">Política de Privacidad</a></li>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Habeas Data</a></li>
+        <li><a href="#">Código de Ética</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 NexCall S.A.S · Colombia. Todos los derechos reservados.</span>
+    <span style="display:flex;gap:1.5rem">
+      <a href="#" style="color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.8rem">Privacidad</a>
+      <a href="#" style="color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.8rem">Términos</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+
+  menuBtn.addEventListener('click', () => {
+    mobileNav.classList.toggle('open');
+  });
+
+  function closeMobile() {
+    mobileNav.classList.remove('open');
+  }
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Form submit
+  document.querySelector('.btn-submit').addEventListener('click', () => {
+    alert('¡Gracias! Nos pondremos en contacto contigo en menos de 24 horas.');
+  });
+</script>
+</body>
+</html>
