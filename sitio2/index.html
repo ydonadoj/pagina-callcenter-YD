@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexCall Colombia — Únete al equipo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;0,700;1,300;1,600&family=Cabinet+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f7f6f2;
+      --ink: #111118;
+      --accent: #00c896;
+      --accent-dark: #009e76;
+      --warm: #f0ede4;
+      --muted: #888;
+      --border: rgba(17,17,24,0.1);
+      --white: #ffffff;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Cabinet Grotesk', sans-serif; background: var(--bg); color: var(--ink); overflow-x: hidden; }
+
+    body::after {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 9999;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 3rem;
+      background: rgba(247,246,242,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -0.03em; }
+    .logo em { font-style: italic; color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink); text-decoration: none; opacity: 0.5; transition: opacity 0.2s; }
+    .nav-links a:hover { opacity: 1; }
+    .nav-right { display: flex; align-items: center; gap: 1rem; }
+    .btn-nav { background: var(--ink); color: var(--white); padding: 0.55rem 1.4rem; border-radius: 100px; font-size: 0.82rem; font-weight: 700; text-decoration: none; transition: background 0.2s; }
+    .btn-nav:hover { background: var(--accent); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); }
+
+    /* MOBILE */
+    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--ink); z-index: 490; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 700; color: var(--white); text-decoration: none; }
+    .mobile-menu a:hover { color: var(--accent); }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 8rem 3rem 4rem; position: relative; overflow: hidden;
+    }
+    .hero-bg { position: absolute; inset: 0; background: linear-gradient(160deg, #0a2e22 0%, #0d3d2c 40%, #091f18 100%); z-index: 0; }
+    .hero-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.2; mix-blend-mode: luminosity; }
+    .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 80px 80px; z-index: 1; }
+    .hero-content { position: relative; z-index: 2; max-width: 900px; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
+    .hero-tag::before { content: ''; display: block; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
+    .hero-title { font-family: 'Fraunces', serif; font-size: clamp(3rem, 7vw, 6rem); font-weight: 600; line-height: 1.0; letter-spacing: -0.03em; color: var(--white); margin-bottom: 2rem; }
+    .hero-title em { font-style: italic; color: var(--accent); }
+    .hero-bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .hero-desc { font-size: 1rem; line-height: 1.7; color: rgba(255,255,255,0.55); max-width: 440px; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-green { background: var(--accent); color: var(--ink); padding: 0.9rem 2rem; border-radius: 100px; font-size: 0.9rem; font-weight: 700; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+    .btn-green:hover { background: #00e0aa; transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--white); padding: 0.9rem 2rem; border-radius: 100px; font-size: 0.9rem; font-weight: 700; text-decoration: none; border: 1.5px solid rgba(255,255,255,0.25); transition: border-color 0.2s, transform 0.2s; }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.7); transform: translateY(-2px); }
+    .scroll-hint { position: absolute; bottom: 2rem; right: 3rem; z-index: 2; display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+    .scroll-arr { width: 1.5rem; height: 1.5rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; animation: bounce 2s infinite; }
+    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(4px)} }
+
+    /* STATS */
+    .stats-row { background: var(--ink); display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat-block { padding: 2.5rem 2rem; border-right: 1px solid rgba(255,255,255,0.08); transition: background 0.3s; }
+    .stat-block:last-child { border-right: none; }
+    .stat-block:hover { background: rgba(0,200,150,0.07); }
+    .stat-num { font-family: 'Fraunces', serif; font-size: 2.8rem; font-weight: 700; color: var(--accent); letter-spacing: -0.04em; line-height: 1; }
+    .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-top: 0.4rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* COMMON */
+    section { padding: 7rem 3rem; }
+    .sec-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
+    .sec-label::before { content: ''; width: 1.2rem; height: 2px; background: var(--accent); display: block; }
+    h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 600; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 3rem; }
+    h2 em { font-style: italic; color: var(--accent); }
+
+    /* POR QUÉ */
+    #porque { background: var(--bg); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .porque-img { position: relative; }
+    .porque-img img { width: 100%; height: 520px; object-fit: cover; border-radius: 1.2rem; display: block; }
+    .porque-badge { position: absolute; bottom: -1.5rem; right: -1.5rem; background: var(--accent); color: var(--ink); border-radius: 1rem; padding: 1.5rem; text-align: center; min-width: 140px; }
+    .porque-badge .big { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 700; display: block; line-height: 1; }
+    .porque-badge .small { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.7; }
+    .porque-perks { display: flex; flex-direction: column; gap: 1.5rem; }
+    .perk { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; align-items: start; }
+    .perk-icon { width: 2.5rem; height: 2.5rem; background: rgba(0,200,150,0.12); border-radius: 0.6rem; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+    .perk h4 { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; margin-bottom: 0.3rem; }
+    .perk p { font-size: 0.87rem; line-height: 1.65; color: var(--muted); }
+
+    /* VIDA */
+    #vida { background: var(--warm); overflow: hidden; }
+    .vida-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap; }
+    .vida-header h2 { margin-bottom: 0; }
+    .vida-mosaic { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 280px 220px; gap: 1rem; }
+    .vida-mosaic .v1 { grid-row: 1 / 3; }
+    .vida-mosaic img { width: 100%; height: 100%; object-fit: cover; border-radius: 0.8rem; display: block; transition: transform 0.4s; }
+    .vida-mosaic img:hover { transform: scale(1.02); }
+
+    /* DIVERSIDAD */
+    #diversidad { background: var(--ink); color: var(--white); }
+    #diversidad h2 { color: var(--white); }
+    .div-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.06); border-radius: 1.2rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); margin-top: 3rem; }
+    .div-card { background: var(--ink); padding: 2.5rem 2rem; transition: background 0.3s; }
+    .div-card:hover { background: rgba(0,200,150,0.08); }
+    .div-num { font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 700; color: var(--accent); letter-spacing: -0.04em; line-height: 1; margin-bottom: 0.5rem; }
+    .div-card h4 { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+    .div-card p { font-size: 0.85rem; line-height: 1.65; color: rgba(255,255,255,0.45); }
+
+    /* VACANTES */
+    #vacantes { background: var(--bg); }
+    .vacantes-top { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1.5rem; }
+    .vacantes-top h2 { margin-bottom: 0; }
+    .filter-bar { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .filter-btn { padding: 0.45rem 1rem; border-radius: 100px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.04em; cursor: pointer; border: 1.5px solid var(--border); background: transparent; color: var(--ink); transition: all 0.2s; font-family: 'Cabinet Grotesk', sans-serif; }
+    .filter-btn.active, .filter-btn:hover { background: var(--ink); color: var(--white); border-color: var(--ink); }
+    .jobs-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border-radius: 1rem; overflow: hidden; border: 1px solid var(--border); }
+    .job-row { background: var(--white); padding: 1.8rem 2rem; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2rem; transition: background 0.2s; cursor: pointer; }
+    .job-row:hover { background: #f0fdf8; }
+    .job-left { display: flex; flex-direction: column; gap: 0.5rem; }
+    .job-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .job-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 100px; background: rgba(0,200,150,0.1); color: var(--accent-dark); }
+    .job-tag.city { background: rgba(17,17,24,0.07); color: var(--muted); }
+    .job-title { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; letter-spacing: -0.02em; }
+    .job-meta { font-size: 0.83rem; color: var(--muted); }
+    .job-arrow { width: 2.5rem; height: 2.5rem; border-radius: 50%; border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; transition: all 0.2s; flex-shrink: 0; }
+    .job-row:hover .job-arrow { background: var(--accent); border-color: var(--accent); color: var(--ink); }
+
+    /* OFICINAS */
+    #oficinas { background: var(--warm); }
+    .oficinas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .oficina-card { background: var(--white); border-radius: 1.2rem; overflow: hidden; border: 1px solid var(--border); transition: transform 0.3s, box-shadow 0.3s; }
+    .oficina-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
+    .oficina-map { width: 100%; height: 200px; background: linear-gradient(135deg, #0d3d2c, #0a2e22); display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; overflow: hidden; }
+    .oficina-map::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(0,200,150,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,200,150,0.08) 1px, transparent 1px); background-size: 30px 30px; }
+    .oficina-body { padding: 1.5rem; }
+    .oficina-city { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .oficina-addr { font-size: 0.85rem; line-height: 1.6; color: var(--muted); margin-bottom: 1rem; }
+    .oficina-tel { font-size: 0.85rem; color: var(--accent-dark); font-weight: 700; text-decoration: none; }
+
+    /* CTA */
+    #cta { background: var(--accent); padding: 6rem 3rem; text-align: center; }
+    #cta h2 { color: var(--ink); margin-bottom: 1.5rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+    #cta p { font-size: 1rem; color: rgba(17,17,24,0.6); max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.7; }
+    .btn-dark { background: var(--ink); color: var(--white); padding: 1rem 2.5rem; border-radius: 100px; font-size: 0.95rem; font-weight: 700; text-decoration: none; transition: opacity 0.2s, transform 0.2s; display: inline-block; }
+    .btn-dark:hover { opacity: 0.85; transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { background: #0a0a10; color: rgba(255,255,255,0.45); padding: 3.5rem 3rem 2rem; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 2rem; }
+    .footer-logo { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.03em; }
+    .footer-logo em { font-style: italic; color: var(--accent); }
+    .footer-desc { font-size: 0.85rem; line-height: 1.7; margin-top: 1rem; max-width: 260px; }
+    .footer-col h5 { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--white); margin-bottom: 1.2rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-col a { font-size: 0.85rem; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; flex-wrap: wrap; gap: 0.5rem; }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.78rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links, .btn-nav { display: none; }
+      .hamburger { display: flex; }
+      section { padding: 4.5rem 1.5rem; }
+      #hero { padding: 7rem 1.5rem 3rem; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .stat-block:nth-child(2) { border-right: none; }
+      #porque { grid-template-columns: 1fr; gap: 3rem; }
+      .porque-badge { right: 0; }
+      .vida-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .vida-mosaic .v1 { grid-row: auto; }
+      .vida-mosaic img { height: 200px; }
+      .div-grid { grid-template-columns: 1fr; }
+      .oficinas-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero" class="logo">Nex<em>Call</em></a>
+  <ul class="nav-links">
+    <li><a href="#porque">Beneficios</a></li>
+    <li><a href="#vida">La Vida NexCall</a></li>
+    <li><a href="#diversidad">Diversidad</a></li>
+    <li><a href="#vacantes">Vacantes</a></li>
+    <li><a href="#oficinas">Oficinas</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#vacantes" class="btn-nav">Ver empleos</a>
+    <button class="hamburger" id="menuBtn"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#porque" onclick="closeMobile()">Beneficios</a>
+  <a href="#vida" onclick="closeMobile()">La Vida NexCall</a>
+  <a href="#diversidad" onclick="closeMobile()">Diversidad</a>
+  <a href="#vacantes" onclick="closeMobile()">Vacantes</a>
+  <a href="#oficinas" onclick="closeMobile()">Oficinas</a>
+</div>
+
+<section id="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1800&auto=format&fit=crop&q=80" alt="" />
+  </div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag reveal">Colombia — Únete al equipo</div>
+    <h1 class="hero-title reveal" style="transition-delay:0.1s">
+      Construye tu<br>carrera en el<br><em>mejor BPO</em> del país
+    </h1>
+    <div class="hero-bottom reveal" style="transition-delay:0.2s">
+      <p class="hero-desc">Somos más de 500 colaboradores en Colombia. Crecimiento real, ambiente diverso e inclusivo, y tecnología de vanguardia.</p>
+      <div class="hero-actions">
+        <a href="#vacantes" class="btn-green">Ver todas las vacantes →</a>
+        <a href="#vida" class="btn-ghost">Conoce la cultura</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll <div class="scroll-arr">↓</div></div>
+</section>
+
+<div class="stats-row">
+  <div class="stat-block reveal"><div class="stat-num">500+</div><div class="stat-label">Colaboradores en Colombia</div></div>
+  <div class="stat-block reveal" style="transition-delay:0.1s"><div class="stat-num">3</div><div class="stat-label">Sedes en el país</div></div>
+  <div class="stat-block reveal" style="transition-delay:0.2s"><div class="stat-num">48%</div><div class="stat-label">Mujeres en liderazgo</div></div>
+  <div class="stat-block reveal" style="transition-delay:0.3s"><div class="stat-num">4.7★</div><div class="stat-label">Calificación colaboradores</div></div>
+</div>
+
+<section id="porque">
+  <div class="porque-img reveal">
+    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80" alt="Equipo NexCall" />
+    <div class="porque-badge"><span class="big">#1</span><span class="small">BPO Colombia<br>2024</span></div>
+  </div>
+  <div>
+    <div class="sec-label reveal">¿Por qué NexCall?</div>
+    <h2 class="reveal">Más que un empleo,<br>una <em>comunidad</em></h2>
+    <div class="porque-perks">
+      <div class="perk reveal"><div class="perk-icon">📈</div><div><h4>Plan de carrera real</h4><p>El 70% de nuestros líderes comenzaron como agentes. Rutas claras de ascenso con mentoría y capacitación continua.</p></div></div>
+      <div class="perk reveal" style="transition-delay:0.1s"><div class="perk-icon">💰</div><div><h4>Salario competitivo + beneficios</h4><p>Bonos por desempeño, auxilio de transporte, seguro médico complementario y descuentos exclusivos.</p></div></div>
+      <div class="perk reveal" style="transition-delay:0.2s"><div class="perk-icon">🏠</div><div><h4>Trabajo híbrido y remoto</h4><p>Según el cargo, ofrecemos modalidad presencial, híbrida o 100% desde casa. Flexibilidad que se adapta a tu vida.</p></div></div>
+      <div class="perk reveal" style="transition-delay:0.3s"><div class="perk-icon">🎓</div><div><h4>Educación continua</h4><p>Alianzas con universidades, plataformas de e-learning y certificaciones pagadas por la empresa.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="vida">
+  <div class="vida-header">
+    <div><div class="sec-label reveal">Galería</div><h2 class="reveal">La Vida <em>NexCall</em></h2></div>
+    <p class="reveal" style="max-width:380px;font-size:0.95rem;line-height:1.7;color:var(--muted)">Cada día es una oportunidad para crecer, conectar y celebrar. Así se vive en nuestras sedes.</p>
+  </div>
+  <div class="vida-mosaic reveal">
+    <img class="v1" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&auto=format&fit=crop&q=80" alt="Equipo trabajando" />
+    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&auto=format&fit=crop&q=80" alt="Reunión" />
+    <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&auto=format&fit=crop&q=80" alt="Oficina" />
+    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&auto=format&fit=crop&q=80" alt="Celebración" />
+    <img src="https://images.unsplash.com/photo-1530099486328-e021101a494a?w=600&auto=format&fit=crop&q=80" alt="Capacitación" />
+  </div>
+</section>
+
+<section id="diversidad">
+  <div class="sec-label reveal">Nuestro compromiso</div>
+  <h2 class="reveal">Diversidad <em>e inclusión</em><br>sin excepciones</h2>
+  <p class="reveal" style="max-width:580px;font-size:0.95rem;line-height:1.7;color:rgba(255,255,255,0.5);margin-top:-1.5rem">En NexCall creemos que los mejores equipos se construyen con personas distintas. La diversidad no es una política, es nuestra fortaleza.</p>
+  <div class="div-grid">
+    <div class="div-card reveal"><div class="div-num">48%</div><h4>Mujeres en liderazgo</h4><p>Casi la mitad de nuestros cargos de supervisión y gerencia están ocupados por mujeres talentosas.</p></div>
+    <div class="div-card reveal" style="transition-delay:0.1s"><div class="div-num">12+</div><h4>Nacionalidades representadas</h4><p>Colaboradores de más de 12 países enriquecen nuestra cultura con perspectivas globales únicas.</p></div>
+    <div class="div-card reveal" style="transition-delay:0.2s"><div class="div-num">100%</div><h4>Inclusión laboral activa</h4><p>Programas activos de contratación inclusiva para personas con discapacidad y poblaciones vulnerables.</p></div>
+    <div class="div-card reveal" style="transition-delay:0.3s"><div class="div-num">LGBTQ+</div><h4>Espacio seguro garantizado</h4><p>Política de cero tolerancia a la discriminación. Todos los colaboradores merecen respeto e igualdad.</p></div>
+    <div class="div-card reveal" style="transition-delay:0.4s"><div class="div-num">35</div><h4>Edad promedio del equipo</h4><p>Un equipo joven, dinámico y con energía, que valora la experiencia de cada generación.</p></div>
+    <div class="div-card reveal" style="transition-delay:0.5s"><div class="div-num">ECO</div><h4>Compromiso con el planeta</h4><p>Papel cero en campañas digitales, reducción de huella de carbono y programas de bienestar sostenible.</p></div>
+  </div>
+</section>
+
+<section id="vacantes">
+  <div class="vacantes-top">
+    <div><div class="sec-label reveal">Oportunidades</div><h2 class="reveal">Vacantes <em>disponibles</em></h2></div>
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" onclick="filterJobs('all',this)">Todos</button>
+      <button class="filter-btn" onclick="filterJobs('barranquilla',this)">Barranquilla</button>
+      <button class="filter-btn" onclick="filterJobs('bogota',this)">Bogotá</button>
+      <button class="filter-btn" onclick="filterJobs('remoto',this)">Remoto</button>
+    </div>
+  </div>
+  <div class="jobs-list reveal" id="jobsList">
+    <div class="job-row" data-city="barranquilla">
+      <div class="job-left"><div class="job-tags"><span class="job-tag">Tiempo Completo</span><span class="job-tag city">📍 Barranquilla</span></div><div class="job-title">Agente de Atención al Cliente — Inbound</div><div class="job-meta">Operaciones · Publicado hace 2 días</div></div>
+      <div class="job-arrow">→</div>
+    </div>
+    <div class="job-row" data-city="bogota">
+      <div class="job-left"><div class="job-tags"><span class="job-tag">Tiempo Completo</span><span class="job-tag city">📍 Bogotá</span></div><div class="job-title">Supervisor de Campaña — Sector Bancario</div><div class="job-meta">Liderazgo · Publicado hace 3 días</div></div>
+      <div class="job-arrow">→</div>
+    </div>
+    <div class="job-row" data-city="remoto">
+      <div class="job-left"><div class="job-tags"><span class="job-tag">Tiempo Completo</span><span class="job-tag city">🏠 Remoto</span></div><div class="job-title">Agente de Soporte Técnico — Telecomunicaciones</div><div class="job-meta">Tecnología · Publicado hace 1 día</div></div>
+      <div class="job-arrow">→</div>
+    </div>
+    <div class="job-row" data-city="barranquilla">
+      <div class="job-left"><div class="job-tags"><span class="job-tag">Medio Tiempo</span><span class="job-tag city">📍 Barranquilla</span></div><div class="job-title">Asesor Comercial — Ventas Outbound</div><div class="job-meta">Ventas · Publicado hace 5 días</div></div>
+      <div class="job-arrow">→</div>
+    </div>
+    <div class="job-row" data-city="bogota">
+      <div class="job-left"><div class="job-tags"><span class="job-tag">Tiempo Completo</span><span class="job-tag city">📍 Bogotá</span></div><div class="job-title">Analista de Calidad (QA) — Contact Center</div><div class="job-meta">Calidad · Publicado hace 1 semana</div></div>
+      <div class="job-arrow">→</div>
+    </div>
+    <div class="job-row" data-city="remoto">
+      <div class="job-left"><div class="job-tags"><span class="job-tag">Freelance</span><span class="job-tag city">🏠 Remoto</span></div><div class="job-title">Agente Bilingüe (Español / Inglés) — Customer Experience</div><div class="job-meta">Internacional · Publicado hace 4 días</div></div>
+      <div class="job-arrow">→</div>
+    </div>
+  </div>
+</section>
+
+<section id="oficinas">
+  <div class="sec-label reveal">Nuestras sedes</div>
+  <h2 class="reveal">Colombia: <em>dónde operamos</em></h2>
+  <div class="oficinas-grid">
+    <div class="oficina-card reveal">
+      <div class="oficina-map">🏙️</div>
+      <div class="oficina-body"><div class="oficina-city">Barranquilla</div><div class="oficina-addr">Carrera 68 #77 – 22<br>Barranquilla, Atlántico</div><a href="tel:+573153208900" class="oficina-tel">+57 (315) 320-8900</a></div>
+    </div>
+    <div class="oficina-card reveal" style="transition-delay:0.1s">
+      <div class="oficina-map">🌆</div>
+      <div class="oficina-body"><div class="oficina-city">Bogotá — Centro Empresarial</div><div class="oficina-addr">Carrera 56 #9 – 1<br>Bogotá, Cundinamarca</div><a href="tel:+573153208900" class="oficina-tel">+57 (315) 320-8900</a></div>
+    </div>
+    <div class="oficina-card reveal" style="transition-delay:0.2s">
+      <div class="oficina-map">🏢</div>
+      <div class="oficina-body"><div class="oficina-city">Bogotá — Torre Empresarial</div><div class="oficina-addr">Carrera 7 #156 – 10, Piso 32<br>Bogotá, Cundinamarca</div><a href="tel:+573153208900" class="oficina-tel">+57 (315) 320-8900</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <h2 class="reveal">¿Listo para dar el <em>siguiente paso?</em></h2>
+  <p class="reveal">Explora todas nuestras vacantes disponibles y aplica hoy. Tu próxima gran oportunidad profesional está aquí.</p>
+  <a href="#vacantes" class="btn-dark reveal">Ver todas las vacantes →</a>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <a href="#hero" class="footer-logo">Nex<em>Call</em></a>
+      <p class="footer-desc">Contact Center y BPO profesional con presencia en Colombia. Gestionamos experiencias, construimos carreras.</p>
+    </div>
+    <div class="footer-col"><h5>Empleos</h5><ul><li><a href="#vacantes">Vacantes en Barranquilla</a></li><li><a href="#vacantes">Vacantes en Bogotá</a></li><li><a href="#vacantes">Trabajo Remoto</a></li><li><a href="#vacantes">Prácticas Universitarias</a></li></ul></div>
+    <div class="footer-col"><h5>Empresa</h5><ul><li><a href="#porque">¿Por qué NexCall?</a></li><li><a href="#vida">La Vida NexCall</a></li><li><a href="#diversidad">Diversidad e Inclusión</a></li><li><a href="#oficinas">Nuestras Sedes</a></li></ul></div>
+    <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Política de Privacidad</a></li><li><a href="#">Términos y Condiciones</a></li><li><a href="#">Habeas Data</a></li><li><a href="#">Código de Ética</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 NexCall S.A.S · Colombia. Todos los derechos reservados.</span>
+    <div class="footer-links"><a href="#">Privacidad</a><a href="#">Términos</a><a href="#">Cookies</a><a href="#">Sitemap</a></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+  function closeMobile() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  function filterJobs(city, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.job-row').forEach(row => {
+      row.style.display = (city === 'all' || row.dataset.city === city) ? 'grid' : 'none';
+    });
+  }
+
+  document.querySelectorAll('.job-row').forEach(row => {
+    row.addEventListener('click', () => alert('Funcionalidad de aplicación disponible próximamente.'));
+  });
+</script>
+</body>
+</html>
