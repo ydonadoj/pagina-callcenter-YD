@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';"/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN"/>
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+<meta name="robots" content="noindex, follow"/>
+<meta name="author" content="Alliance Contact Solutions"/>
+<meta name="theme-color" content="#1a2b6d"/>
+<meta name="description" content="Code of Ethics of Alliance Contact Solutions — Standards of conduct for national and international operations."/>
+<title>Code of Ethics | Alliance Contact Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--blue-dark:#0f2689;--blue-mid:#244bb9;--blue-light:#4a8af4;--red:#d32617;--red-light:#f04030;--gold:#f6b922;--gold-light:#ffd060;--gold-dark:#c47a00;--orange:#db711c;--white:#ffffff;--bg:#f0f4fb;--ink:#0a1640;--muted:#4a5a82;--border:rgba(15,38,137,.1);--navy:#0f2689;--navy-dark:#070e2e}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-size:16px}
+a{color:var(--blue-mid);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
+a:hover{color:var(--red)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+nav{background:var(--white);padding:.75rem 3rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(26,43,109,.1);box-shadow:0 2px 16px rgba(26,43,109,.08)}
+.nav-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;padding:.15rem 0}
+.nav-logo img{height:46px;width:auto;object-fit:contain;background:var(--white);border-radius:4px;max-width:56px}
+.nav-logo-name{display:flex;flex-direction:column;justify-content:center;gap:.08rem;line-height:1}
+.nav-logo-name strong{font-family:'Montserrat','Arial Black',sans-serif;font-size:1.5rem;font-weight:900;letter-spacing:.02em;color:#1a2a5e;display:block;line-height:1}
+.nav-logo-name span{font-family:'Montserrat','Arial',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#5a6070;display:block;line-height:1}
+.nav-right{display:flex;align-items:center;gap:.8rem}
+.lang-switcher{display:flex;align-items:center;gap:.25rem;background:rgba(26,43,109,.06);border:1px solid rgba(26,43,109,.14);border-radius:6px;padding:.2rem .3rem}
+.lang-btn{font-size:.7rem;font-weight:800;letter-spacing:.06em;padding:.22rem .55rem;border-radius:4px;border:none;cursor:pointer;background:transparent;color:rgba(26,43,109,.4);transition:all .25s;font-family:inherit}
+.lang-btn.active{background:var(--blue-dark);color:var(--white)!important}
+.lang-btn:hover:not(.active){color:var(--blue-dark)!important}
+.pp-hero{background:linear-gradient(135deg,#070e2e 0%,#0f2689 55%,#1a3a8f 100%);padding:4rem 3rem;text-align:center;position:relative;overflow:hidden}
+.pp-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.02) 20px,rgba(255,255,255,.02) 40px)}
+.pp-hero h1{font-family:'Montserrat',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:var(--white);margin-bottom:.5rem;position:relative}
+.pp-hero h1 span{color:var(--gold)}
+.pp-hero p{color:rgba(255,255,255,.5);font-size:.9rem;position:relative}
+.pp-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,168,0,.15);border:1px solid rgba(245,168,0,.3);border-radius:100px;padding:.35rem 1rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;position:relative}
+.pp-wrap{max-width:860px;margin:0 auto;padding:4rem 2rem 6rem}
+.pp-toc{background:var(--white);border:1px solid var(--border);border-radius:1rem;padding:1.8rem 2rem;margin-bottom:3rem;box-shadow:0 2px 16px rgba(26,43,109,.07)}
+.pp-toc h2{font-family:'Montserrat',sans-serif;font-size:.85rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--blue-dark);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.pp-toc h2::before{content:'';width:1rem;height:2px;background:linear-gradient(90deg,var(--red),var(--gold));border-radius:2px;display:block}
+.pp-toc ol{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.4rem .5rem;counter-reset:toc}
+.pp-toc ol li{counter-increment:toc}
+.pp-toc ol li a{font-size:.83rem;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:.4rem;padding:.2rem .3rem;border-radius:.3rem;transition:all .2s}
+.pp-toc ol li a::before{content:counter(toc,decimal-leading-zero);font-size:.68rem;font-weight:700;color:var(--gold);min-width:1.6rem}
+.pp-toc ol li a:hover{color:var(--blue-dark);background:var(--bg);padding-left:.6rem}
+.pp-toc-toggle{display:none}
+.pp-toc-body{display:block}
+@media(max-width:700px){
+  .pp-toc{padding:1.2rem 1.4rem;margin-bottom:2rem}
+  .pp-toc-header{display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
+  .pp-toc-header h2{margin-bottom:0}
+  .pp-toc-toggle{display:flex;align-items:center;justify-content:center;width:2rem;height:2rem;font-size:.9rem;color:var(--blue-dark);cursor:pointer;flex-shrink:0;background:transparent;border:2px solid var(--border);border-radius:6px;transition:transform .3s ease}
+  .pp-toc-body{display:none}
+  .pp-toc-body.open{display:block}
+  .pp-toc ol{grid-template-columns:1fr;margin-top:.8rem}
+}
+.pp-section{margin-bottom:2.8rem;scroll-margin-top:100px}
+.pp-section h2{font-family:'Montserrat',sans-serif;font-size:1.2rem;font-weight:800;color:var(--blue-dark);margin-bottom:1rem;display:flex;align-items:center;gap:.7rem;padding-bottom:.7rem;border-bottom:2px solid rgba(15,38,137,.12)}
+.pp-section h2 .num{background:linear-gradient(135deg,var(--red),var(--orange));color:var(--white);width:2rem;height:2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;flex-shrink:0}
+.pp-section p{color:var(--muted);margin-bottom:1rem;font-size:.95rem}
+.pp-section ul{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem;padding-left:.5rem}
+.pp-section ul li{font-size:.92rem;color:var(--muted);display:flex;align-items:flex-start;gap:.6rem}
+.pp-section ul li::before{content:'→';color:var(--red);font-weight:700;flex-shrink:0;margin-top:.05rem}
+.pp-section ul li span{flex:1}
+.pp-card{background:var(--white);border:1px solid var(--border);border-radius:.9rem;padding:1.4rem 1.8rem;margin-top:1rem;box-shadow:0 2px 12px rgba(26,43,109,.06)}
+.pp-card p{margin:0;font-size:.9rem}
+.pp-card strong{color:var(--blue-dark);font-weight:700}
+.pp-highlight{background:rgba(246,185,34,.08);border:1px solid rgba(246,185,34,.28);border-radius:.8rem;padding:1.1rem 1.4rem;margin:1rem 0;font-size:.88rem;color:var(--ink)}
+.pp-highlight strong{color:var(--blue-dark)}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.2rem 0}
+.value-card{background:var(--white);border:1px solid var(--border);border-radius:.9rem;padding:1.2rem 1.2rem 1rem;box-shadow:0 2px 12px rgba(26,43,109,.06);text-align:center}
+.value-card .v-icon{font-size:1.6rem;margin-bottom:.5rem;display:block}
+.value-card h3{font-family:'Montserrat',sans-serif;font-size:.82rem;font-weight:800;color:var(--blue-dark);margin-bottom:.35rem}
+.value-card p{font-size:.78rem;color:var(--muted);margin:0}
+@media(max-width:620px){.values-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:400px){.values-grid{grid-template-columns:1fr}}
+.alert-card{background:linear-gradient(135deg,rgba(211,38,23,.06),rgba(219,113,28,.04));border:1px solid rgba(211,38,23,.2);border-radius:.9rem;padding:1.4rem 1.8rem;margin-top:1rem}
+.alert-card p{margin:0;font-size:.9rem;color:var(--ink)}
+.alert-card strong{color:var(--red)}
+.pp-footer{background:#070e2e;padding:2.5rem 3rem;text-align:center}
+.pp-footer-logo{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;margin-bottom:1.2rem;justify-content:center}
+.pp-footer-logo img{height:40px;width:auto;max-width:48px;object-fit:contain;opacity:.9}
+.pp-footer-logo-name{display:flex;flex-direction:column;gap:.06rem;line-height:1;text-align:left}
+.pp-footer-logo-name strong{font-family:'Montserrat','Arial Black',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:.02em;color:var(--white);line-height:1}
+.pp-footer-logo-name span{font-family:'Montserrat','Arial',sans-serif;font-size:.52rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);line-height:1}
+.pp-footer p{color:rgba(255,255,255,.35);font-size:.8rem;margin-bottom:.4rem}
+.pp-footer a{color:var(--gold);text-decoration:none;transition:color .2s}
+.pp-footer a:hover{color:var(--gold-light)}
+.pp-footer-divider{width:40px;height:1px;background:linear-gradient(90deg,var(--red),var(--gold));margin:.9rem auto}
+#btt{position:fixed;bottom:2rem;right:2rem;width:2.8rem;height:2.8rem;background:linear-gradient(135deg,var(--blue-mid),var(--blue-dark));border:none;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(245,168,0,.4);transition:all .3s;opacity:0;transform:translateY(20px);color:var(--white);font-weight:800;z-index:400}
+#btt.show{opacity:1;transform:translateY(0)}
+#btt:hover{transform:translateY(-4px)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
+@media(max-width:700px){nav{padding:.9rem 1.2rem}.pp-hero{padding:3rem 1.5rem}.pp-wrap{padding:2.5rem 1.2rem 4rem}.pp-toc ol{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<button id="btt" aria-label="Back to top of page">&#8593;</button>
+
+<nav role="navigation" aria-label="Code of Ethics navigation">
+  <a href="index.html" class="nav-logo" aria-label="Return to Alliance Contact Solutions main site">
+    <img src="img/logo-icon.png?v=3" alt="Alliance Contact Solutions logo" height="46" loading="eager" decoding="async" onerror="this.style.display='none'"/>
+    <div class="nav-logo-name">
+      <strong>ALLIANCE</strong>
+      <span>Contact Solutions</span>
+    </div>
+  </a>
+  <div class="nav-right">
+    <div class="lang-switcher" role="group" aria-label="Language selector">
+      <button class="lang-btn active" id="ce-btn-en" onclick="ceSetLang('en')" aria-label="English">EN</button>
+      <button class="lang-btn" id="ce-btn-es" onclick="ceSetLang('es')" aria-label="Español">ES</button>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="pp-hero">
+    <div class="pp-badge" id="ce-badge" aria-hidden="true">&#9878;&#65039; Corporate Integrity</div>
+    <h1 id="ce-title">Code of <span>Ethics</span></h1>
+    <p id="ce-date">Last updated: March 2026 &middot; Alliance Contact Solutions</p>
+  </div>
+</header>
+
+<main class="pp-wrap" id="main-content" role="main">
+
+  <nav class="pp-toc" aria-label="Table of contents">
+    <div class="pp-toc-header" onclick="toggleToc()">
+      <h2 id="toc-title">Table of Contents</h2>
+      <button class="pp-toc-toggle" id="toc-btn" aria-label="Toggle table of contents">&#9660;</button>
+    </div>
+    <div class="pp-toc-body" id="toc-body">
+      <ol>
+        <li><a href="#s1" id="toc-1">Purpose and Scope</a></li>
+        <li><a href="#s2" id="toc-2">Corporate Values</a></li>
+        <li><a href="#s3" id="toc-3">Principles of Conduct</a></li>
+        <li><a href="#s4" id="toc-4">Confidential Information</a></li>
+        <li><a href="#s5" id="toc-5">Binational Compliance</a></li>
+        <li><a href="#s6" id="toc-6">Conflicts of Interest</a></li>
+        <li><a href="#s7" id="toc-7">Non-Discrimination</a></li>
+        <li><a href="#s8" id="toc-8">Use of Technology</a></li>
+        <li><a href="#s9" id="toc-9">Reporting Channel</a></li>
+        <li><a href="#s10" id="toc-10">Consequences of Non-Compliance</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <div class="pp-highlight" id="ce-intro" role="note">
+    <strong>ALLIANCE CONTACT SOLUTIONS</strong> <span id="ce-intro-body">is an organization committed to integrity, transparency, and professional excellence. This Code of Ethics establishes the behavioral standards that all members of our organization must uphold — regardless of their position, role, or location — in every interaction with clients, colleagues, suppliers, and the communities we serve in Colombia and the United States.</span>
+  </div>
+
+  <!-- S1 -->
+  <section class="pp-section" id="s1" aria-labelledby="h-s1">
+    <h2 id="h-s1"><span class="num" aria-hidden="true">01</span> <span id="h-s1-text">Purpose and Scope</span></h2>
+    <p id="s1-p1">The purpose of this Code of Ethics is to define the principles, values, and conduct standards that guide the actions of Alliance Contact Solutions and all individuals who are part of our organization, including employees, contractors, suppliers, and strategic partners.</p>
+    <p id="s1-p2">This Code applies to:</p>
+    <ul id="s1-list">
+      <li><span>All operations carried out from our offices in Barranquilla, Colombia, whether serving domestic or international clients.</span></li>
+      <li><span>Services provided to clients in the United States and other international markets, governed additionally by applicable regulations in those jurisdictions.</span></li>
+      <li><span>Any person acting on behalf of Alliance Contact Solutions, regardless of the nature or duration of their relationship with the company.</span></li>
+      <li><span>Interactions through any channel: telephone, digital, face-to-face, or written.</span></li>
+    </ul>
+    <p id="s1-p3">Compliance with this Code is mandatory. Ignorance of its contents does not constitute an exemption from the obligations set forth herein.</p>
+  </section>
+
+  <!-- S2 -->
+  <section class="pp-section" id="s2" aria-labelledby="h-s2">
+    <h2 id="h-s2"><span class="num" aria-hidden="true">02</span> <span id="h-s2-text">Corporate Values</span></h2>
+    <p id="s2-p1">Our actions are guided by six core values that define who we are and how we operate:</p>
+    <div class="values-grid" id="s2-grid">
+      <div class="value-card">
+        <span class="v-icon">&#9878;&#65039;</span>
+        <h3 id="v1-title">Integrity</h3>
+        <p id="v1-desc">We act honestly and consistently, keeping our commitments in every interaction.</p>
+      </div>
+      <div class="value-card">
+        <span class="v-icon">&#127919;</span>
+        <h3 id="v2-title">Excellence</h3>
+        <p id="v2-desc">We pursue quality in every process, service, and result we deliver to our clients.</p>
+      </div>
+      <div class="value-card">
+        <span class="v-icon">&#129309;</span>
+        <h3 id="v3-title">Respect</h3>
+        <p id="v3-desc">We value the dignity of every person, regardless of their origin, role, or belief.</p>
+      </div>
+      <div class="value-card">
+        <span class="v-icon">&#128274;</span>
+        <h3 id="v4-title">Confidentiality</h3>
+        <p id="v4-desc">We protect sensitive information with the highest standards of security and discretion.</p>
+      </div>
+      <div class="value-card">
+        <span class="v-icon">&#128200;</span>
+        <h3 id="v5-title">Commitment</h3>
+        <p id="v5-desc">We take full responsibility for our results and the impact of our work on clients and communities.</p>
+      </div>
+      <div class="value-card">
+        <span class="v-icon">&#127759;</span>
+        <h3 id="v6-title">Transparency</h3>
+        <p id="v6-desc">We communicate openly and truthfully with all stakeholders, building trust through clarity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 -->
+  <section class="pp-section" id="s3" aria-labelledby="h-s3">
+    <h2 id="h-s3"><span class="num" aria-hidden="true">03</span> <span id="h-s3-text">Principles of Conduct with Clients</span></h2>
+    <p id="s3-p1">Every interaction with clients — whether Colombian or international — must reflect our commitment to service quality, honesty, and respect. The following principles apply at all times:</p>
+    <p id="s3-p2co"><strong>With Colombian Clients:</strong></p>
+    <ul id="s3-list-co">
+      <li><span>Provide accurate, truthful, and complete information about the services and products represented.</span></li>
+      <li><span>Respect consumer rights as established in Colombian Law 1480 of 2011 (Consumer Statute) and applicable sector regulations.</span></li>
+      <li><span>Maintain a respectful and professional tone in all communications, avoiding any conduct that may be construed as harassment or pressure.</span></li>
+      <li><span>Honor commitments made to clients and escalate situations that exceed the agent's authority without delay.</span></li>
+    </ul>
+    <p id="s3-p2us"><strong>With U.S.-Based Clients and End Consumers:</strong></p>
+    <ul id="s3-list-us">
+      <li><span>Comply strictly with the Telephone Consumer Protection Act (TCPA), including restrictions on call times, do-not-call lists, and consent requirements.</span></li>
+      <li><span>Adhere to the Fair Debt Collection Practices Act (FDCPA) when applicable, prohibiting abusive, deceptive, or unfair collection practices.</span></li>
+      <li><span>Follow all client-specific compliance protocols and scripts as provided during onboarding and training.</span></li>
+      <li><span>Never misrepresent the identity of the company, the agent, or the nature of the call.</span></li>
+    </ul>
+  </section>
+
+  <!-- S4 -->
+  <section class="pp-section" id="s4" aria-labelledby="h-s4">
+    <h2 id="h-s4"><span class="num" aria-hidden="true">04</span> <span id="h-s4-text">Confidential Handling of Information</span></h2>
+    <p id="s4-p1">Alliance Contact Solutions handles sensitive information belonging to clients, end consumers, and the organization itself. All team members are required to:</p>
+    <ul id="s4-list">
+      <li><span>Treat all client data, campaign information, scripts, and operational procedures as strictly confidential, both during and after their relationship with the company.</span></li>
+      <li><span>Access only the information necessary to perform their assigned duties and refrain from sharing it with unauthorized persons.</span></li>
+      <li><span>Refrain from storing, copying, or transferring confidential information to personal devices or external platforms without explicit written authorization.</span></li>
+      <li><span>Report immediately any suspected unauthorized access, data breach, or loss of confidential information to the direct supervisor and the data protection officer.</span></li>
+      <li><span>Sign and comply with confidentiality agreements as a condition of employment or engagement with the company.</span></li>
+    </ul>
+    <div class="pp-highlight" id="s4-hl">
+      <strong>Important:</strong> The obligation of confidentiality survives the termination of the employment or contractual relationship and remains in force for as long as the information retains its confidential character.
+    </div>
+  </section>
+
+  <!-- S5 -->
+  <section class="pp-section" id="s5" aria-labelledby="h-s5">
+    <h2 id="h-s5"><span class="num" aria-hidden="true">05</span> <span id="h-s5-text">Binational Regulatory Compliance</span></h2>
+    <p id="s5-p1">Given that Alliance Contact Solutions operates in both the Colombian and U.S. markets, compliance with applicable regulations in both jurisdictions is mandatory. All team members must:</p>
+    <ul id="s5-list">
+      <li><span>Know and apply the regulations relevant to their role, including the TCPA, CAN-SPAM Act, FDCPA, Colombian Law 1581 of 2012, and any applicable client-specific compliance requirements.</span></li>
+      <li><span>Complete all mandatory compliance training provided by the company and pass required certifications before handling client campaigns.</span></li>
+      <li><span>Immediately notify their supervisor of any regulatory change or compliance risk they identify in the course of their work.</span></li>
+      <li><span>Refrain from engaging in any conduct that could expose the company or its clients to legal liability in either jurisdiction.</span></li>
+      <li><span>Cooperate fully with internal and external audits, inspections, or regulatory reviews.</span></li>
+    </ul>
+    <p id="s5-p2">Non-compliance with regulatory requirements — particularly those related to consumer protection, data privacy, and telemarketing practices — will be treated as a serious disciplinary matter and may result in immediate termination and legal proceedings.</p>
+  </section>
+
+  <!-- S6 -->
+  <section class="pp-section" id="s6" aria-labelledby="h-s6">
+    <h2 id="h-s6"><span class="num" aria-hidden="true">06</span> <span id="h-s6-text">Conflicts of Interest</span></h2>
+    <p id="s6-p1">A conflict of interest arises when a personal interest of a team member influences or appears to influence their professional judgment or decisions on behalf of Alliance Contact Solutions. Team members must:</p>
+    <ul id="s6-list">
+      <li><span>Disclose promptly and in writing any situation that may constitute a conflict of interest to their direct supervisor or the Ethics Committee.</span></li>
+      <li><span>Refrain from participating in decisions, negotiations, or activities in which they have a direct or indirect personal interest that could compromise their impartiality.</span></li>
+      <li><span>Not accept gifts, incentives, entertainment, or benefits from clients, suppliers, or third parties that could create a sense of obligation or compromise professional judgment.</span></li>
+      <li><span>Avoid holding positions or investments in competing companies without prior written disclosure and approval from the company.</span></li>
+    </ul>
+    <p id="s6-p2">Situations that generate doubt about the existence of a conflict of interest should be disclosed proactively. When in doubt, team members should consult with their supervisor before taking any action.</p>
+  </section>
+
+  <!-- S7 -->
+  <section class="pp-section" id="s7" aria-labelledby="h-s7">
+    <h2 id="h-s7"><span class="num" aria-hidden="true">07</span> <span id="h-s7-text">Non-Discrimination and Inclusion</span></h2>
+    <p id="s7-p1">Alliance Contact Solutions is committed to creating and maintaining a work environment based on equal opportunity, mutual respect, and dignity for all people. Discrimination of any kind is strictly prohibited, whether based on:</p>
+    <ul id="s7-list">
+      <li><span>Race, ethnicity, or national origin.</span></li>
+      <li><span>Gender, gender identity, or sexual orientation.</span></li>
+      <li><span>Age, disability, or health condition.</span></li>
+      <li><span>Religion or political beliefs.</span></li>
+      <li><span>Socioeconomic status or educational background.</span></li>
+    </ul>
+    <p id="s7-p2">Harassment, intimidation, mockery, or any conduct that creates a hostile work environment will not be tolerated. This principle applies equally to interactions with clients, colleagues, supervisors, and subordinates.</p>
+    <p id="s7-p3">Any incident of discrimination or harassment must be reported immediately through the established reporting channel. The company guarantees non-retaliation against any person who reports such situations in good faith.</p>
+  </section>
+
+  <!-- S8 -->
+  <section class="pp-section" id="s8" aria-labelledby="h-s8">
+    <h2 id="h-s8"><span class="num" aria-hidden="true">08</span> <span id="h-s8-text">Appropriate Use of Technological Resources</span></h2>
+    <p id="s8-p1">The technological resources provided by Alliance Contact Solutions — including computers, telephony systems, software, internet access, and communication platforms — are tools for professional use and must be used responsibly and in accordance with operational needs.</p>
+    <p id="s8-p2">Team members must:</p>
+    <ul id="s8-list">
+      <li><span>Use technological resources exclusively for purposes related to their work functions.</span></li>
+      <li><span>Protect access credentials and avoid sharing usernames or passwords with third parties.</span></li>
+      <li><span>Refrain from installing unauthorized software, accessing inappropriate content, or using company resources for personal commercial activities.</span></li>
+      <li><span>Not record, capture, or share call content, client data, or internal processes through unauthorized channels or personal devices.</span></li>
+      <li><span>Report any technical failure, security vulnerability, or suspicious activity detected on company systems immediately.</span></li>
+    </ul>
+    <div class="pp-highlight" id="s8-hl">
+      <strong>Note:</strong> All use of company technological resources is subject to monitoring in accordance with applicable law and company policy. Users have no expectation of personal privacy when using company-owned systems.
+    </div>
+  </section>
+
+  <!-- S9 -->
+  <section class="pp-section" id="s9" aria-labelledby="h-s9">
+    <h2 id="h-s9"><span class="num" aria-hidden="true">09</span> <span id="h-s9-text">Reporting Channel for Irregularities</span></h2>
+    <p id="s9-p1">Alliance Contact Solutions provides a confidential channel for reporting conduct that violates this Code of Ethics, internal policies, or applicable law. Any team member, client, or third party who becomes aware of an irregularity is encouraged to report it.</p>
+    <p id="s9-p2">Reports may be submitted through the following channel:</p>
+    <div class="pp-card">
+      <p id="s9-card">
+        <strong>Ethics Committee — ALLIANCE CONTACT SOLUTIONS</strong><br/>
+        Email: <a href="mailto:info@alliancebpo.com">info@alliancebpo.com</a><br/>
+        Subject line: "Ethics Report – Confidential"<br/>
+        Address: Calle 76 #47-33, Barranquilla, Atlántico, Colombia<br/><br/>
+        Reports may be submitted anonymously. The company guarantees strict confidentiality and non-retaliation against any person reporting in good faith.
+      </p>
+    </div>
+    <p id="s9-p3" style="margin-top:1rem">All reports will be reviewed by the Ethics Committee within five (5) business days of receipt. The reporter will be notified of the outcome of the investigation to the extent permitted by confidentiality obligations.</p>
+  </section>
+
+  <!-- S10 -->
+  <section class="pp-section" id="s10" aria-labelledby="h-s10">
+    <h2 id="h-s10"><span class="num" aria-hidden="true">10</span> <span id="h-s10-text">Consequences of Non-Compliance</span></h2>
+    <p id="s10-p1">Violation of this Code of Ethics will result in disciplinary measures proportional to the severity of the conduct, the circumstances, and the impact caused. Possible consequences include:</p>
+    <ul id="s10-list">
+      <li><span><strong>Verbal or written warning</strong> — for minor first-time violations with no significant impact.</span></li>
+      <li><span><strong>Formal written reprimand</strong> — for repeated minor violations or moderate conduct affecting clients, colleagues, or the company's reputation.</span></li>
+      <li><span><strong>Suspension without pay</strong> — for serious violations or those involving regulatory breaches, confidentiality failures, or conflicts of interest.</span></li>
+      <li><span><strong>Immediate termination of contract</strong> — for conduct constituting just cause under Colombian labor law, or for violations that expose the company or its clients to legal, financial, or reputational risk.</span></li>
+      <li><span><strong>Legal action</strong> — in cases involving fraud, data theft, regulatory violations, or any conduct that causes harm to clients, the company, or third parties. This may include civil and criminal proceedings under Colombian and, where applicable, U.S. law.</span></li>
+    </ul>
+    <div class="alert-card">
+      <p id="s10-alert"><strong>Zero tolerance:</strong> Alliance Contact Solutions applies zero tolerance to conduct involving corruption, bribery, data theft, sexual harassment, discrimination, or deliberate regulatory violations. These cases will result in immediate contract termination and referral to the competent authorities, regardless of the position or seniority of the person involved.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pp-footer" role="contentinfo">
+  <a href="index.html" class="pp-footer-logo" aria-label="Return to Alliance Contact Solutions homepage">
+    <div class="pp-footer-logo-name">
+      <strong>ALLIANCE</strong>
+      <span>Contact Solutions</span>
+    </div>
+  </a>
+  <div class="pp-footer-divider" aria-hidden="true"></div>
+  <p id="footer-copy">&copy; 2026 Alliance Contact Solutions. All rights reserved.</p>
+  <p style="margin-top:.5rem"><a href="privacy-policy.html">Privacy Policy</a></p>
+</footer>
+
+<script>
+function renderList(items){
+  return items.map(i=>`<li><span>${i}</span></li>`).join('');
+}
+
+const ceContent = {
+  en:{
+    badge:'&#9878;&#65039; Corporate Integrity',
+    title:'Code of <span style="color:var(--gold)">Ethics</span>',
+    date:'Last updated: March 2026 &middot; Alliance Contact Solutions',
+    toc:'Table of Contents',
+    toc1:'Purpose and Scope', toc2:'Corporate Values', toc3:'Principles of Conduct',
+    toc4:'Confidential Information', toc5:'Binational Compliance', toc6:'Conflicts of Interest',
+    toc7:'Non-Discrimination', toc8:'Use of Technology', toc9:'Reporting Channel', toc10:'Consequences of Non-Compliance',
+    intro:'is an organization committed to integrity, transparency, and professional excellence. This Code of Ethics establishes the behavioral standards that all members of our organization must uphold — regardless of their position, role, or location — in every interaction with clients, colleagues, suppliers, and the communities we serve in Colombia and the United States.',
+    s1h:'Purpose and Scope',
+    s1p1:'The purpose of this Code of Ethics is to define the principles, values, and conduct standards that guide the actions of Alliance Contact Solutions and all individuals who are part of our organization, including employees, contractors, suppliers, and strategic partners.',
+    s1p2:'This Code applies to:',
+    s1li:['All operations carried out from our offices in Barranquilla, Colombia, whether serving domestic or international clients.','Services provided to clients in the United States and other international markets, governed additionally by applicable regulations in those jurisdictions.','Any person acting on behalf of Alliance Contact Solutions, regardless of the nature or duration of their relationship with the company.','Interactions through any channel: telephone, digital, face-to-face, or written.'],
+    s1p3:'Compliance with this Code is mandatory. Ignorance of its contents does not constitute an exemption from the obligations set forth herein.',
+    s2h:'Corporate Values',
+    s2p1:'Our actions are guided by six core values that define who we are and how we operate:',
+    v1t:'Integrity', v1d:'We act honestly and consistently, keeping our commitments in every interaction.',
+    v2t:'Excellence', v2d:'We pursue quality in every process, service, and result we deliver to our clients.',
+    v3t:'Respect', v3d:'We value the dignity of every person, regardless of their origin, role, or belief.',
+    v4t:'Confidentiality', v4d:'We protect sensitive information with the highest standards of security and discretion.',
+    v5t:'Commitment', v5d:'We take full responsibility for our results and the impact of our work on clients and communities.',
+    v6t:'Transparency', v6d:'We communicate openly and truthfully with all stakeholders, building trust through clarity.',
+    s3h:'Principles of Conduct with Clients',
+    s3p1:'Every interaction with clients — whether Colombian or international — must reflect our commitment to service quality, honesty, and respect. The following principles apply at all times:',
+    s3p2co:'<strong>With Colombian Clients:</strong>',
+    s3lico:['Provide accurate, truthful, and complete information about the services and products represented.','Respect consumer rights as established in Colombian Law 1480 of 2011 (Consumer Statute) and applicable sector regulations.','Maintain a respectful and professional tone in all communications, avoiding any conduct that may be construed as harassment or pressure.','Honor commitments made to clients and escalate situations that exceed the agent\'s authority without delay.'],
+    s3p2us:'<strong>With U.S.-Based Clients and End Consumers:</strong>',
+    s3lius:['Comply strictly with the Telephone Consumer Protection Act (TCPA), including restrictions on call times, do-not-call lists, and consent requirements.','Adhere to the Fair Debt Collection Practices Act (FDCPA) when applicable, prohibiting abusive, deceptive, or unfair collection practices.','Follow all client-specific compliance protocols and scripts as provided during onboarding and training.','Never misrepresent the identity of the company, the agent, or the nature of the call.'],
+    s4h:'Confidential Handling of Information',
+    s4p1:'Alliance Contact Solutions handles sensitive information belonging to clients, end consumers, and the organization itself. All team members are required to:',
+    s4li:['Treat all client data, campaign information, scripts, and operational procedures as strictly confidential, both during and after their relationship with the company.','Access only the information necessary to perform their assigned duties and refrain from sharing it with unauthorized persons.','Refrain from storing, copying, or transferring confidential information to personal devices or external platforms without explicit written authorization.','Report immediately any suspected unauthorized access, data breach, or loss of confidential information to the direct supervisor and the data protection officer.','Sign and comply with confidentiality agreements as a condition of employment or engagement with the company.'],
+    s4hl:'<strong>Important:</strong> The obligation of confidentiality survives the termination of the employment or contractual relationship and remains in force for as long as the information retains its confidential character.',
+    s5h:'Binational Regulatory Compliance',
+    s5p1:'Given that Alliance Contact Solutions operates in both the Colombian and U.S. markets, compliance with applicable regulations in both jurisdictions is mandatory. All team members must:',
+    s5li:['Know and apply the regulations relevant to their role, including the TCPA, CAN-SPAM Act, FDCPA, Colombian Law 1581 of 2012, and any applicable client-specific compliance requirements.','Complete all mandatory compliance training provided by the company and pass required certifications before handling client campaigns.','Immediately notify their supervisor of any regulatory change or compliance risk they identify in the course of their work.','Refrain from engaging in any conduct that could expose the company or its clients to legal liability in either jurisdiction.','Cooperate fully with internal and external audits, inspections, or regulatory reviews.'],
+    s5p2:'Non-compliance with regulatory requirements — particularly those related to consumer protection, data privacy, and telemarketing practices — will be treated as a serious disciplinary matter and may result in immediate termination and legal proceedings.',
+    s6h:'Conflicts of Interest',
+    s6p1:'A conflict of interest arises when a personal interest of a team member influences or appears to influence their professional judgment or decisions on behalf of Alliance Contact Solutions. Team members must:',
+    s6li:['Disclose promptly and in writing any situation that may constitute a conflict of interest to their direct supervisor or the Ethics Committee.','Refrain from participating in decisions, negotiations, or activities in which they have a direct or indirect personal interest that could compromise their impartiality.','Not accept gifts, incentives, entertainment, or benefits from clients, suppliers, or third parties that could create a sense of obligation or compromise professional judgment.','Avoid holding positions or investments in competing companies without prior written disclosure and approval from the company.'],
+    s6p2:'Situations that generate doubt about the existence of a conflict of interest should be disclosed proactively. When in doubt, team members should consult with their supervisor before taking any action.',
+    s7h:'Non-Discrimination and Inclusion',
+    s7p1:'Alliance Contact Solutions is committed to creating and maintaining a work environment based on equal opportunity, mutual respect, and dignity for all people. Discrimination of any kind is strictly prohibited, whether based on:',
+    s7li:['Race, ethnicity, or national origin.','Gender, gender identity, or sexual orientation.','Age, disability, or health condition.','Religion or political beliefs.','Socioeconomic status or educational background.'],
+    s7p2:'Harassment, intimidation, mockery, or any conduct that creates a hostile work environment will not be tolerated. This principle applies equally to interactions with clients, colleagues, supervisors, and subordinates.',
+    s7p3:'Any incident of discrimination or harassment must be reported immediately through the established reporting channel. The company guarantees non-retaliation against any person who reports such situations in good faith.',
+    s8h:'Appropriate Use of Technological Resources',
+    s8p1:'The technological resources provided by Alliance Contact Solutions — including computers, telephony systems, software, internet access, and communication platforms — are tools for professional use and must be used responsibly and in accordance with operational needs.',
+    s8p2:'Team members must:',
+    s8li:['Use technological resources exclusively for purposes related to their work functions.','Protect access credentials and avoid sharing usernames or passwords with third parties.','Refrain from installing unauthorized software, accessing inappropriate content, or using company resources for personal commercial activities.','Not record, capture, or share call content, client data, or internal processes through unauthorized channels or personal devices.','Report any technical failure, security vulnerability, or suspicious activity detected on company systems immediately.'],
+    s8hl:'<strong>Note:</strong> All use of company technological resources is subject to monitoring in accordance with applicable law and company policy. Users have no expectation of personal privacy when using company-owned systems.',
+    s9h:'Reporting Channel for Irregularities',
+    s9p1:'Alliance Contact Solutions provides a confidential channel for reporting conduct that violates this Code of Ethics, internal policies, or applicable law. Any team member, client, or third party who becomes aware of an irregularity is encouraged to report it.',
+    s9p2:'Reports may be submitted through the following channel:',
+    s9card:'<strong>Ethics Committee — ALLIANCE CONTACT SOLUTIONS</strong><br/>Email: <a href="mailto:info@alliancebpo.com">info@alliancebpo.com</a><br/>Subject line: "Ethics Report – Confidential"<br/>Address: 76th St #47-33, Barranquilla, Atlántico, Colombia<br/><br/>Reports may be submitted anonymously. The company guarantees strict confidentiality and non-retaliation against any person reporting in good faith.',
+    s9p3:'All reports will be reviewed by the Ethics Committee within five (5) business days of receipt. The reporter will be notified of the outcome of the investigation to the extent permitted by confidentiality obligations.',
+    s10h:'Consequences of Non-Compliance',
+    s10p1:'Violation of this Code of Ethics will result in disciplinary measures proportional to the severity of the conduct, the circumstances, and the impact caused. Possible consequences include:',
+    s10li:['<strong>Verbal or written warning</strong> — for minor first-time violations with no significant impact.','<strong>Formal written reprimand</strong> — for repeated minor violations or moderate conduct affecting clients, colleagues, or the company\'s reputation.','<strong>Suspension without pay</strong> — for serious violations or those involving regulatory breaches, confidentiality failures, or conflicts of interest.','<strong>Immediate termination of contract</strong> — for conduct constituting just cause under Colombian labor law, or for violations that expose the company or its clients to legal, financial, or reputational risk.','<strong>Legal action</strong> — in cases involving fraud, data theft, regulatory violations, or any conduct that causes harm to clients, the company, or third parties. This may include civil and criminal proceedings under Colombian and, where applicable, U.S. law.'],
+    s10alert:'<strong>Zero tolerance:</strong> Alliance Contact Solutions applies zero tolerance to conduct involving corruption, bribery, data theft, sexual harassment, discrimination, or deliberate regulatory violations. These cases will result in immediate contract termination and referral to the competent authorities, regardless of the position or seniority of the person involved.',
+    footer:'&copy; 2026 Alliance Contact Solutions. All rights reserved.'
+  },
+  es:{
+    badge:'&#9878;&#65039; Integridad Corporativa',
+    title:'Código de <span style="color:var(--gold)">Ética</span>',
+    date:'Última actualización: marzo 2026 &middot; Alliance Contact Solutions',
+    toc:'Tabla de Contenido',
+    toc1:'Propósito y Alcance', toc2:'Valores Corporativos', toc3:'Principios de Conducta',
+    toc4:'Información Confidencial', toc5:'Cumplimiento Binacional', toc6:'Conflictos de Interés',
+    toc7:'No Discriminación', toc8:'Uso de Tecnología', toc9:'Canal de Reporte', toc10:'Consecuencias del Incumplimiento',
+    intro:'es una organización comprometida con la integridad, la transparencia y la excelencia profesional. Este Código de Ética establece los estándares de conducta que todos los integrantes de nuestra organización deben observar — independientemente de su cargo, rol o ubicación — en cada interacción con clientes, colegas, proveedores y las comunidades que servimos en Colombia y los Estados Unidos.',
+    s1h:'Propósito y Alcance',
+    s1p1:'El propósito de este Código de Ética es definir los principios, valores y estándares de conducta que orientan las acciones de Alliance Contact Solutions y de todas las personas que forman parte de nuestra organización, incluyendo empleados, contratistas, proveedores y socios estratégicos.',
+    s1p2:'Este Código aplica a:',
+    s1li:['Todas las operaciones realizadas desde nuestras oficinas en Barranquilla, Colombia, tanto para clientes nacionales como internacionales.','Los servicios prestados a clientes en los Estados Unidos y otros mercados internacionales, regidos adicionalmente por las normativas aplicables en dichas jurisdicciones.','Toda persona que actúe en nombre de Alliance Contact Solutions, independientemente de la naturaleza o duración de su relación con la empresa.','Las interacciones a través de cualquier canal: telefónico, digital, presencial o escrito.'],
+    s1p3:'El cumplimiento de este Código es obligatorio. El desconocimiento de su contenido no constituye eximente de las obligaciones aquí establecidas.',
+    s2h:'Valores Corporativos',
+    s2p1:'Nuestras acciones están guiadas por seis valores fundamentales que definen quiénes somos y cómo operamos:',
+    v1t:'Integridad', v1d:'Actuamos con honestidad y coherencia, cumpliendo nuestros compromisos en cada interacción.',
+    v2t:'Excelencia', v2d:'Perseguimos la calidad en cada proceso, servicio y resultado que entregamos a nuestros clientes.',
+    v3t:'Respeto', v3d:'Valoramos la dignidad de cada persona, independientemente de su origen, rol o creencia.',
+    v4t:'Confidencialidad', v4d:'Protegemos la información sensible con los más altos estándares de seguridad y discreción.',
+    v5t:'Compromiso', v5d:'Asumimos plena responsabilidad por nuestros resultados y el impacto de nuestro trabajo en clientes y comunidades.',
+    v6t:'Transparencia', v6d:'Nos comunicamos de manera abierta y veraz con todos los grupos de interés, construyendo confianza mediante la claridad.',
+    s3h:'Principios de Conducta con Clientes',
+    s3p1:'Cada interacción con clientes — ya sean colombianos o internacionales — debe reflejar nuestro compromiso con la calidad del servicio, la honestidad y el respeto. Los siguientes principios aplican en todo momento:',
+    s3p2co:'<strong>Con Clientes Colombianos:</strong>',
+    s3lico:['Suministrar información veraz, exacta y completa sobre los servicios y productos representados.','Respetar los derechos del consumidor establecidos en la Ley 1480 de 2011 (Estatuto del Consumidor) y la regulación sectorial aplicable.','Mantener un tono respetuoso y profesional en todas las comunicaciones, evitando cualquier conducta que pueda interpretarse como acoso o presión indebida.','Honrar los compromisos adquiridos con los clientes y escalar sin demora las situaciones que superen la autoridad del agente.'],
+    s3p2us:'<strong>Con Clientes y Consumidores Finales en EE.UU.:</strong>',
+    s3lius:['Cumplir estrictamente con la Ley de Protección al Consumidor Telefónico (TCPA), incluyendo restricciones de horarios de llamada, listas de no llamar y requisitos de consentimiento.','Aplicar la Ley de Prácticas Justas de Cobro de Deudas (FDCPA) cuando corresponda, prohibiendo prácticas abusivas, engañosas o injustas de cobranza.','Seguir todos los protocolos de cumplimiento y guiones específicos del cliente proporcionados durante la incorporación y capacitación.','Nunca tergiversar la identidad de la empresa, el agente o la naturaleza de la llamada.'],
+    s4h:'Manejo Confidencial de la Información',
+    s4p1:'Alliance Contact Solutions maneja información sensible de clientes, consumidores finales y la propia organización. Todos los integrantes del equipo están obligados a:',
+    s4li:['Tratar todos los datos de clientes, información de campañas, guiones y procedimientos operativos como estrictamente confidenciales, tanto durante como después de su relación con la empresa.','Acceder únicamente a la información necesaria para el desempeño de sus funciones y abstenerse de compartirla con personas no autorizadas.','Abstenerse de almacenar, copiar o transferir información confidencial a dispositivos personales o plataformas externas sin autorización expresa y por escrito.','Reportar de inmediato cualquier acceso no autorizado sospechoso, brecha de datos o pérdida de información confidencial al supervisor directo y al oficial de protección de datos.','Firmar y cumplir los acuerdos de confidencialidad como condición de vinculación con la empresa.'],
+    s4hl:'<strong>Importante:</strong> La obligación de confidencialidad subsiste a la terminación de la relación laboral o contractual y permanece vigente mientras la información conserve su carácter confidencial.',
+    s5h:'Cumplimiento Normativo Binacional',
+    s5p1:'Dado que Alliance Contact Solutions opera tanto en el mercado colombiano como en el estadounidense, el cumplimiento de las regulaciones aplicables en ambas jurisdicciones es obligatorio. Todos los integrantes del equipo deben:',
+    s5li:['Conocer y aplicar las normas relevantes para su rol, incluyendo la TCPA, la Ley CAN-SPAM, la FDCPA, la Ley 1581 de 2012 de Colombia, y cualquier requisito de cumplimiento específico del cliente.','Completar toda la capacitación de cumplimiento obligatoria proporcionada por la empresa y aprobar las certificaciones requeridas antes de gestionar campañas de clientes.','Notificar de inmediato a su supervisor cualquier cambio normativo o riesgo de cumplimiento que identifique en el desarrollo de su trabajo.','Abstenerse de incurrir en cualquier conducta que pueda exponer a la empresa o a sus clientes a responsabilidad legal en cualquiera de las dos jurisdicciones.','Cooperar plenamente con auditorías internas y externas, inspecciones o revisiones regulatorias.'],
+    s5p2:'El incumplimiento de los requisitos regulatorios — en especial los relacionados con la protección al consumidor, la privacidad de datos y las prácticas de telemarketing — será tratado como una falta disciplinaria grave y podrá dar lugar a la terminación inmediata del contrato y a actuaciones legales.',
+    s6h:'Conflictos de Interés',
+    s6p1:'Un conflicto de interés surge cuando un interés personal de un integrante del equipo influye o parece influir en su juicio profesional o en las decisiones que toma en nombre de Alliance Contact Solutions. Los integrantes del equipo deben:',
+    s6li:['Revelar de forma inmediata y por escrito cualquier situación que pueda constituir un conflicto de interés a su supervisor directo o al Comité de Ética.','Abstenerse de participar en decisiones, negociaciones o actividades en las que tengan un interés personal directo o indirecto que pueda comprometer su imparcialidad.','No aceptar regalos, incentivos, entretenimiento o beneficios de clientes, proveedores o terceros que puedan generar una sensación de obligación o comprometer el juicio profesional.','Evitar ocupar cargos o tener inversiones en empresas competidoras sin previa revelación escrita y aprobación de la empresa.'],
+    s6p2:'Las situaciones que generen duda sobre la existencia de un conflicto de interés deben revelarse de forma proactiva. En caso de duda, los integrantes del equipo deben consultar con su supervisor antes de tomar cualquier acción.',
+    s7h:'No Discriminación e Inclusión',
+    s7p1:'Alliance Contact Solutions está comprometida con la creación y el mantenimiento de un entorno de trabajo basado en la igualdad de oportunidades, el respeto mutuo y la dignidad de todas las personas. Se prohíbe estrictamente cualquier forma de discriminación, ya sea por:',
+    s7li:['Raza, etnia u origen nacional.','Género, identidad de género u orientación sexual.','Edad, discapacidad o condición de salud.','Religión o creencias políticas.','Condición socioeconómica o nivel educativo.'],
+    s7p2:'El acoso, la intimidación, la burla o cualquier conducta que genere un ambiente de trabajo hostil no serán tolerados. Este principio aplica por igual a las interacciones con clientes, colegas, superiores y subordinados.',
+    s7p3:'Todo incidente de discriminación o acoso debe reportarse de inmediato a través del canal de reporte establecido. La empresa garantiza la no represalia contra cualquier persona que reporte tales situaciones de buena fe.',
+    s8h:'Uso Adecuado de los Recursos Tecnológicos',
+    s8p1:'Los recursos tecnológicos provistos por Alliance Contact Solutions — incluyendo computadores, sistemas de telefonía, software, acceso a internet y plataformas de comunicación — son herramientas de uso profesional y deben emplearse de manera responsable y acorde con las necesidades operacionales.',
+    s8p2:'Los integrantes del equipo deben:',
+    s8li:['Utilizar los recursos tecnológicos exclusivamente para fines relacionados con sus funciones laborales.','Proteger las credenciales de acceso y evitar compartir nombres de usuario o contraseñas con terceros.','Abstenerse de instalar software no autorizado, acceder a contenido inapropiado o usar los recursos de la empresa para actividades comerciales personales.','No grabar, capturar ni compartir el contenido de llamadas, datos de clientes o procesos internos a través de canales no autorizados o dispositivos personales.','Reportar de inmediato cualquier falla técnica, vulnerabilidad de seguridad o actividad sospechosa detectada en los sistemas de la empresa.'],
+    s8hl:'<strong>Nota:</strong> Todo uso de los recursos tecnológicos de la empresa está sujeto a monitoreo conforme a la ley aplicable y las políticas internas. Los usuarios no tienen expectativa de privacidad personal al utilizar sistemas de propiedad de la empresa.',
+    s9h:'Canal de Reporte de Irregularidades',
+    s9p1:'Alliance Contact Solutions dispone de un canal confidencial para reportar conductas que vulneren este Código de Ética, las políticas internas o la normativa aplicable. Todo integrante del equipo, cliente o tercero que tenga conocimiento de una irregularidad es invitado a reportarla.',
+    s9p2:'Los reportes pueden presentarse a través del siguiente canal:',
+    s9card:'<strong>Comité de Ética — ALLIANCE CONTACT SOLUTIONS</strong><br/>Correo: <a href="mailto:info@alliancebpo.com">info@alliancebpo.com</a><br/>Asunto: "Reporte de Ética – Confidencial"<br/>Dirección: Calle 76 #47-33, Barranquilla, Atlántico, Colombia<br/><br/>Los reportes pueden presentarse de forma anónima. La empresa garantiza estricta confidencialidad y no represalia contra cualquier persona que reporte de buena fe.',
+    s9p3:'Todos los reportes serán revisados por el Comité de Ética dentro de los cinco (5) días hábiles siguientes a su recepción. El reportante será informado del resultado de la investigación en la medida en que las obligaciones de confidencialidad lo permitan.',
+    s10h:'Consecuencias del Incumplimiento',
+    s10p1:'La violación de este Código de Ética dará lugar a medidas disciplinarias proporcionales a la gravedad de la conducta, las circunstancias y el impacto causado. Las posibles consecuencias incluyen:',
+    s10li:['<strong>Llamado de atención verbal o escrito</strong> — para faltas leves ocurridas por primera vez sin impacto significativo.','<strong>Memorando formal</strong> — para faltas leves reiteradas o conductas moderadas que afecten a clientes, colegas o la reputación de la empresa.','<strong>Suspensión sin goce de sueldo</strong> — para faltas graves o aquellas que involucren incumplimientos regulatorios, fallas de confidencialidad o conflictos de interés.','<strong>Terminación inmediata del contrato</strong> — para conductas que constituyan justa causa conforme a la legislación laboral colombiana, o para violaciones que expongan a la empresa o a sus clientes a riesgo legal, financiero o reputacional.','<strong>Acciones legales</strong> — en casos de fraude, robo de datos, infracciones regulatorias o cualquier conducta que cause daño a clientes, a la empresa o a terceros. Esto puede incluir actuaciones civiles y penales bajo la ley colombiana y, cuando aplique, la ley estadounidense.'],
+    s10alert:'<strong>Tolerancia cero:</strong> Alliance Contact Solutions aplica tolerancia cero a conductas que involucren corrupción, soborno, robo de datos, acoso sexual, discriminación o violaciones regulatorias deliberadas. Estos casos darán lugar a la terminación inmediata del contrato y a la remisión ante las autoridades competentes, independientemente del cargo o antigüedad de la persona involucrada.',
+    footer:'&copy; 2026 Alliance Contact Solutions. Todos los derechos reservados.'
+  }
+};
+
+function ceSetLang(lang){
+  const c = ceContent[lang];
+  document.documentElement.lang = lang;
+  document.getElementById('ce-badge').innerHTML = c.badge;
+  document.getElementById('ce-title').innerHTML = c.title;
+  document.getElementById('ce-date').innerHTML = c.date;
+  document.getElementById('toc-title').textContent = c.toc;
+  for(let i=1;i<=10;i++) document.getElementById('toc-'+i).textContent = c['toc'+i];
+  document.getElementById('ce-intro-body').textContent = c.intro;
+  // S1
+  document.getElementById('h-s1-text').textContent = c.s1h;
+  document.getElementById('s1-p1').textContent = c.s1p1;
+  document.getElementById('s1-p2').textContent = c.s1p2;
+  document.getElementById('s1-list').innerHTML = renderList(c.s1li);
+  document.getElementById('s1-p3').textContent = c.s1p3;
+  // S2
+  document.getElementById('h-s2-text').textContent = c.s2h;
+  document.getElementById('s2-p1').textContent = c.s2p1;
+  document.getElementById('v1-title').textContent = c.v1t; document.getElementById('v1-desc').textContent = c.v1d;
+  document.getElementById('v2-title').textContent = c.v2t; document.getElementById('v2-desc').textContent = c.v2d;
+  document.getElementById('v3-title').textContent = c.v3t; document.getElementById('v3-desc').textContent = c.v3d;
+  document.getElementById('v4-title').textContent = c.v4t; document.getElementById('v4-desc').textContent = c.v4d;
+  document.getElementById('v5-title').textContent = c.v5t; document.getElementById('v5-desc').textContent = c.v5d;
+  document.getElementById('v6-title').textContent = c.v6t; document.getElementById('v6-desc').textContent = c.v6d;
+  // S3
+  document.getElementById('h-s3-text').textContent = c.s3h;
+  document.getElementById('s3-p1').textContent = c.s3p1;
+  document.getElementById('s3-p2co').innerHTML = c.s3p2co;
+  document.getElementById('s3-list-co').innerHTML = renderList(c.s3lico);
+  document.getElementById('s3-p2us').innerHTML = c.s3p2us;
+  document.getElementById('s3-list-us').innerHTML = renderList(c.s3lius);
+  // S4
+  document.getElementById('h-s4-text').textContent = c.s4h;
+  document.getElementById('s4-p1').textContent = c.s4p1;
+  document.getElementById('s4-list').innerHTML = renderList(c.s4li);
+  document.getElementById('s4-hl').innerHTML = c.s4hl;
+  // S5
+  document.getElementById('h-s5-text').textContent = c.s5h;
+  document.getElementById('s5-p1').textContent = c.s5p1;
+  document.getElementById('s5-list').innerHTML = renderList(c.s5li);
+  document.getElementById('s5-p2').textContent = c.s5p2;
+  // S6
+  document.getElementById('h-s6-text').textContent = c.s6h;
+  document.getElementById('s6-p1').textContent = c.s6p1;
+  document.getElementById('s6-list').innerHTML = renderList(c.s6li);
+  document.getElementById('s6-p2').textContent = c.s6p2;
+  // S7
+  document.getElementById('h-s7-text').textContent = c.s7h;
+  document.getElementById('s7-p1').textContent = c.s7p1;
+  document.getElementById('s7-list').innerHTML = renderList(c.s7li);
+  document.getElementById('s7-p2').textContent = c.s7p2;
+  document.getElementById('s7-p3').textContent = c.s7p3;
+  // S8
+  document.getElementById('h-s8-text').textContent = c.s8h;
+  document.getElementById('s8-p1').textContent = c.s8p1;
+  document.getElementById('s8-p2').textContent = c.s8p2;
+  document.getElementById('s8-list').innerHTML = renderList(c.s8li);
+  document.getElementById('s8-hl').innerHTML = c.s8hl;
+  // S9
+  document.getElementById('h-s9-text').textContent = c.s9h;
+  document.getElementById('s9-p1').textContent = c.s9p1;
+  document.getElementById('s9-p2').textContent = c.s9p2;
+  document.getElementById('s9-card').innerHTML = c.s9card;
+  document.getElementById('s9-p3').textContent = c.s9p3;
+  // S10
+  document.getElementById('h-s10-text').textContent = c.s10h;
+  document.getElementById('s10-p1').textContent = c.s10p1;
+  document.getElementById('s10-list').innerHTML = renderList(c.s10li);
+  document.getElementById('s10-alert').innerHTML = c.s10alert;
+  document.getElementById('footer-copy').innerHTML = c.footer;
+  document.getElementById('ce-btn-en').classList.toggle('active', lang==='en');
+  document.getElementById('ce-btn-es').classList.toggle('active', lang==='es');
+  try{ localStorage.setItem('acs_lang', lang); }catch(e){}
+}
+
+function toggleToc(){
+  const body = document.getElementById('toc-body');
+  const btn = document.getElementById('toc-btn');
+  body.classList.toggle('open');
+  btn.style.transform = body.classList.contains('open') ? 'rotate(180deg)' : '';
+}
+
+const btt = document.getElementById('btt');
+window.addEventListener('scroll', ()=>{ btt.classList.toggle('show', window.scrollY > 300); }, {passive:true});
+btt.addEventListener('click', ()=>{ window.scrollTo({top:0, behavior:'smooth'}); });
+
+(function(){
+  let lang = 'en';
+  const urlLang = new URLSearchParams(window.location.search).get('lang');
+  if(urlLang==='es'||urlLang==='en') lang = urlLang;
+  if(lang==='es') ceSetLang('es');
+})();
+</script>
+</body>
+</html>

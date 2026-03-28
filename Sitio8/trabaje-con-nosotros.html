@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io https://ipapi.co; frame-ancestors 'none'; form-action 'self' https://formspree.io;"/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN"/>
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="Alliance Contact Solutions"/>
+<meta name="theme-color" content="#1a2b6d"/>
+<meta name="description" content="Join Alliance Contact Solutions — Apply to be part of our bilingual BPO team in Colombia."/>
+<title>Work With Us | Alliance Contact Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--blue-dark:#0f2689;--blue-mid:#244bb9;--blue-light:#4a8af4;--red:#d32617;--red-light:#f04030;--gold:#f6b922;--gold-light:#ffd060;--gold-dark:#c47a00;--orange:#db711c;--white:#ffffff;--bg:#f0f4fb;--ink:#0a1640;--muted:#4a5a82;--border:rgba(15,38,137,.1);--ease:cubic-bezier(.16,1,.3,1);--navy:#0f2689;--navy-dark:#070e2e}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-size:16px}
+a{color:var(--blue-mid);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
+a:hover{color:var(--red)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+nav{background:var(--white);padding:.75rem 3rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(26,43,109,.1);box-shadow:0 2px 16px rgba(26,43,109,.08)}
+.nav-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;padding:.15rem 0}
+.nav-logo img{height:46px;width:auto;object-fit:contain;background:var(--white);border-radius:4px;max-width:56px}
+.nav-logo-name{display:flex;flex-direction:column;justify-content:center;gap:.08rem;line-height:1}
+.nav-logo-name strong{font-family:'Montserrat','Arial Black',sans-serif;font-size:1.5rem;font-weight:900;letter-spacing:.02em;color:#1a2a5e;display:block;line-height:1}
+.nav-logo-name span{font-family:'Montserrat','Arial',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#5a6070;display:block;line-height:1}
+.nav-right{display:flex;align-items:center;gap:.8rem}
+.lang-switcher{display:flex;align-items:center;gap:.25rem;background:rgba(26,43,109,.06);border:1px solid rgba(26,43,109,.14);border-radius:6px;padding:.2rem .3rem}
+.lang-btn{font-size:.7rem;font-weight:800;letter-spacing:.06em;padding:.22rem .55rem;border-radius:4px;border:none;cursor:pointer;background:transparent;color:rgba(26,43,109,.4);transition:all .25s;font-family:inherit}
+.lang-btn.active{background:var(--blue-dark);color:var(--white)!important}
+.lang-btn:hover:not(.active){color:var(--blue-dark)!important}
+/* HERO */
+.pp-hero{background:linear-gradient(135deg,#070e2e 0%,#0f2689 55%,#1a3a8f 100%);padding:4rem 3rem;text-align:center;position:relative;overflow:hidden}
+.pp-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.02) 20px,rgba(255,255,255,.02) 40px)}
+.pp-hero h1{font-family:'Montserrat',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:var(--white);margin-bottom:.5rem;position:relative}
+.pp-hero h1 span{color:var(--gold)}
+.pp-hero p{color:rgba(255,255,255,.5);font-size:.9rem;position:relative}
+.pp-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,168,0,.15);border:1px solid rgba(245,168,0,.3);border-radius:100px;padding:.35rem 1rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;position:relative}
+/* WRAP */
+.pp-wrap{max-width:860px;margin:0 auto;padding:4rem 2rem 6rem}
+/* SECTIONS */
+.pp-section{margin-bottom:2.8rem;scroll-margin-top:100px}
+.pp-section h2{font-family:'Montserrat',sans-serif;font-size:1.2rem;font-weight:800;color:var(--blue-dark);margin-bottom:1rem;display:flex;align-items:center;gap:.7rem;padding-bottom:.7rem;border-bottom:2px solid rgba(15,38,137,.12)}
+.pp-section h2 .num{background:linear-gradient(135deg,var(--red),var(--orange));color:var(--white);width:2rem;height:2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;flex-shrink:0}
+.pp-section p{color:var(--muted);margin-bottom:1rem;font-size:.95rem}
+.pp-section ul{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem;padding-left:.5rem}
+.pp-section ul li{font-size:.92rem;color:var(--muted);display:flex;align-items:flex-start;gap:.6rem}
+.pp-section ul li::before{content:'→';color:var(--red);font-weight:700;flex-shrink:0;margin-top:.05rem}
+.pp-card{background:var(--white);border:1px solid var(--border);border-radius:.9rem;padding:1.4rem 1.8rem;margin-top:1rem;box-shadow:0 2px 12px rgba(26,43,109,.06)}
+.pp-card p{margin:0;font-size:.9rem}
+.pp-card strong{color:var(--blue-dark);font-weight:700}
+.pp-highlight{background:rgba(246,185,34,.08);border:1px solid rgba(246,185,34,.28);border-radius:.8rem;padding:1.1rem 1.4rem;margin:1rem 0;font-size:.88rem;color:var(--ink)}
+.pp-highlight strong{color:var(--blue-dark)}
+/* BENEFITS GRID */
+.benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.2rem 0}
+.benefit-card{background:var(--white);border:1px solid var(--border);border-radius:.9rem;padding:1.2rem 1.4rem;box-shadow:0 2px 12px rgba(26,43,109,.06);display:flex;flex-direction:column;gap:.5rem}
+.benefit-icon{font-size:1.6rem;line-height:1}
+.benefit-card h3{font-family:'Montserrat',sans-serif;font-size:.85rem;font-weight:800;color:var(--blue-dark)}
+.benefit-card p{font-size:.8rem;color:var(--muted);margin:0}
+/* FORM */
+.form-card{background:var(--white);border:1px solid var(--border);border-radius:1.2rem;padding:2rem 2.4rem;box-shadow:0 4px 24px rgba(26,43,109,.09)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}
+.form-group label{font-size:.82rem;font-weight:700;color:var(--ink);letter-spacing:.02em}
+.form-group label .req{color:var(--red);margin-left:.2rem}
+.form-input{width:100%;padding:.65rem .9rem;border:1.5px solid rgba(26,43,109,.18);border-radius:.5rem;font-family:inherit;font-size:.93rem;color:var(--ink);background:var(--bg);transition:border-color .2s,box-shadow .2s;appearance:none}
+.form-input:focus{outline:none;border-color:var(--blue-mid);box-shadow:0 0 0 3px rgba(36,75,185,.12)}
+.form-input.error{border-color:var(--red);box-shadow:0 0 0 3px rgba(211,38,23,.1)}
+textarea.form-input{resize:vertical;min-height:120px}
+select.form-input{cursor:pointer}
+.file-upload-area{border:2px dashed rgba(26,43,109,.22);border-radius:.7rem;padding:1.5rem;text-align:center;cursor:pointer;transition:all .25s;background:var(--bg);position:relative}
+.file-upload-area:hover,.file-upload-area.drag-over{border-color:var(--blue-mid);background:rgba(36,75,185,.04)}
+.file-upload-area input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.file-upload-icon{font-size:2rem;margin-bottom:.5rem;display:block}
+.file-upload-text{font-size:.85rem;color:var(--muted)}
+.file-upload-text strong{color:var(--blue-dark)}
+.file-name-display{font-size:.8rem;color:var(--blue-mid);font-weight:600;margin-top:.4rem;display:none}
+.form-err{font-size:.78rem;color:var(--red);margin-top:.25rem;display:none}
+.consent-row{display:flex;align-items:flex-start;gap:.7rem;margin:1rem 0}
+.consent-row input[type=checkbox]{width:1.1rem;height:1.1rem;flex-shrink:0;margin-top:.2rem;accent-color:var(--blue-dark);cursor:pointer}
+.consent-row label{font-size:.82rem;color:var(--muted);cursor:pointer}
+.consent-row label a{color:var(--blue-mid)}
+#emp-consent-err{display:none}
+.btn-submit{width:100%;padding:1rem;background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));color:var(--white);border:none;border-radius:.6rem;font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;letter-spacing:.04em;cursor:pointer;transition:all .3s;margin-top:.5rem}
+.btn-submit:hover:not(:disabled){background:linear-gradient(135deg,var(--red),var(--orange));transform:translateY(-2px);box-shadow:0 8px 24px rgba(211,38,23,.3)}
+.btn-submit:disabled{opacity:.55;cursor:not-allowed;transform:none}
+.form-general-err{background:rgba(211,38,23,.08);border:1px solid rgba(211,38,23,.25);border-radius:.6rem;padding:.8rem 1rem;font-size:.84rem;color:var(--red);margin-bottom:1rem;display:none}
+.success-msg{text-align:center;padding:2rem;display:none}
+.success-msg .check{font-size:3rem;margin-bottom:1rem}
+.success-msg h3{font-family:'Montserrat',sans-serif;font-size:1.3rem;font-weight:800;color:var(--blue-dark);margin-bottom:.5rem}
+.success-msg p{color:var(--muted);font-size:.92rem}
+/* FOOTER */
+.pp-footer{background:#070e2e;padding:2.5rem 3rem;text-align:center}
+.pp-footer-logo{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;margin-bottom:1.2rem;justify-content:center}
+.pp-footer-logo img{height:40px;width:auto;max-width:48px;object-fit:contain;opacity:.9}
+.pp-footer-logo-name{display:flex;flex-direction:column;gap:.06rem;line-height:1;text-align:left}
+.pp-footer-logo-name strong{font-family:'Montserrat','Arial Black',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:.02em;color:var(--white);line-height:1}
+.pp-footer-logo-name span{font-family:'Montserrat','Arial',sans-serif;font-size:.52rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);line-height:1}
+.pp-footer p{color:rgba(255,255,255,.35);font-size:.8rem;margin-bottom:.4rem}
+.pp-footer a{color:var(--gold);text-decoration:none;transition:color .2s}
+.pp-footer a:hover{color:var(--gold-light)}
+.pp-footer-divider{width:40px;height:1px;background:linear-gradient(90deg,var(--red),var(--gold));margin:.9rem auto}
+#btt{position:fixed;bottom:2rem;right:2rem;width:2.8rem;height:2.8rem;background:linear-gradient(135deg,var(--blue-mid),var(--blue-dark));border:none;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(245,168,0,.4);transition:all .3s;opacity:0;transform:translateY(20px);color:var(--white);font-weight:800;z-index:400}
+#btt.show{opacity:1;transform:translateY(0)}
+#btt:hover{transform:translateY(-4px)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
+@media(max-width:700px){nav{padding:.9rem 1.2rem}.pp-hero{padding:3rem 1.5rem}.pp-wrap{padding:2.5rem 1.2rem 4rem}.form-row{grid-template-columns:1fr}.form-card{padding:1.4rem 1.2rem}}
+</style>
+</head>
+<body>
+
+<button id="btt" aria-label="Back to top of page">&#8593;</button>
+
+<nav role="navigation" aria-label="Work With Us navigation">
+  <a href="index.html" class="nav-logo" aria-label="Return to Alliance Contact Solutions main site">
+    <img src="img/logo-icon.png?v=3" alt="Alliance Contact Solutions logo" height="46" loading="eager" decoding="async" onerror="this.style.display='none'"/>
+    <div class="nav-logo-name">
+      <strong>ALLIANCE</strong>
+      <span>Contact Solutions</span>
+    </div>
+  </a>
+  <div class="nav-right">
+    <div class="lang-switcher" role="group" aria-label="Language selector">
+      <button class="lang-btn active" id="ww-btn-en" onclick="wwSetLang('en')" aria-label="English">EN</button>
+      <button class="lang-btn" id="ww-btn-es" onclick="wwSetLang('es')" aria-label="Español">ES</button>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="pp-hero">
+    <div class="pp-badge" aria-hidden="true">&#128188; Careers</div>
+    <h1 id="ww-title">Work <span id="ww-title-span">With Us</span></h1>
+    <p id="ww-subtitle">Join our bilingual BPO team &middot; Alliance Contact Solutions</p>
+  </div>
+</header>
+
+<main class="pp-wrap" id="main-content" role="main">
+
+  <!-- WHY JOIN US -->
+  <section class="pp-section" id="s-why" aria-labelledby="s-why-h">
+    <h2 id="s-why-h"><span class="num" aria-hidden="true">01</span><span id="ww-s1-title">Why Join Alliance?</span></h2>
+    <p id="ww-s1-intro">At Alliance Contact Solutions we build bilingual, high-performance teams that deliver exceptional customer experiences for clients in Colombia and the United States. We are looking for passionate professionals ready to grow in a dynamic BPO environment.</p>
+    <div class="benefits-grid" id="ww-benefits-grid">
+      <div class="benefit-card">
+        <span class="benefit-icon">&#127758;</span>
+        <h3 id="ww-b1-title">Bilingual Environment</h3>
+        <p id="ww-b1-desc">Work daily in English and Spanish serving international clients across the US and Latin America.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">&#128200;</span>
+        <h3 id="ww-b2-title">Career Growth</h3>
+        <p id="ww-b2-desc">Clear paths for promotion, continuous training, and skill development in BPO operations.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">&#9203;</span>
+        <h3 id="ww-b3-title">24/7 Operations</h3>
+        <p id="ww-b3-desc">Flexible schedules with morning, afternoon, and night shifts to match your lifestyle.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">&#127941;</span>
+        <h3 id="ww-b4-title">Certified Quality</h3>
+        <p id="ww-b4-desc">Work under international quality standards with best-in-class technology and processes.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">&#129309;</span>
+        <h3 id="ww-b5-title">Inclusive Culture</h3>
+        <p id="ww-b5-desc">A diverse, respectful, and collaborative work environment where every voice matters.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">&#128176;</span>
+        <h3 id="ww-b6-title">Competitive Benefits</h3>
+        <p id="ww-b6-desc">Competitive salary, legal benefits, performance bonuses, and growth incentives.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFILES WE SEEK -->
+  <section class="pp-section" id="s-profiles" aria-labelledby="s-profiles-h">
+    <h2 id="s-profiles-h"><span class="num" aria-hidden="true">02</span><span id="ww-s2-title">Profiles We Seek</span></h2>
+    <p id="ww-s2-intro">We are constantly looking for talented individuals for the following roles and areas:</p>
+    <ul>
+      <li><span id="ww-p1">Bilingual Customer Service Agents (English/Spanish)</span></li>
+      <li><span id="ww-p2">Inbound and Outbound Sales Representatives</span></li>
+      <li><span id="ww-p3">Collections and Back-Office Specialists</span></li>
+      <li><span id="ww-p4">Technical Support Agents (Tier 1 &amp; Tier 2)</span></li>
+      <li><span id="ww-p5">Quality Assurance Analysts</span></li>
+      <li><span id="ww-p6">Team Leaders and Supervisors</span></li>
+      <li><span id="ww-p7">Training and Development Coordinators</span></li>
+      <li><span id="ww-p8">Operations and Project Managers</span></li>
+    </ul>
+  </section>
+
+  <!-- APPLICATION FORM -->
+  <section class="pp-section" id="s-form" aria-labelledby="s-form-h">
+    <h2 id="s-form-h"><span class="num" aria-hidden="true">03</span><span id="ww-s3-title">Apply Now</span></h2>
+    <p id="ww-s3-intro">Fill out the form below and attach your resume. Our HR team will review your application and contact you within <strong>5 business days</strong>.</p>
+
+    <div class="form-card">
+      <div id="emp-general-err" class="form-general-err" role="alert">
+        <span id="emp-err-msg">Please complete all required fields before submitting.</span>
+      </div>
+
+      <form id="emp-form" action="https://formspree.io/f/xwvrzdov" method="POST" enctype="multipart/form-data" novalidate>
+        <!-- Hidden fields -->
+        <input type="hidden" name="Application Number" id="emp-consec"/>
+        <input type="hidden" name="Date and Time (Colombia)" id="emp-timestamp"/>
+        <input type="hidden" name="Applicant Location" id="emp-location"/>
+        <input type="hidden" name="Form Language" id="emp-lang" value="EN"/>
+        <input type="hidden" name="_subject" id="emp-subject" value="[EMP-0001] Job Application | Alliance Contact Solutions"/>
+        <input type="hidden" name="email" id="emp-replyto" value=""/>
+        <!-- Honeypot anti-spam -->
+        <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+
+        <!-- Row 1: Name + Position -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="emp-nombre"><span id="lbl-nombre">Full Name</span><span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="emp-nombre" name="Full Name" class="form-input" placeholder="John Smith" maxlength="120" autocomplete="name" required/>
+            <span class="form-err" id="err-nombre" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="emp-cargo"><span id="lbl-cargo">Position Applied For</span><span class="req" aria-hidden="true">*</span></label>
+            <select id="emp-cargo" name="Position Applied For" class="form-input" required>
+              <option value="" id="opt-cargo-select">— Select a position —</option>
+              <option id="opt-cargo-1">Bilingual Customer Service Agents (English/Spanish)</option>
+              <option id="opt-cargo-2">Inbound and Outbound Sales Representatives</option>
+              <option id="opt-cargo-3">Collections and Back-Office Specialists</option>
+              <option id="opt-cargo-4">Technical Support Agents (Tier 1 &amp; Tier 2)</option>
+              <option id="opt-cargo-5">Quality Assurance Analysts</option>
+              <option id="opt-cargo-6">Team Leaders and Supervisors</option>
+              <option id="opt-cargo-7">Training and Development Coordinators</option>
+              <option id="opt-cargo-8">Operations and Project Managers</option>
+            </select>
+            <span class="form-err" id="err-cargo" role="alert"></span>
+          </div>
+        </div>
+
+        <!-- Row 2: Email + Phone -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="emp-email"><span id="lbl-email">Email Address</span><span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="emp-email" name="Email Address" class="form-input" placeholder="you@example.com" maxlength="200" autocomplete="email" required/>
+            <span class="form-err" id="err-email" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="emp-tel"><span id="lbl-tel">Phone Number</span><span class="req" aria-hidden="true">*</span></label>
+            <input type="tel" id="emp-tel" name="Phone Number" class="form-input" placeholder="+57 300 000 0000" maxlength="30" autocomplete="tel" required/>
+            <span class="form-err" id="err-tel" role="alert"></span>
+          </div>
+        </div>
+
+        <!-- Row 3: City + English Level -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="emp-ciudad"><span id="lbl-ciudad">City / Country</span><span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="emp-ciudad" name="City / Country" class="form-input" placeholder="Bogota, Colombia" maxlength="100" required/>
+            <span class="form-err" id="err-ciudad" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="emp-english"><span id="lbl-english">English Level</span><span class="req" aria-hidden="true">*</span></label>
+            <select id="emp-english" name="English Level" class="form-input" required>
+              <option value="" id="opt-select">-- Select --</option>
+              <option value="Basic (A1-A2)" id="opt-basic">Basic (A1-A2)</option>
+              <option value="Intermediate (B1-B2)" id="opt-inter">Intermediate (B1-B2)</option>
+              <option value="Advanced (C1-C2)" id="opt-adv">Advanced (C1-C2)</option>
+              <option value="Native" id="opt-native">Native</option>
+            </select>
+            <span class="form-err" id="err-english" role="alert"></span>
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div class="form-group">
+          <label for="emp-msg"><span id="lbl-msg">Tell Us About Yourself</span><span class="req" aria-hidden="true">*</span></label>
+          <textarea id="emp-msg" name="About the Applicant" class="form-input" placeholder="Briefly describe your experience, skills, and why you want to join Alliance Contact Solutions..." maxlength="1000" required></textarea>
+          <span class="form-err" id="err-msg" role="alert"></span>
+        </div>
+
+        <!-- File Upload -->
+        <div class="form-group">
+          <label for="emp-cv"><span id="lbl-cv">Attach Resume / CV</span><span class="req" aria-hidden="true">*</span></label>
+          <div class="file-upload-area" id="file-upload-area">
+            <input type="file" id="emp-cv" name="Resume / CV" accept=".pdf,.doc,.docx" required/>
+            <span class="file-upload-icon">&#128196;</span>
+            <div class="file-upload-text">
+              <strong id="file-upload-cta">Click to upload or drag and drop</strong><br/>
+              <span id="file-upload-hint">PDF, DOC or DOCX &mdash; max 5 MB</span>
+            </div>
+            <div class="file-name-display" id="file-name-display"></div>
+          </div>
+          <span class="form-err" id="err-cv" role="alert"></span>
+        </div>
+
+        <!-- Consent -->
+        <div class="consent-row">
+          <input type="checkbox" id="emp-consent" name="Data Authorization" value="Yes - I authorize the processing of my personal data"/>
+          <label for="emp-consent">
+            <span id="lbl-consent">I authorize Alliance Contact Solutions to process my personal data (including IP address) for recruitment purposes, transmitted via Formspree, in accordance with our </span><a href="habeas-data.html" target="_blank" rel="noopener" id="emp-habeas-link">Habeas Data Policy</a><span id="lbl-consent2"> and </span><a href="privacy-policy.html" target="_blank" rel="noopener" id="emp-privacy-link">Privacy Policy</a>.
+          </label>
+        </div>
+        <span class="form-err" id="emp-consent-err" role="alert"></span>
+
+        <button type="submit" class="btn-submit" id="emp-btn-send" disabled title="Please authorize the processing of your personal data first">
+          <span id="lbl-submit">Send Application</span>
+        </button>
+      </form>
+
+      <div class="success-msg" id="emp-success" role="status" aria-live="polite">
+        <div class="check">&#9989;</div>
+        <h3 id="success-title">Application Received!</h3>
+        <p id="success-msg">Thank you for your interest in joining Alliance Contact Solutions. Our HR team will review your application and contact you within 5 business days.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="pp-section" id="s-process" aria-labelledby="s-process-h">
+    <h2 id="s-process-h"><span class="num" aria-hidden="true">04</span><span id="ww-s4-title">Selection Process</span></h2>
+    <p id="ww-s4-intro">Our recruitment process is transparent and designed to find the best mutual fit:</p>
+    <ul>
+      <li><span id="ww-proc1"><strong>Application Review:</strong> Our HR team evaluates your resume and cover letter (up to 5 business days).</span></li>
+      <li><span id="ww-proc2"><strong>Initial Interview:</strong> A phone or video call to discuss your experience and expectations.</span></li>
+      <li><span id="ww-proc3"><strong>Skills Assessment:</strong> Language proficiency and role-specific skills evaluation.</span></li>
+      <li><span id="ww-proc4"><strong>Final Interview:</strong> Meeting with the operations or management team.</span></li>
+      <li><span id="ww-proc5"><strong>Offer &amp; Onboarding:</strong> Job offer, contract signing, and induction program.</span></li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="pp-section" id="s-contact" aria-labelledby="s-contact-h">
+    <h2 id="s-contact-h"><span class="num" aria-hidden="true">05</span><span id="ww-s5-title">Contact HR</span></h2>
+    <p id="ww-s5-intro">Have questions about open positions or the application process? Reach out to our Human Resources team directly:</p>
+    <div class="pp-card">
+      <p><strong>Alliance Contact Solutions &mdash; Human Resources</strong></p>
+      <p id="ww-contact-email">&#128231; <a href="mailto:info@alliancebpo.com">info@alliancebpo.com</a></p>
+      <p id="ww-contact-hours">&#128336; <span>Monday – Friday, 8:00 AM – 6:00 PM (Colombia time)</span></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pp-footer" role="contentinfo">
+  <a href="index.html" class="pp-footer-logo" aria-label="Alliance Contact Solutions homepage">
+    <div class="pp-footer-logo-name">
+      <strong>ALLIANCE</strong>
+      <span>Contact Solutions</span>
+    </div>
+  </a>
+  <div class="pp-footer-divider" aria-hidden="true"></div>
+  <p id="ww-footer-copy">&copy; 2026 Alliance Contact Solutions. All rights reserved.</p>
+  <p><a href="privacy-policy.html" id="ww-pp-link" target="_blank" rel="noopener">Privacy Policy</a> &nbsp;|&nbsp; <a href="habeas-data.html" id="ww-hd-link" target="_blank" rel="noopener">Habeas Data</a> &nbsp;|&nbsp; <a href="terms-conditions.html" id="ww-tc-link" target="_blank" rel="noopener">Terms &amp; Conditions</a></p>
+</footer>
+
+<script>
+'use strict';
+
+/* ── TRANSLATIONS ── */
+const wwI18n = {
+  en: {
+    title: 'Work',
+    titleSpan: 'With Us',
+    subtitle: 'Join our bilingual BPO team · Alliance Contact Solutions',
+    s1Title: 'Why Join Alliance?',
+    s1Intro: 'At Alliance Contact Solutions we build bilingual, high-performance teams that deliver exceptional customer experiences for clients in Colombia and the United States. We are looking for passionate professionals ready to grow in a dynamic BPO environment.',
+    b1Title: 'Bilingual Environment', b1Desc: 'Work daily in English and Spanish serving international clients across the US and Latin America.',
+    b2Title: 'Career Growth', b2Desc: 'Clear paths for promotion, continuous training, and skill development in BPO operations.',
+    b3Title: '24/7 Operations', b3Desc: 'Flexible schedules with morning, afternoon, and night shifts to match your lifestyle.',
+    b4Title: 'Certified Quality', b4Desc: 'Work under international quality standards with best-in-class technology and processes.',
+    b5Title: 'Inclusive Culture', b5Desc: 'A diverse, respectful, and collaborative work environment where every voice matters.',
+    b6Title: 'Competitive Benefits', b6Desc: 'Competitive salary, legal benefits, performance bonuses, and growth incentives.',
+    s2Title: 'Profiles We Seek',
+    s2Intro: 'We are constantly looking for talented individuals for the following roles and areas:',
+    p1: 'Bilingual Customer Service Agents (English/Spanish)',
+    p2: 'Inbound and Outbound Sales Representatives',
+    p3: 'Collections and Back-Office Specialists',
+    p4: 'Technical Support Agents (Tier 1 & Tier 2)',
+    p5: 'Quality Assurance Analysts',
+    p6: 'Team Leaders and Supervisors',
+    p7: 'Training and Development Coordinators',
+    p8: 'Operations and Project Managers',
+    s3Title: 'Apply Now',
+    s3Intro: 'Fill out the form below and attach your resume. Our HR team will review your application and contact you within <strong>5 business days</strong>.',
+    lblNombre: 'Full Name', lblCargo: 'Position Applied For', lblEmail: 'Email Address', lblTel: 'Phone Number',
+    lblCiudad: 'City / Country', lblEnglish: 'English Level', lblMsg: 'Tell Us About Yourself',
+    lblCv: 'Attach Resume / CV', fileUploadCta: 'Click to upload or drag and drop', fileUploadHint: 'PDF, DOC or DOCX — max 5 MB',
+    optSelect: '— Select —', optBasic: 'Basic (A1-A2)', optInter: 'Intermediate (B1-B2)', optAdv: 'Advanced (C1-C2)', optNative: 'Native',
+    optCargoSelect: '— Select a position —',
+    optCargo1: 'Bilingual Customer Service Agents (English/Spanish)',
+    optCargo2: 'Inbound and Outbound Sales Representatives',
+    optCargo3: 'Collections and Back-Office Specialists',
+    optCargo4: 'Technical Support Agents (Tier 1 & Tier 2)',
+    optCargo5: 'Quality Assurance Analysts',
+    optCargo6: 'Team Leaders and Supervisors',
+    optCargo7: 'Training and Development Coordinators',
+    optCargo8: 'Operations and Project Managers',
+    placeholderNombre: 'John Smith', placeholderCargo: 'e.g. Bilingual Customer Service Agent',
+    placeholderEmail: 'you@example.com', placeholderTel: '+57 300 000 0000',
+    placeholderCiudad: 'Bogotá, Colombia', placeholderMsg: 'Briefly describe your experience, skills, and why you want to join Alliance Contact Solutions...',
+    lblConsent: 'I authorize Alliance Contact Solutions to process my personal data (including IP address) for recruitment purposes, transmitted via Formspree, in accordance with our ',
+    lblConsent2: ' and ',
+    lblSubmit: 'Send Application', sending: 'Sending...',
+    generalErr: 'Please complete all required fields before submitting.',
+    errRequired: 'This field is required.',
+    errEmail: 'Please enter a valid email address.',
+    errConsent: 'You must authorize the processing of your personal data to submit the application.',
+    errCv: 'Please attach your resume (PDF, DOC or DOCX, max 5 MB).',
+    errCvType: 'Only PDF, DOC or DOCX files are accepted.',
+    errCvSize: 'The file must not exceed 5 MB.',
+    successTitle: 'Application Received!',
+    successMsg: 'Thank you for your interest in joining Alliance Contact Solutions. Our HR team will review your application and contact you within 5 business days.',
+    s4Title: 'Selection Process',
+    s4Intro: 'Our recruitment process is transparent and designed to find the best mutual fit:',
+    proc1: '<strong>Application Review:</strong> Our HR team evaluates your resume and cover letter (up to 5 business days).',
+    proc2: '<strong>Initial Interview:</strong> A phone or video call to discuss your experience and expectations.',
+    proc3: '<strong>Skills Assessment:</strong> Language proficiency and role-specific skills evaluation.',
+    proc4: '<strong>Final Interview:</strong> Meeting with the operations or management team.',
+    proc5: '<strong>Offer & Onboarding:</strong> Job offer, contract signing, and induction program.',
+    s5Title: 'Contact HR',
+    s5Intro: 'Have questions about open positions or the application process? Reach out to our Human Resources team directly:',
+    contactHours: 'Monday – Friday, 8:00 AM – 6:00 PM (Colombia time)',
+    footerCopy: '© 2026 Alliance Contact Solutions. All rights reserved.',
+    btnTitle: 'Please authorize the processing of your personal data first'
+  },
+  es: {
+    title: 'Trabaje',
+    titleSpan: 'con Nosotros',
+    subtitle: 'Únase a nuestro equipo bilingüe de BPO · Alliance Contact Solutions',
+    s1Title: '¿Por qué unirse a Alliance?',
+    s1Intro: 'En Alliance Contact Solutions construimos equipos bilingües de alto rendimiento que brindan experiencias excepcionales a los clientes de Colombia y Estados Unidos. Buscamos profesionales apasionados listos para crecer en un entorno BPO dinámico.',
+    b1Title: 'Entorno Bilingüe', b1Desc: 'Trabaje diariamente en inglés y español atendiendo clientes internacionales de EE.UU. y América Latina.',
+    b2Title: 'Crecimiento Profesional', b2Desc: 'Rutas claras de ascenso, capacitación continua y desarrollo de habilidades en operaciones BPO.',
+    b3Title: 'Operación 24/7', b3Desc: 'Horarios flexibles con turnos mañana, tarde y noche que se adaptan a su estilo de vida.',
+    b4Title: 'Calidad Certificada', b4Desc: 'Trabaje bajo estándares internacionales de calidad con tecnología y procesos de primera clase.',
+    b5Title: 'Cultura Inclusiva', b5Desc: 'Un entorno laboral diverso, respetuoso y colaborativo donde cada voz importa.',
+    b6Title: 'Beneficios Competitivos', b6Desc: 'Salario competitivo, prestaciones de ley, bonificaciones por desempeño e incentivos de crecimiento.',
+    s2Title: 'Perfiles que Buscamos',
+    s2Intro: 'Buscamos constantemente personas talentosas para los siguientes roles y áreas:',
+    p1: 'Agentes de Servicio al Cliente Bilingüe (inglés/español)',
+    p2: 'Representantes de Ventas Inbound y Outbound',
+    p3: 'Especialistas en Cobranza y Back Office',
+    p4: 'Agentes de Soporte Técnico (Nivel 1 y Nivel 2)',
+    p5: 'Analistas de Aseguramiento de Calidad',
+    p6: 'Líderes de Equipo y Supervisores',
+    p7: 'Coordinadores de Capacitación y Desarrollo',
+    p8: 'Gerentes de Operaciones y Proyectos',
+    s3Title: 'Aplique Ahora',
+    s3Intro: 'Diligencia el formulario y adjunte su hoja de vida. Nuestro equipo de Recursos Humanos revisará su solicitud y se comunicará con usted en un máximo de <strong>5 días hábiles</strong>.',
+    lblNombre: 'Nombre Completo', lblCargo: 'Cargo al que Aspira', lblEmail: 'Correo Electrónico', lblTel: 'Teléfono',
+    lblCiudad: 'Ciudad / País', lblEnglish: 'Nivel de Inglés', lblMsg: 'Cuéntenos Sobre Usted',
+    lblCv: 'Adjuntar Hoja de Vida', fileUploadCta: 'Haga clic para cargar o arrastre el archivo', fileUploadHint: 'PDF, DOC o DOCX — máx. 5 MB',
+    optSelect: '— Seleccione —', optBasic: 'Básico (A1-A2)', optInter: 'Intermedio (B1-B2)', optAdv: 'Avanzado (C1-C2)', optNative: 'Nativo',
+    optCargoSelect: '— Seleccione un cargo —',
+    optCargo1: 'Agentes de Servicio al Cliente Bilingüe (inglés/español)',
+    optCargo2: 'Representantes de Ventas Inbound y Outbound',
+    optCargo3: 'Especialistas en Cobranza y Back Office',
+    optCargo4: 'Agentes de Soporte Técnico (Nivel 1 y Nivel 2)',
+    optCargo5: 'Analistas de Aseguramiento de Calidad',
+    optCargo6: 'Líderes de Equipo y Supervisores',
+    optCargo7: 'Coordinadores de Capacitación y Desarrollo',
+    optCargo8: 'Gerentes de Operaciones y Proyectos',
+    placeholderNombre: 'Juan Pérez', placeholderCargo: 'Ej. Agente de Servicio al Cliente Bilingüe',
+    placeholderEmail: 'usted@ejemplo.com', placeholderTel: '+57 300 000 0000',
+    placeholderCiudad: 'Bogotá, Colombia', placeholderMsg: 'Describa brevemente su experiencia, habilidades y por qué desea unirse a Alliance Contact Solutions...',
+    lblConsent: 'Autorizo a Alliance Contact Solutions para tratar mis datos personales (incluida la dirección IP), transmitidos a través de Formspree, con fines de reclutamiento, de conformidad con nuestra ',
+    lblConsent2: ' y ',
+    lblSubmit: 'Enviar Solicitud', sending: 'Enviando...',
+    generalErr: 'Por favor complete todos los campos requeridos antes de enviar.',
+    errRequired: 'Este campo es obligatorio.',
+    errEmail: 'Por favor ingrese un correo electrónico válido.',
+    errConsent: 'Debe autorizar el tratamiento de sus datos personales para enviar la solicitud.',
+    errCv: 'Por favor adjunte su hoja de vida (PDF, DOC o DOCX, máx. 5 MB).',
+    errCvType: 'Solo se aceptan archivos PDF, DOC o DOCX.',
+    errCvSize: 'El archivo no debe superar los 5 MB.',
+    successTitle: '¡Solicitud Recibida!',
+    successMsg: 'Gracias por su interés en unirse a Alliance Contact Solutions. Nuestro equipo de Recursos Humanos revisará su solicitud y se comunicará con usted en un máximo de 5 días hábiles.',
+    s4Title: 'Proceso de Selección',
+    s4Intro: 'Nuestro proceso de reclutamiento es transparente y está diseñado para encontrar la mejor compatibilidad mutua:',
+    proc1: '<strong>Revisión de Solicitud:</strong> Nuestro equipo de RR.HH. evalúa su hoja de vida y carta de presentación (hasta 5 días hábiles).',
+    proc2: '<strong>Entrevista Inicial:</strong> Llamada o videollamada para hablar sobre su experiencia y expectativas.',
+    proc3: '<strong>Evaluación de Habilidades:</strong> Prueba de dominio del idioma y evaluación específica del rol.',
+    proc4: '<strong>Entrevista Final:</strong> Reunión con el equipo de operaciones o gerencia.',
+    proc5: '<strong>Oferta y Onboarding:</strong> Carta de oferta, firma de contrato y programa de inducción.',
+    s5Title: 'Contacto con Recursos Humanos',
+    s5Intro: '¿Tiene preguntas sobre vacantes o el proceso de aplicación? Comuníquese directamente con nuestro equipo de Recursos Humanos:',
+    contactHours: 'Lunes a viernes, 8:00 AM – 6:00 PM (hora Colombia)',
+    footerCopy: '© 2026 Alliance Contact Solutions. Todos los derechos reservados.',
+    btnTitle: 'Debe autorizar el tratamiento de sus datos personales primero'
+  }
+};
+
+let wwLang = 'en';
+
+function wwSetLang(lang) {
+  wwLang = lang;
+  document.documentElement.lang = lang;
+  const t = wwI18n[lang];
+
+  document.getElementById('ww-title').childNodes[0].textContent = t.title + ' ';
+  document.getElementById('ww-title-span').textContent = t.titleSpan;
+  document.getElementById('ww-subtitle').textContent = t.subtitle;
+
+  document.getElementById('ww-s1-title').textContent = t.s1Title;
+  document.getElementById('ww-s1-intro').textContent = t.s1Intro;
+  document.getElementById('ww-b1-title').textContent = t.b1Title;
+  document.getElementById('ww-b1-desc').textContent = t.b1Desc;
+  document.getElementById('ww-b2-title').textContent = t.b2Title;
+  document.getElementById('ww-b2-desc').textContent = t.b2Desc;
+  document.getElementById('ww-b3-title').textContent = t.b3Title;
+  document.getElementById('ww-b3-desc').textContent = t.b3Desc;
+  document.getElementById('ww-b4-title').textContent = t.b4Title;
+  document.getElementById('ww-b4-desc').textContent = t.b4Desc;
+  document.getElementById('ww-b5-title').textContent = t.b5Title;
+  document.getElementById('ww-b5-desc').textContent = t.b5Desc;
+  document.getElementById('ww-b6-title').textContent = t.b6Title;
+  document.getElementById('ww-b6-desc').textContent = t.b6Desc;
+
+  document.getElementById('ww-s2-title').textContent = t.s2Title;
+  document.getElementById('ww-s2-intro').textContent = t.s2Intro;
+  document.getElementById('ww-p1').textContent = t.p1;
+  document.getElementById('ww-p2').textContent = t.p2;
+  document.getElementById('ww-p3').textContent = t.p3;
+  document.getElementById('ww-p4').textContent = t.p4;
+  document.getElementById('ww-p5').textContent = t.p5;
+  document.getElementById('ww-p6').textContent = t.p6;
+  document.getElementById('ww-p7').textContent = t.p7;
+  document.getElementById('ww-p8').textContent = t.p8;
+
+  document.getElementById('ww-s3-title').textContent = t.s3Title;
+  document.getElementById('ww-s3-intro').innerHTML = t.s3Intro;
+
+  document.getElementById('lbl-nombre').textContent = t.lblNombre;
+  document.getElementById('lbl-cargo').textContent = t.lblCargo;
+  document.getElementById('lbl-email').textContent = t.lblEmail;
+  document.getElementById('lbl-tel').textContent = t.lblTel;
+  document.getElementById('lbl-ciudad').textContent = t.lblCiudad;
+  document.getElementById('lbl-english').textContent = t.lblEnglish;
+  document.getElementById('lbl-msg').textContent = t.lblMsg;
+  document.getElementById('lbl-cv').textContent = t.lblCv;
+  document.getElementById('file-upload-cta').textContent = t.fileUploadCta;
+  document.getElementById('file-upload-hint').textContent = t.fileUploadHint;
+
+  document.getElementById('opt-select').textContent = t.optSelect;
+  document.getElementById('opt-basic').textContent = t.optBasic;
+  document.getElementById('opt-inter').textContent = t.optInter;
+  document.getElementById('opt-adv').textContent = t.optAdv;
+  document.getElementById('opt-native').textContent = t.optNative;
+
+  document.getElementById('opt-cargo-select').textContent = t.optCargoSelect;
+  document.getElementById('opt-cargo-1').textContent = t.optCargo1;
+  document.getElementById('opt-cargo-2').textContent = t.optCargo2;
+  document.getElementById('opt-cargo-3').textContent = t.optCargo3;
+  document.getElementById('opt-cargo-4').textContent = t.optCargo4;
+  document.getElementById('opt-cargo-5').textContent = t.optCargo5;
+  document.getElementById('opt-cargo-6').textContent = t.optCargo6;
+  document.getElementById('opt-cargo-7').textContent = t.optCargo7;
+  document.getElementById('opt-cargo-8').textContent = t.optCargo8;
+
+  document.getElementById('emp-nombre').placeholder = t.placeholderNombre;
+  document.getElementById('emp-email').placeholder = t.placeholderEmail;
+  document.getElementById('emp-tel').placeholder = t.placeholderTel;
+  document.getElementById('emp-ciudad').placeholder = t.placeholderCiudad;
+  document.getElementById('emp-msg').placeholder = t.placeholderMsg;
+
+  document.getElementById('lbl-consent').textContent = t.lblConsent;
+  document.getElementById('lbl-consent2').textContent = t.lblConsent2;
+  document.getElementById('lbl-submit').textContent = t.lblSubmit;
+
+  document.getElementById('emp-lang').value = lang.toUpperCase();
+
+  // Update footer links with lang param
+  document.getElementById('emp-habeas-link').href = 'habeas-data.html?lang=' + lang;
+  document.getElementById('emp-privacy-link').href = 'privacy-policy.html?lang=' + lang;
+  document.getElementById('ww-pp-link').href = 'privacy-policy.html?lang=' + lang;
+  document.getElementById('ww-hd-link').href = 'habeas-data.html?lang=' + lang;
+  document.getElementById('ww-tc-link').href = 'terms-conditions.html?lang=' + lang;
+
+  document.getElementById('ww-s4-title').textContent = t.s4Title;
+  document.getElementById('ww-s4-intro').textContent = t.s4Intro;
+  document.getElementById('ww-proc1').innerHTML = t.proc1;
+  document.getElementById('ww-proc2').innerHTML = t.proc2;
+  document.getElementById('ww-proc3').innerHTML = t.proc3;
+  document.getElementById('ww-proc4').innerHTML = t.proc4;
+  document.getElementById('ww-proc5').innerHTML = t.proc5;
+
+  document.getElementById('ww-s5-title').textContent = t.s5Title;
+  document.getElementById('ww-s5-intro').textContent = t.s5Intro;
+  document.getElementById('ww-contact-hours').innerHTML = '&#128336; <span>' + t.contactHours + '</span>';
+  document.getElementById('ww-footer-copy').textContent = t.footerCopy;
+
+  const btn = document.getElementById('emp-btn-send');
+  const cb = document.getElementById('emp-consent');
+  if (btn && cb && !cb.checked) btn.title = t.btnTitle;
+  else if (btn) btn.title = '';
+
+  // Update lang buttons
+  document.getElementById('ww-btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('ww-btn-es').classList.toggle('active', lang === 'es');
+
+  // Save to localStorage
+  try { localStorage.setItem('acs_lang', lang); } catch(e) {}
+}
+
+/* ── INIT ── */
+(function(){
+  let lang = 'en';
+  try { const s = localStorage.getItem('acs_lang'); if(s==='es'||s==='en') lang=s; } catch(e){}
+  const urlLang = new URLSearchParams(window.location.search).get('lang');
+  if(urlLang==='es'||urlLang==='en') lang = urlLang;
+  if(lang==='es') wwSetLang('es');
+  else { wwSetLang('en'); }
+})();
+
+/* ── CONSENT TOGGLE ── */
+const empConsent = document.getElementById('emp-consent');
+const empBtn = document.getElementById('emp-btn-send');
+empConsent.addEventListener('change', function(){
+  empBtn.disabled = !this.checked;
+  if(this.checked) { empBtn.title=''; empBtn.removeAttribute('title'); }
+  else { empBtn.title = wwI18n[wwLang].btnTitle; }
+});
+
+/* ── FILE UPLOAD ── */
+const fileInput = document.getElementById('emp-cv');
+const fileNameDisplay = document.getElementById('file-name-display');
+const fileUploadArea = document.getElementById('file-upload-area');
+fileInput.addEventListener('change', function(){
+  if(this.files && this.files[0]){
+    fileNameDisplay.textContent = this.files[0].name;
+    fileNameDisplay.style.display = 'block';
+    fileUploadArea.style.borderColor = 'var(--blue-mid)';
+  }
+});
+fileUploadArea.addEventListener('dragover', function(e){ e.preventDefault(); this.classList.add('drag-over'); });
+fileUploadArea.addEventListener('dragleave', function(){ this.classList.remove('drag-over'); });
+fileUploadArea.addEventListener('drop', function(e){
+  e.preventDefault(); this.classList.remove('drag-over');
+  if(e.dataTransfer.files[0]){
+    fileInput.files = e.dataTransfer.files;
+    fileNameDisplay.textContent = e.dataTransfer.files[0].name;
+    fileNameDisplay.style.display = 'block';
+    fileUploadArea.style.borderColor = 'var(--blue-mid)';
+  }
+});
+
+/* ── SANITIZE ── */
+function sanitize(str, max){ return String(str).replace(/[<>"'&]/g,'').trim().substring(0,max||200); }
+
+/* ── VALIDATION ── */
+function showErr(id, msg){ const el=document.getElementById(id); if(el){el.textContent=msg;el.style.display='block';} }
+function clearErr(id){ const el=document.getElementById(id); if(el){el.textContent='';el.style.display='none';} }
+function markErr(id){ const el=document.getElementById(id); if(el) el.classList.add('error'); }
+function clearMark(id){ const el=document.getElementById(id); if(el) el.classList.remove('error'); }
+
+function validateForm(){
+  const t = wwI18n[wwLang];
+  let ok = true;
+  const fields = [
+    {id:'emp-nombre', err:'err-nombre'},
+    {id:'emp-cargo', err:'err-cargo'},
+    {id:'emp-ciudad', err:'err-ciudad'}
+  ];
+  fields.forEach(f => {
+    const el = document.getElementById(f.id);
+    if(!el.value.trim()){ showErr(f.err, t.errRequired); markErr(f.id); ok=false; }
+    else { clearErr(f.err); clearMark(f.id); }
+  });
+  // Email
+  const emailEl = document.getElementById('emp-email');
+  const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!emailRx.test(emailEl.value.trim())){ showErr('err-email', t.errEmail); markErr('emp-email'); ok=false; }
+  else { clearErr('err-email'); clearMark('emp-email'); }
+  // Phone
+  const telEl = document.getElementById('emp-tel');
+  if(!telEl.value.trim()){ showErr('err-tel', t.errRequired); markErr('emp-tel'); ok=false; }
+  else { clearErr('err-tel'); clearMark('emp-tel'); }
+  // English
+  const engEl = document.getElementById('emp-english');
+  if(!engEl.value){ showErr('err-english', t.errRequired); markErr('emp-english'); ok=false; }
+  else { clearErr('err-english'); clearMark('emp-english'); }
+  // Message
+  const msgEl = document.getElementById('emp-msg');
+  if(!msgEl.value.trim()){ showErr('err-msg', t.errRequired); markErr('emp-msg'); ok=false; }
+  else { clearErr('err-msg'); clearMark('emp-msg'); }
+  // CV
+  const cvEl = document.getElementById('emp-cv');
+  if(!cvEl.files || !cvEl.files[0]){ showErr('err-cv', t.errCv); ok=false; }
+  else {
+    const file = cvEl.files[0];
+    const allowed = ['application/pdf','application/msword','application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+    const ext = file.name.split('.').pop().toLowerCase();
+    if(!allowed.includes(file.type) && !['pdf','doc','docx'].includes(ext)){ showErr('err-cv', t.errCvType); ok=false; }
+    else if(file.size > 5*1024*1024){ showErr('err-cv', t.errCvSize); ok=false; }
+    else { clearErr('err-cv'); }
+  }
+  // Consent
+  if(!empConsent.checked){ showErr('emp-consent-err', t.errConsent); ok=false; }
+  else { clearErr('emp-consent-err'); }
+  return ok;
+}
+
+/* ── SUBMIT ── */
+document.getElementById('emp-form').addEventListener('submit', async function(e){
+  e.preventDefault();
+  document.getElementById('emp-general-err').style.display='none';
+  if(!validateForm()){
+    document.getElementById('emp-general-err').style.display='block';
+    document.getElementById('emp-err-msg').textContent = wwI18n[wwLang].generalErr;
+    return;
+  }
+
+  // Consecutivo EMP
+  const consec = (parseInt(localStorage.getItem('acs_emp_consec')||'0')+1);
+  const consecStr = 'EMP-'+String(consec).padStart(4,'0');
+  document.getElementById('emp-consec').value = consecStr;
+  const nomVal = sanitize(document.getElementById('emp-nombre').value, 60);
+  const cargoVal = sanitize(document.getElementById('emp-cargo').value, 60);
+  document.getElementById('emp-subject').value = '['+consecStr+'] Job Application - '+nomVal+' - '+cargoVal+' | Alliance Contact Solutions';
+  document.getElementById('emp-replyto').value = document.getElementById('emp-email').value.trim();
+
+  // Timestamp Colombia
+  const now = new Date();
+  const col = new Date(now.toLocaleString('en-US',{timeZone:'America/Bogota'}));
+  const dias = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const diasEs = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+  const meses = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const mesesEs = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  const d = wwLang==='en' ? dias[col.getDay()] : diasEs[col.getDay()];
+  const m = wwLang==='en' ? meses[col.getMonth()] : mesesEs[col.getMonth()];
+  const h = col.getHours().toString().padStart(2,'0');
+  const mn = col.getMinutes().toString().padStart(2,'0');
+  document.getElementById('emp-timestamp').value = d+', '+col.getDate()+' '+(wwLang==='en'?'of':' de')+' '+m+' '+col.getFullYear()+' — '+h+':'+mn+' (Colombia)';
+
+  // Location
+  const clientTZ = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  let locationStr = 'Timezone: '+clientTZ;
+  try{
+    const geo = await fetch('https://ipapi.co/json/',{signal:AbortSignal.timeout(5000)});
+    if(geo.ok){
+      const gd = await geo.json();
+      const ct = new Date().toLocaleString('en-US',{timeZone:clientTZ,hour:'2-digit',minute:'2-digit',hour12:true});
+      locationStr = sanitize(gd.city,60)+', '+sanitize(gd.region,60)+' — '+sanitize(gd.country_name,60)+' | IP: '+sanitize(gd.ip,45)+' | Local time: '+ct+' ('+sanitize(clientTZ,60)+')';
+    }
+  }catch(e){}
+  document.getElementById('emp-location').value = locationStr;
+
+  // Send
+  const btn = document.getElementById('emp-btn-send');
+  const t = wwI18n[wwLang];
+  btn.textContent = t.sending; btn.disabled=true; btn.style.opacity='.65';
+
+  try{
+    const fd = new FormData(this);
+    const resp = await fetch(this.action,{method:'POST',body:fd,headers:{'Accept':'application/json'},signal:AbortSignal.timeout(15000)});
+    if(resp.ok){
+      localStorage.setItem('acs_emp_consec', String(consec));
+      this.style.display='none';
+      document.getElementById('emp-success').style.display='block';
+      document.getElementById('success-title').textContent = t.successTitle;
+      document.getElementById('success-msg').textContent = t.successMsg;
+    } else {
+      btn.textContent = t.lblSubmit; btn.disabled=false; btn.style.opacity='1';
+      document.getElementById('emp-general-err').style.display='block';
+      document.getElementById('emp-err-msg').textContent = wwLang==='en' ? 'There was an error sending your application. Please try again.' : 'Hubo un error al enviar su solicitud. Por favor intente de nuevo.';
+    }
+  }catch(err){
+    btn.textContent = t.lblSubmit; btn.disabled=false; btn.style.opacity='1';
+    document.getElementById('emp-general-err').style.display='block';
+    document.getElementById('emp-err-msg').textContent = wwLang==='en' ? 'Connection error. Please check your internet and try again.' : 'Error de conexión. Por favor verifique su internet e intente de nuevo.';
+  }
+});
+
+/* ── BACK TO TOP ── */
+const btt = document.getElementById('btt');
+window.addEventListener('scroll',()=>{ btt.classList.toggle('show',window.scrollY>400); },{passive:true});
+btt.addEventListener('click',()=>{ window.scrollTo({top:0,behavior:'smooth'}); });
+</script>
+</body>
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';"/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN"/>
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+<meta name="robots" content="noindex, follow"/>
+<meta name="author" content="Alliance Contact Solutions"/>
+<meta name="theme-color" content="#1a2b6d"/>
+<meta name="description" content="Política de Cookies de Alliance Contact Solutions — Información sobre el uso de cookies en nuestro sitio web."/>
+<title>Política de Cookies | Alliance Contact Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--blue-dark:#0f2689;--blue-mid:#244bb9;--blue-light:#4a8af4;--red:#d32617;--red-light:#f04030;--gold:#f6b922;--gold-light:#ffd060;--gold-dark:#c47a00;--orange:#db711c;--white:#ffffff;--bg:#f0f4fb;--ink:#0a1640;--muted:#4a5a82;--border:rgba(15,38,137,.1);--navy:#0f2689;--navy-dark:#070e2e}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-size:16px}
+a{color:var(--blue-mid);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
+a:hover{color:var(--red)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+nav{background:var(--white);padding:.75rem 3rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(26,43,109,.1);box-shadow:0 2px 16px rgba(26,43,109,.08)}
+.nav-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;padding:.15rem 0}
+.nav-logo img{height:46px;width:auto;object-fit:contain;background:var(--white);border-radius:4px;max-width:56px}
+.nav-logo-name{display:flex;flex-direction:column;justify-content:center;gap:.08rem;line-height:1}
+.nav-logo-name strong{font-family:'Montserrat','Arial Black',sans-serif;font-size:1.5rem;font-weight:900;letter-spacing:.02em;color:#1a2a5e;display:block;line-height:1}
+.nav-logo-name span{font-family:'Montserrat','Arial',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#5a6070;display:block;line-height:1}
+.nav-right{display:flex;align-items:center;gap:.8rem}
+.lang-switcher{display:flex;align-items:center;gap:.25rem;background:rgba(26,43,109,.06);border:1px solid rgba(26,43,109,.14);border-radius:6px;padding:.2rem .3rem}
+.lang-btn{font-size:.7rem;font-weight:800;letter-spacing:.06em;padding:.22rem .55rem;border-radius:4px;border:none;cursor:pointer;background:transparent;color:rgba(26,43,109,.4);transition:all .25s;font-family:inherit}
+.lang-btn.active{background:var(--blue-dark);color:var(--white)!important}
+.lang-btn:hover:not(.active){color:var(--blue-dark)!important}
+.pp-hero{background:linear-gradient(135deg,#070e2e 0%,#0f2689 55%,#1a3a8f 100%);padding:4rem 3rem;text-align:center;position:relative;overflow:hidden}
+.pp-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.02) 20px,rgba(255,255,255,.02) 40px)}
+.pp-hero h1{font-family:'Montserrat',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:var(--white);margin-bottom:.5rem;position:relative}
+.pp-hero h1 span{color:var(--gold)}
+.pp-hero p{color:rgba(255,255,255,.5);font-size:.9rem;position:relative}
+.pp-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,168,0,.15);border:1px solid rgba(245,168,0,.3);border-radius:100px;padding:.35rem 1rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;position:relative}
+.pp-wrap{max-width:860px;margin:0 auto;padding:4rem 2rem 6rem}
+.pp-toc{background:var(--white);border:1px solid var(--border);border-radius:1rem;padding:1.8rem 2rem;margin-bottom:3rem;box-shadow:0 2px 16px rgba(26,43,109,.07)}
+.pp-toc h2{font-family:'Montserrat',sans-serif;font-size:.85rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--blue-dark);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.pp-toc h2::before{content:'';width:1rem;height:2px;background:linear-gradient(90deg,var(--red),var(--gold));border-radius:2px;display:block}
+.pp-toc ol{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.4rem .5rem;counter-reset:toc}
+.pp-toc ol li{counter-increment:toc}
+.pp-toc ol li a{font-size:.83rem;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:.4rem;padding:.2rem .3rem;border-radius:.3rem;transition:all .2s}
+.pp-toc ol li a::before{content:counter(toc,decimal-leading-zero);font-size:.68rem;font-weight:700;color:var(--gold);min-width:1.6rem}
+.pp-toc ol li a:hover{color:var(--blue-dark);background:var(--bg);padding-left:.6rem}
+.pp-toc-toggle{display:none}
+.pp-toc-body{display:block}
+@media(max-width:700px){
+  .pp-toc{padding:1.2rem 1.4rem;margin-bottom:2rem}
+  .pp-toc-header{display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none}
+  .pp-toc-header h2{margin-bottom:0}
+  .pp-toc-toggle{display:flex;align-items:center;justify-content:center;width:2rem;height:2rem;font-size:.9rem;color:var(--blue-dark);cursor:pointer;flex-shrink:0;background:transparent;border:2px solid var(--border);border-radius:6px;transition:transform .3s}
+  .pp-toc-body{display:none}
+  .pp-toc-body.open{display:block}
+  .pp-toc ol{grid-template-columns:1fr;margin-top:.8rem}
+}
+.pp-section{margin-bottom:2.8rem;scroll-margin-top:100px}
+.pp-section h2{font-family:'Montserrat',sans-serif;font-size:1.2rem;font-weight:800;color:var(--blue-dark);margin-bottom:1rem;display:flex;align-items:center;gap:.7rem;padding-bottom:.7rem;border-bottom:2px solid rgba(15,38,137,.12)}
+.pp-section h2 .num{background:linear-gradient(135deg,var(--red),var(--orange));color:var(--white);width:2rem;height:2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;flex-shrink:0}
+.pp-section p{color:var(--muted);margin-bottom:1rem;font-size:.95rem}
+.pp-section ul{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem;padding-left:.5rem}
+.pp-section ul li{font-size:.92rem;color:var(--muted);display:flex;align-items:flex-start;gap:.6rem}
+.pp-section ul li::before{content:'→';color:var(--red);font-weight:700;flex-shrink:0;margin-top:.05rem}
+.pp-section ul li span{flex:1}
+.pp-card{background:var(--white);border:1px solid var(--border);border-radius:.9rem;padding:1.4rem 1.8rem;margin-top:1rem;box-shadow:0 2px 12px rgba(26,43,109,.06)}
+.pp-card p{margin:0;font-size:.9rem}
+.pp-card strong{color:var(--blue-dark);font-weight:700}
+.pp-highlight{background:rgba(246,185,34,.08);border:1px solid rgba(246,185,34,.28);border-radius:.8rem;padding:1.1rem 1.4rem;margin:1rem 0;font-size:.88rem;color:var(--ink)}
+.pp-highlight strong{color:var(--blue-dark)}
+/* Cookie table */
+.cookie-table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.85rem}
+.cookie-table thead tr{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));color:var(--white)}
+.cookie-table thead th{padding:.7rem 1rem;text-align:left;font-weight:700;font-size:.78rem;letter-spacing:.04em}
+.cookie-table tbody tr{border-bottom:1px solid var(--border)}
+.cookie-table tbody tr:nth-child(even){background:rgba(15,38,137,.03)}
+.cookie-table tbody td{padding:.7rem 1rem;color:var(--muted);vertical-align:top}
+.cookie-table tbody td:first-child{font-family:'Montserrat',sans-serif;font-weight:800;color:var(--blue-dark);white-space:nowrap}
+@media(max-width:600px){
+  .cookie-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
+/* Browser steps */
+.browser-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.2rem 0}
+.browser-card{background:var(--white);border:1px solid var(--border);border-radius:.9rem;padding:1.2rem 1.4rem;box-shadow:0 2px 12px rgba(26,43,109,.06)}
+.browser-card h3{font-family:'Montserrat',sans-serif;font-size:.85rem;font-weight:800;color:var(--blue-dark);margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem}
+.browser-card ol{list-style:none;counter-reset:step;display:flex;flex-direction:column;gap:.35rem;padding-left:.2rem}
+.browser-card ol li{counter-increment:step;font-size:.8rem;color:var(--muted);display:flex;align-items:flex-start;gap:.5rem}
+.browser-card ol li::before{content:counter(step);background:var(--gold);color:var(--ink);font-size:.65rem;font-weight:900;min-width:1.3rem;height:1.3rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem}
+@media(max-width:580px){.browser-grid{grid-template-columns:1fr}}
+/* Banner preview */
+.banner-preview{background:#070e2e;border-radius:1rem;padding:1.8rem 2rem;margin-top:1.2rem;box-shadow:0 4px 24px rgba(7,14,46,.3)}
+.banner-preview p{color:rgba(255,255,255,.75);font-size:.88rem;margin-bottom:1.2rem;line-height:1.65}
+.banner-preview strong{color:var(--gold)}
+.banner-btns{display:flex;gap:.7rem;flex-wrap:wrap}
+.banner-btn{padding:.5rem 1.2rem;border-radius:.5rem;font-size:.78rem;font-weight:700;cursor:default;border:none;font-family:inherit}
+.banner-btn.accept{background:var(--gold);color:#0a1640}
+.banner-btn.reject{background:transparent;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.2)}
+.banner-btn.more{background:transparent;color:var(--gold);border:1px solid rgba(246,185,34,.4);text-decoration:underline}
+/* Footer */
+.pp-footer{background:#070e2e;padding:2.5rem 3rem;text-align:center}
+.pp-footer-logo{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;margin-bottom:1.2rem;justify-content:center}
+.pp-footer-logo img{height:40px;width:auto;max-width:48px;object-fit:contain;opacity:.9}
+.pp-footer-logo-name{display:flex;flex-direction:column;gap:.06rem;line-height:1;text-align:left}
+.pp-footer-logo-name strong{font-family:'Montserrat','Arial Black',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:.02em;color:var(--white);line-height:1}
+.pp-footer-logo-name span{font-family:'Montserrat','Arial',sans-serif;font-size:.52rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);line-height:1}
+.pp-footer p{color:rgba(255,255,255,.35);font-size:.8rem;margin-bottom:.4rem}
+.pp-footer a{color:var(--gold);text-decoration:none;transition:color .2s}
+.pp-footer a:hover{color:var(--gold-light)}
+.pp-footer-divider{width:40px;height:1px;background:linear-gradient(90deg,var(--red),var(--gold));margin:.9rem auto}
+#btt{position:fixed;bottom:2rem;right:2rem;width:2.8rem;height:2.8rem;background:linear-gradient(135deg,var(--blue-mid),var(--blue-dark));border:none;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(245,168,0,.4);transition:all .3s;opacity:0;transform:translateY(20px);color:var(--white);font-weight:800;z-index:400}
+#btt.show{opacity:1;transform:translateY(0)}
+#btt:hover{transform:translateY(-4px)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
+@media(max-width:700px){nav{padding:.9rem 1.2rem}.pp-hero{padding:3rem 1.5rem}.pp-wrap{padding:2.5rem 1.2rem 4rem}.pp-toc ol{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<button id="btt" aria-label="Back to top">&#8593;</button>
+
+<nav role="navigation">
+  <a href="index.html" class="nav-logo" aria-label="Volver al sitio principal">
+    <img src="img/logo-icon.png?v=3" alt="Alliance Contact Solutions" height="46" loading="eager" decoding="async" onerror="this.style.display='none'"/>
+    <div class="nav-logo-name"><strong>ALLIANCE</strong><span>Contact Solutions</span></div>
+  </a>
+  <div class="nav-right">
+    <div class="lang-switcher" role="group" aria-label="Selector de idioma">
+      <button class="lang-btn active" id="ck-btn-en" onclick="ckSetLang('en')" aria-label="English">EN</button>
+      <button class="lang-btn" id="ck-btn-es" onclick="ckSetLang('es')" aria-label="Español">ES</button>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="pp-hero">
+    <div class="pp-badge" id="ck-badge" aria-hidden="true">&#127850; Cookie Policy</div>
+    <h1 id="ck-title">Cookie <span>Policy</span></h1>
+    <p id="ck-date">Last updated: March 2026 &middot; Alliance Contact Solutions</p>
+  </div>
+</header>
+
+<main class="pp-wrap" id="main-content" role="main">
+
+  <nav class="pp-toc" aria-label="Tabla de contenido">
+    <div class="pp-toc-header" onclick="toggleToc()">
+      <h2 id="toc-title">Table of Contents</h2>
+      <button class="pp-toc-toggle" id="toc-btn" aria-label="Toggle table of contents">&#9660;</button>
+    </div>
+    <div class="pp-toc-body" id="toc-body">
+      <ol>
+        <li><a href="#s1" id="toc-1">What are cookies?</a></li>
+        <li><a href="#s2" id="toc-2">Cookies we use</a></li>
+        <li><a href="#s3" id="toc-3">Analytical cookies — Google Analytics</a></li>
+        <li><a href="#s4" id="toc-4">Functional cookies — Contact form</a></li>
+        <li><a href="#s5" id="toc-5">Managing cookies by browser</a></li>
+        <li><a href="#s6" id="toc-6">Google Privacy Policy</a></li>
+        <li><a href="#s7" id="toc-7">Consent banner</a></li>
+        <li><a href="#s8" id="toc-8">Validity and updates</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <div class="pp-highlight" id="ck-intro" role="note">
+    <strong>ALLIANCE CONTACT SOLUTIONS</strong> <span id="ck-intro-body">uses cookies on its website solely to measure site performance through web analytics tools and to ensure the correct functioning of the contact form. We do not use advertising, behavioral tracking, or user profiling cookies.</span>
+  </div>
+
+  <!-- S1 -->
+  <section class="pp-section" id="s1" aria-labelledby="h-s1">
+    <h2 id="h-s1"><span class="num" aria-hidden="true">01</span> <span id="h-s1-text">What are cookies?</span></h2>
+    <p id="s1-p1">Cookies are small text files that websites install in the user's browser when they visit. These files allow the site to remember information about the visit, such as preferred language and other settings, in order to facilitate navigation and improve the user experience.</p>
+    <p id="s1-p2">Cookies can be:</p>
+    <ul id="s1-list">
+      <li><span><strong>Session cookies:</strong> Automatically deleted when the user closes the browser.</span></li>
+      <li><span><strong>Persistent cookies:</strong> Remain on the device for a set period or until the user manually deletes them.</span></li>
+      <li><span><strong>First-party cookies:</strong> Installed directly by the website being visited.</span></li>
+      <li><span><strong>Third-party cookies:</strong> Installed by external services integrated into the site, such as analytics tools.</span></li>
+    </ul>
+  </section>
+
+  <!-- S2 -->
+  <section class="pp-section" id="s2" aria-labelledby="h-s2">
+    <h2 id="h-s2"><span class="num" aria-hidden="true">02</span> <span id="h-s2-text">Cookies we use</span></h2>
+    <p id="s2-p1">This website uses only two categories of cookies: analytical and functional. No advertising or behavioral tracking cookies are installed.</p>
+    <table class="cookie-table" aria-label="Summary of cookies used">
+      <thead>
+        <tr>
+          <th id="th1">Category</th>
+          <th id="th2">Provider</th>
+          <th id="th3">Purpose</th>
+          <th id="th4">Legal basis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="tc1-1">Analytical</td>
+          <td id="tc1-2">Google Analytics</td>
+          <td id="tc1-3">Measure website traffic and performance</td>
+          <td id="tc1-4">User consent</td>
+        </tr>
+        <tr>
+          <td id="tc2-1">Functional</td>
+          <td id="tc2-2">Alliance Contact Solutions</td>
+          <td id="tc2-3">Contact form functionality</td>
+          <td id="tc2-4">Legitimate interest / technical necessity</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- S3 -->
+  <section class="pp-section" id="s3" aria-labelledby="h-s3">
+    <h2 id="h-s3"><span class="num" aria-hidden="true">03</span> <span id="h-s3-text">Analytical cookies — Google Analytics</span></h2>
+    <p id="s3-p1">The website uses Google Analytics, a web analytics service provided by Google LLC, to understand how users interact with the site and continuously improve its content and usability. Google Analytics installs the following cookies:</p>
+
+    <table class="cookie-table" aria-label="Detalle de cookies de Google Analytics">
+      <thead>
+        <tr>
+          <th>Cookie</th>
+          <th id="th-ga-type">Type</th>
+          <th id="th-ga-data">Data collected</th>
+          <th id="th-ga-purpose">Purpose</th>
+          <th id="th-ga-exp">Expiration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>_ga</td>
+          <td id="tc-ga1-type">Persistent / Third-party</td>
+          <td id="tc-ga1-data">Anonymous unique user identifier; pages visited; time on site; approximate location (country/city); device type and browser.</td>
+          <td id="tc-ga1-purpose">Distinguish unique users and generate statistical usage reports for the site.</td>
+          <td id="tc-ga1-exp">2 years</td>
+        </tr>
+        <tr>
+          <td>_gid</td>
+          <td id="tc-ga2-type">Persistent / Third-party</td>
+          <td id="tc-ga2-data">User session identifier; pages visited during the active session.</td>
+          <td id="tc-ga2-purpose">Distinguish users within a session and record interactions during that session.</td>
+          <td id="tc-ga2-exp">24 hours</td>
+        </tr>
+        <tr>
+          <td>_gat</td>
+          <td id="tc-ga3-type">Persistent / Third-party</td>
+          <td id="tc-ga3-data">Does not collect user data. Used exclusively to throttle the request rate to Google's server.</td>
+          <td id="tc-ga3-purpose">Regulate the analytics request rate and prevent server overload.</td>
+          <td id="tc-ga3-exp">1 minute</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pp-highlight" id="s3-hl">
+      <strong>Important:</strong> <span id="s3-hl-body">Information collected by Google Analytics is processed anonymously and in aggregate. Alliance Contact Solutions does not have access to personally identifiable data through these cookies. Google LLC may process this data on servers located outside Colombia, in accordance with its own privacy policy.</span>
+    </div>
+  </section>
+
+  <!-- S4 -->
+  <section class="pp-section" id="s4" aria-labelledby="h-s4">
+    <h2 id="h-s4"><span class="num" aria-hidden="true">04</span> <span id="h-s4-text">Functional cookies — Contact form</span></h2>
+    <p id="s4-p1">The contact form available on our website requires data voluntarily entered by the user: name, email address, and message. To ensure the correct functioning of the form, the site may temporarily store this information in the browser's session storage.</p>
+    <ul id="s4-list">
+      <li><span>This data is used exclusively to process and send the user's contact request to Alliance Contact Solutions.</span></li>
+      <li><span>It is not shared with third parties, is not used for advertising purposes, and is not permanently stored on the user's device.</span></li>
+      <li><span>Information entered in the form is automatically deleted when the browser session is closed.</span></li>
+    </ul>
+    <div class="pp-card">
+      <p id="s4-card"><strong>Legal basis:</strong> The processing of contact form data is based on the technical necessity of fulfilling the user's request (contact or quote) and on the consent given when completing and submitting the form, in accordance with Colombian Law 1581 of 2012.</p>
+    </div>
+  </section>
+
+  <!-- S5 -->
+  <section class="pp-section" id="s5" aria-labelledby="h-s5">
+    <h2 id="h-s5"><span class="num" aria-hidden="true">05</span> <span id="h-s5-text">Managing cookies by browser</span></h2>
+    <p id="s5-p1">Users can configure their browser to accept, reject, or delete cookies at any time. Below are the steps for managing cookies in the most common browsers:</p>
+
+    <div class="browser-grid" id="s5-grid">
+      <div class="browser-card">
+        <h3>&#127758; <span id="br1-title">Google Chrome</span></h3>
+        <ol id="br1-steps">
+          <li><span>Click the ⋮ menu (three dots) in the upper right corner.</span></li>
+          <li><span>Select <em>Settings</em>.</span></li>
+          <li><span>Go to <em>Privacy and security → Cookies and other site data</em>.</span></li>
+          <li><span>Choose your preferred management option or delete specific cookies.</span></li>
+        </ol>
+      </div>
+      <div class="browser-card">
+        <h3>&#129418; <span id="br2-title">Mozilla Firefox</span></h3>
+        <ol id="br2-steps">
+          <li><span>Click the ☰ menu (three lines) in the upper right corner.</span></li>
+          <li><span>Select <em>Settings</em>.</span></li>
+          <li><span>Go to <em>Privacy &amp; Security → Cookies and Site Data</em>.</span></li>
+          <li><span>Select your protection level or manually delete cookies.</span></li>
+        </ol>
+      </div>
+      <div class="browser-card">
+        <h3>&#127822; <span id="br3-title">Apple Safari</span></h3>
+        <ol id="br3-steps">
+          <li><span>Go to <em>Safari → Preferences</em> (on Mac) or <em>Settings</em> (on iOS).</span></li>
+          <li><span>Select the <em>Privacy</em> tab.</span></li>
+          <li><span>Enable <em>Block all cookies</em> or manage website data.</span></li>
+          <li><span>Click <em>Manage Website Data</em> to delete specific cookies.</span></li>
+        </ol>
+      </div>
+      <div class="browser-card">
+        <h3>&#127881; <span id="br4-title">Microsoft Edge</span></h3>
+        <ol id="br4-steps">
+          <li><span>Click the ⋯ menu (three dots) in the upper right corner.</span></li>
+          <li><span>Select <em>Settings</em>.</span></li>
+          <li><span>Go to <em>Privacy, search, and services → Cookies and site permissions</em>.</span></li>
+          <li><span>Choose your preferences or delete existing cookies.</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="pp-highlight" id="s5-hl">
+      <strong>Note:</strong> <span id="s5-hl-body">Disabling analytical cookies does not affect website functionality. However, disabling contact form cookies may interrupt the submission of requests.</span>
+    </div>
+  </section>
+
+  <!-- S6 -->
+  <section class="pp-section" id="s6" aria-labelledby="h-s6">
+    <h2 id="h-s6"><span class="num" aria-hidden="true">06</span> <span id="h-s6-text">Google Privacy Policy</span></h2>
+    <p id="s6-p1">Google Analytics cookies are managed by Google LLC. To learn in detail how Google collects, uses, and protects information obtained through its analytics tools, please refer to Google's privacy policy at the following link:</p>
+    <div class="pp-card">
+      <p id="s6-card"><strong>Google Privacy Policy:</strong><br/>
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a><br/><br/>
+      Additionally, users may opt out of being tracked by Google Analytics by installing the browser opt-out add-on provided by Google:<br/>
+      <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout</a></p>
+    </div>
+  </section>
+
+  <!-- S7 -->
+  <section class="pp-section" id="s7" aria-labelledby="h-s7">
+    <h2 id="h-s7"><span class="num" aria-hidden="true">07</span> <span id="h-s7-text">Consent banner — First visit</span></h2>
+    <p id="s7-p1">When visiting the website for the first time, users will see the following cookie consent notice. Below is the official banner text and its action buttons:</p>
+
+    <div class="banner-preview" id="s7-banner" aria-label="Vista previa del banner de cookies">
+      <p id="s7-banner-text">&#127850; <strong>This website uses cookies.</strong><br/><br/>
+      We use Google Analytics analytical cookies to measure site performance, and functional cookies necessary for the contact form. We do not use advertising or behavioral tracking cookies.<br/><br/>
+      You may accept, reject, or learn more before deciding. Your preference will be remembered for future visits. For more details, see our <a href="cookies.html" style="color:var(--gold)">Cookie Policy</a>.</p>
+      <div class="banner-btns">
+        <button class="banner-btn accept" id="btn-accept-label">✓ Accept cookies</button>
+        <button class="banner-btn reject" id="btn-reject-label">✕ Reject</button>
+        <button class="banner-btn more" id="btn-more-label">More information</button>
+      </div>
+    </div>
+
+    <div class="pp-highlight" id="s7-hl" style="margin-top:1.2rem">
+      <strong id="s7-hl-title">Implementation note:</strong> <span id="s7-hl-body">The consent banner applies only to Google Analytics analytical cookies, as the form's functional cookies are strictly necessary for its operation. If the user clicks "Reject", Google Analytics will not be activated during that session or future sessions until the user changes their preference.</span>
+    </div>
+  </section>
+
+  <!-- S8 -->
+  <section class="pp-section" id="s8" aria-labelledby="h-s8">
+    <h2 id="h-s8"><span class="num" aria-hidden="true">08</span> <span id="h-s8-text">Validity and updates</span></h2>
+    <p id="s8-p1">This Cookie Policy enters into force on the date of its publication on the Alliance Contact Solutions website and remains in effect until replaced by an updated version.</p>
+    <p id="s8-p2">Alliance Contact Solutions reserves the right to update this policy at any time to reflect changes in the tools used, applicable regulations, or cookie management practices. The date of the last update will always be indicated at the beginning of the document.</p>
+    <p id="s8-p3">For questions or requests related to the use of cookies on this site, you may contact us at:</p>
+    <div class="pp-card">
+      <p id="s8-card"><strong>ALLIANCE CONTACT SOLUTIONS</strong><br/>
+      Calle 76 #47-33, Barranquilla, Atlántico, Colombia<br/>
+      Email: <a href="mailto:info@alliancebpo.com">info@alliancebpo.com</a><br/>
+      Business hours: Monday – Friday, 8:00 a.m. – 8:00 p.m. (COT)</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pp-footer" role="contentinfo">
+  <a href="index.html" class="pp-footer-logo" aria-label="Volver al sitio principal de Alliance Contact Solutions">
+    <div class="pp-footer-logo-name"><strong>ALLIANCE</strong><span>Contact Solutions</span></div>
+  </a>
+  <div class="pp-footer-divider" aria-hidden="true"></div>
+  <p id="footer-copy">&copy; 2026 Alliance Contact Solutions. All rights reserved.</p>
+  <p style="margin-top:.5rem"><a href="privacy-policy.html">Privacy Policy</a></p>
+</footer>
+
+<script>
+const ckContent = {
+  es:{
+    badge:'&#127850; Política de Cookies',
+    title:'Política de <span style="color:var(--gold)">Cookies</span>',
+    date:'Última actualización: marzo de 2026 &middot; Alliance Contact Solutions',
+    toc:'Tabla de Contenido',
+    toc1:'¿Qué son las cookies?', toc2:'Cookies que utilizamos',
+    toc3:'Cookies analíticas — Google Analytics', toc4:'Cookies funcionales — Formulario de contacto',
+    toc5:'Gestión de cookies por navegador', toc6:'Política de privacidad de Google',
+    toc7:'Banner de consentimiento', toc8:'Vigencia y actualizaciones',
+    intro:'utiliza cookies en su sitio web con el único propósito de medir el desempeño del sitio mediante herramientas de analítica web y garantizar el correcto funcionamiento del formulario de contacto. No utilizamos cookies de publicidad, rastreo de comportamiento ni perfilamiento de usuarios.',
+    s1h:'¿Qué son las cookies?',
+    s1p1:'Las cookies son pequeños archivos de texto que los sitios web instalan en el navegador del usuario cuando este los visita. Estos archivos permiten al sitio recordar información sobre la visita, como el idioma preferido y otras configuraciones, con el fin de facilitar la navegación y mejorar la experiencia del usuario.',
+    s1p2:'Las cookies pueden ser:',
+    s1li:['<strong>De sesión:</strong> Se eliminan automáticamente cuando el usuario cierra el navegador.','<strong>Persistentes:</strong> Permanecen en el dispositivo durante un período determinado o hasta que el usuario las elimine manualmente.','<strong>Propias:</strong> Instaladas directamente por el sitio web visitado.','<strong>De terceros:</strong> Instaladas por servicios externos integrados en el sitio, como herramientas de analítica.'],
+    s2h:'Cookies que utilizamos',
+    s2p1:'Este sitio web utiliza únicamente dos categorías de cookies: analíticas y funcionales. No se instalan cookies de publicidad ni de seguimiento de comportamiento.',
+    th1:'Categoría', th2:'Proveedor', th3:'Finalidad', th4:'Base legal',
+    tc11:'Analítica', tc12:'Google Analytics', tc13:'Medir el tráfico y el desempeño del sitio web', tc14:'Consentimiento del usuario',
+    tc21:'Funcional', tc22:'Alliance Contact Solutions', tc23:'Funcionamiento del formulario de contacto', tc24:'Interés legítimo / necesidad técnica',
+    s3h:'Cookies analíticas — Google Analytics',
+    s3p1:'El sitio web utiliza Google Analytics, un servicio de analítica web prestado por Google LLC, con el fin de comprender cómo los usuarios interactúan con el sitio y mejorar continuamente su contenido y usabilidad. Google Analytics instala las siguientes cookies:',
+    thGaType:'Tipo', thGaData:'Datos que recopila', thGaPurpose:'Finalidad', thGaExp:'Expiración',
+    ga1type:'Persistente / Tercero', ga1data:'Identificador único de usuario anónimo; páginas visitadas; tiempo en el sitio; ubicación aproximada (país/ciudad); tipo de dispositivo y navegador.', ga1purpose:'Distinguir usuarios únicos y generar informes estadísticos de uso del sitio.', ga1exp:'2 años',
+    ga2type:'Persistente / Tercero', ga2data:'Identificador de sesión del usuario; páginas visitadas durante la sesión activa.', ga2purpose:'Distinguir usuarios durante una sesión y registrar las interacciones dentro de esa sesión.', ga2exp:'24 horas',
+    ga3type:'Persistente / Tercero', ga3data:'No recopila datos de usuario. Se utiliza exclusivamente para controlar la frecuencia de solicitudes al servidor de Google.', ga3purpose:'Regular la tasa de solicitudes de analítica y evitar la sobrecarga del servidor.', ga3exp:'1 minuto',
+    s3hl:'<strong>Importante:</strong>',
+    s3hlBody:'La información recopilada por Google Analytics es procesada de forma anónima y agregada. Alliance Contact Solutions no tiene acceso a datos personales identificables a través de estas cookies. Google LLC puede procesar estos datos en servidores ubicados fuera de Colombia, de conformidad con su propia política de privacidad.',
+    s4h:'Cookies funcionales — Formulario de contacto',
+    s4p1:'El formulario de contacto disponible en nuestro sitio web requiere el uso de datos que el usuario ingresa voluntariamente: nombre, correo electrónico y mensaje. Para garantizar el correcto funcionamiento del formulario, el sitio puede almacenar temporalmente esta información en el almacenamiento de sesión del navegador.',
+    s4li:['Estos datos se utilizan exclusivamente para procesar y enviar la solicitud de contacto del usuario a Alliance Contact Solutions.','No se comparten con terceros, no se utilizan con fines publicitarios y no se almacenan de forma permanente en el dispositivo del usuario.','La información ingresada en el formulario se elimina automáticamente al cerrar la sesión del navegador.'],
+    s4card:'<strong>Base legal:</strong> El tratamiento de los datos del formulario de contacto se fundamenta en la necesidad técnica de cumplir con la solicitud del usuario (contacto o cotización) y en el consentimiento otorgado al completar y enviar el formulario, de conformidad con la Ley 1581 de 2012.',
+    s5h:'Gestión de cookies por navegador',
+    s5p1:'El usuario puede configurar su navegador para aceptar, rechazar o eliminar las cookies en cualquier momento. A continuación se indican los pasos para gestionar las cookies en los navegadores más comunes:',
+    br1t:'Google Chrome', br1s:['Haz clic en el menú ⋮ (tres puntos) en la esquina superior derecha.','Selecciona <em>Configuración</em>.','Ve a <em>Privacidad y seguridad → Cookies y otros datos de sitios</em>.','Elige la opción de gestión que prefieras o elimina cookies específicas.'],
+    br2t:'Mozilla Firefox', br2s:['Haz clic en el menú ☰ (tres líneas) en la esquina superior derecha.','Selecciona <em>Configuración</em>.','Ve a <em>Privacidad y seguridad → Cookies y datos del sitio</em>.','Selecciona el nivel de protección o elimina las cookies manualmente.'],
+    br3t:'Apple Safari', br3s:['Ve al menú <em>Safari → Preferencias</em> (en Mac) o <em>Configuración</em> (en iOS).','Selecciona la pestaña <em>Privacidad</em>.','Activa <em>Bloquear todas las cookies</em> o gestiona los datos de sitios web.','Haz clic en <em>Administrar datos del sitio web</em> para eliminar cookies específicas.'],
+    br4t:'Microsoft Edge', br4s:['Haz clic en el menú ⋯ (tres puntos) en la esquina superior derecha.','Selecciona <em>Configuración</em>.','Ve a <em>Privacidad, búsqueda y servicios → Cookies y permisos del sitio</em>.','Elige tus preferencias o elimina cookies existentes.'],
+    s5hl:'<strong>Aviso:</strong>',
+    s5hlBody:'La desactivación de las cookies analíticas no afecta la funcionalidad del sitio web. Sin embargo, si se desactivan las cookies del formulario de contacto, el envío de solicitudes puede verse interrumpido.',
+    s6h:'Política de privacidad de Google',
+    s6p1:'Las cookies de Google Analytics son gestionadas por Google LLC. Para conocer en detalle cómo Google recopila, utiliza y protege la información obtenida a través de sus herramientas de analítica, puede consultar la política de privacidad de Google en el siguiente enlace:',
+    s6card:'<strong>Política de privacidad de Google:</strong><br/><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a><br/><br/>Adicionalmente, el usuario puede optar por no ser rastreado por Google Analytics instalando el complemento de inhabilitación para navegadores proporcionado por Google:<br/><a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout</a>',
+    s7h:'Banner de consentimiento — Primera visita',
+    s7p1:'Al ingresar al sitio web por primera vez, el usuario verá el siguiente aviso de consentimiento de cookies. A continuación se presenta el texto oficial del banner y sus botones de acción:',
+    s7banner:'&#127850; <strong>Este sitio web utiliza cookies.</strong><br/><br/>Utilizamos cookies analíticas de Google Analytics para medir el rendimiento de nuestro sitio y cookies funcionales necesarias para el formulario de contacto. No utilizamos cookies publicitarias ni de rastreo de comportamiento.<br/><br/>Puede aceptar el uso de cookies, rechazarlas o conocer más información antes de decidir. Su preferencia se recordará para futuras visitas. Para más detalles, consulte nuestra <a href="cookies.html" style="color:var(--gold)">Política de Cookies</a>.',
+    btnAccept:'✓ Aceptar cookies', btnReject:'✕ Rechazar', btnMore:'Más información',
+    s7hlTitle:'Nota de implementación:',
+    s7hlBody:'El banner de consentimiento aplica únicamente para las cookies analíticas de Google Analytics, ya que las cookies funcionales del formulario son estrictamente necesarias para su operación. Si el usuario hace clic en "Rechazar", Google Analytics no se activará durante esa sesión y sesiones futuras hasta que el usuario cambie su preferencia.',
+    s8h:'Vigencia y actualizaciones',
+    s8p1:'La presente Política de Cookies entra en vigor a partir de la fecha de su publicación en el sitio web de Alliance Contact Solutions y permanece vigente hasta que sea reemplazada por una versión actualizada.',
+    s8p2:'Alliance Contact Solutions se reserva el derecho de actualizar esta política en cualquier momento para reflejar cambios en las herramientas utilizadas, en la normativa aplicable o en las prácticas de gestión de cookies. La fecha de la última actualización se indicará siempre al inicio del documento.',
+    s8p3:'Para preguntas o solicitudes relacionadas con el uso de cookies en este sitio, puede contactarnos en:',
+    s8card:'<strong>ALLIANCE CONTACT SOLUTIONS</strong><br/>Calle 76 #47-33, Barranquilla, Atlántico, Colombia<br/>Correo: <a href="mailto:info@alliancebpo.com">info@alliancebpo.com</a><br/>Horario comercial: lunes a viernes, 8:00 a.m. – 8:00 p.m. (COT)',
+    footer:'&copy; 2026 Alliance Contact Solutions. Todos los derechos reservados.',
+    ppLink:'Política de Privacidad'
+  },
+  en:{
+    badge:'&#127850; Cookie Policy',
+    title:'Cookie <span style="color:var(--gold)">Policy</span>',
+    date:'Last updated: March 2026 &middot; Alliance Contact Solutions',
+    toc:'Table of Contents',
+    toc1:'What are cookies?', toc2:'Cookies we use',
+    toc3:'Analytical cookies — Google Analytics', toc4:'Functional cookies — Contact form',
+    toc5:'Managing cookies by browser', toc6:'Google Privacy Policy',
+    toc7:'Consent banner', toc8:'Validity and updates',
+    intro:'uses cookies on its website solely to measure site performance through web analytics tools and to ensure the correct functioning of the contact form. We do not use advertising, behavioral tracking, or user profiling cookies.',
+    s1h:'What are cookies?',
+    s1p1:'Cookies are small text files that websites install in the user\'s browser when they visit. These files allow the site to remember information about the visit, such as preferred language and other settings, in order to facilitate navigation and improve the user experience.',
+    s1p2:'Cookies can be:',
+    s1li:['<strong>Session cookies:</strong> Automatically deleted when the user closes the browser.','<strong>Persistent cookies:</strong> Remain on the device for a set period or until the user manually deletes them.','<strong>First-party cookies:</strong> Installed directly by the website being visited.','<strong>Third-party cookies:</strong> Installed by external services integrated into the site, such as analytics tools.'],
+    s2h:'Cookies we use',
+    s2p1:'This website uses only two categories of cookies: analytical and functional. No advertising or behavioral tracking cookies are installed.',
+    th1:'Category', th2:'Provider', th3:'Purpose', th4:'Legal basis',
+    tc11:'Analytical', tc12:'Google Analytics', tc13:'Measure website traffic and performance', tc14:'User consent',
+    tc21:'Functional', tc22:'Alliance Contact Solutions', tc23:'Contact form functionality', tc24:'Legitimate interest / technical necessity',
+    s3h:'Analytical cookies — Google Analytics',
+    s3p1:'The website uses Google Analytics, a web analytics service provided by Google LLC, to understand how users interact with the site and continuously improve its content and usability. Google Analytics installs the following cookies:',
+    thGaType:'Type', thGaData:'Data collected', thGaPurpose:'Purpose', thGaExp:'Expiration',
+    ga1type:'Persistent / Third-party', ga1data:'Anonymous unique user identifier; pages visited; time on site; approximate location (country/city); device type and browser.', ga1purpose:'Distinguish unique users and generate statistical usage reports for the site.', ga1exp:'2 years',
+    ga2type:'Persistent / Third-party', ga2data:'User session identifier; pages visited during the active session.', ga2purpose:'Distinguish users within a session and record interactions during that session.', ga2exp:'24 hours',
+    ga3type:'Persistent / Third-party', ga3data:'Does not collect user data. Used exclusively to throttle the request rate to Google\'s server.', ga3purpose:'Regulate the analytics request rate and prevent server overload.', ga3exp:'1 minute',
+    s3hl:'<strong>Important:</strong>',
+    s3hlBody:'Information collected by Google Analytics is processed anonymously and in aggregate. Alliance Contact Solutions does not have access to personally identifiable data through these cookies. Google LLC may process this data on servers located outside Colombia, in accordance with its own privacy policy.',
+    s4h:'Functional cookies — Contact form',
+    s4p1:'The contact form available on our website requires data voluntarily entered by the user: name, email address, and message. To ensure the correct functioning of the form, the site may temporarily store this information in the browser\'s session storage.',
+    s4li:['This data is used exclusively to process and send the user\'s contact request to Alliance Contact Solutions.','It is not shared with third parties, is not used for advertising purposes, and is not permanently stored on the user\'s device.','Information entered in the form is automatically deleted when the browser session is closed.'],
+    s4card:'<strong>Legal basis:</strong> The processing of contact form data is based on the technical necessity of fulfilling the user\'s request (contact or quote) and on the consent given when completing and submitting the form, in accordance with Colombian Law 1581 of 2012.',
+    s5h:'Managing cookies by browser',
+    s5p1:'Users can configure their browser to accept, reject, or delete cookies at any time. Below are the steps for managing cookies in the most common browsers:',
+    br1t:'Google Chrome', br1s:['Click the ⋮ menu (three dots) in the upper right corner.','Select <em>Settings</em>.','Go to <em>Privacy and security → Cookies and other site data</em>.','Choose your preferred management option or delete specific cookies.'],
+    br2t:'Mozilla Firefox', br2s:['Click the ☰ menu (three lines) in the upper right corner.','Select <em>Settings</em>.','Go to <em>Privacy &amp; Security → Cookies and Site Data</em>.','Select your protection level or manually delete cookies.'],
+    br3t:'Apple Safari', br3s:['Go to <em>Safari → Preferences</em> (on Mac) or <em>Settings</em> (on iOS).','Select the <em>Privacy</em> tab.','Enable <em>Block all cookies</em> or manage website data.','Click <em>Manage Website Data</em> to delete specific cookies.'],
+    br4t:'Microsoft Edge', br4s:['Click the ⋯ menu (three dots) in the upper right corner.','Select <em>Settings</em>.','Go to <em>Privacy, search, and services → Cookies and site permissions</em>.','Choose your preferences or delete existing cookies.'],
+    s5hl:'<strong>Note:</strong>',
+    s5hlBody:'Disabling analytical cookies does not affect website functionality. However, disabling contact form cookies may interrupt the submission of requests.',
+    s6h:'Google Privacy Policy',
+    s6p1:'Google Analytics cookies are managed by Google LLC. To learn in detail how Google collects, uses, and protects information obtained through its analytics tools, please refer to Google\'s privacy policy at the following link:',
+    s6card:'<strong>Google Privacy Policy:</strong><br/><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a><br/><br/>Additionally, users may opt out of being tracked by Google Analytics by installing the browser opt-out add-on provided by Google:<br/><a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout</a>',
+    s7h:'Consent banner — First visit',
+    s7p1:'When visiting the website for the first time, users will see the following cookie consent notice. Below is the official banner text and its action buttons:',
+    s7banner:'&#127850; <strong>This website uses cookies.</strong><br/><br/>We use Google Analytics analytical cookies to measure site performance, and functional cookies necessary for the contact form. We do not use advertising or behavioral tracking cookies.<br/><br/>You may accept, reject, or learn more before deciding. Your preference will be remembered for future visits. For more details, see our <a href="cookies.html" style="color:var(--gold)">Cookie Policy</a>.',
+    btnAccept:'✓ Accept cookies', btnReject:'✕ Reject', btnMore:'More information',
+    s7hlTitle:'Implementation note:',
+    s7hlBody:'The consent banner applies only to Google Analytics analytical cookies, as the form\'s functional cookies are strictly necessary for its operation. If the user clicks "Reject", Google Analytics will not be activated during that session or future sessions until the user changes their preference.',
+    s8h:'Validity and updates',
+    s8p1:'This Cookie Policy enters into force on the date of its publication on the Alliance Contact Solutions website and remains in effect until replaced by an updated version.',
+    s8p2:'Alliance Contact Solutions reserves the right to update this policy at any time to reflect changes in the tools used, applicable regulations, or cookie management practices. The date of the last update will always be indicated at the beginning of the document.',
+    s8p3:'For questions or requests related to the use of cookies on this site, you may contact us at:',
+    s8card:'<strong>ALLIANCE CONTACT SOLUTIONS</strong><br/>76th St #47-33, Barranquilla, Atlántico, Colombia<br/>Email: <a href="mailto:info@alliancebpo.com">info@alliancebpo.com</a><br/>Business hours: Monday – Friday, 8:00 a.m. – 8:00 p.m. (COT)',
+    footer:'&copy; 2026 Alliance Contact Solutions. All rights reserved.',
+    ppLink:'Privacy Policy'
+  }
+};
+
+function renderList(items){ return items.map(i=>`<li><span>${i}</span></li>`).join(''); }
+function renderSteps(items){ return items.map(i=>`<li><span>${i}</span></li>`).join(''); }
+
+function ckSetLang(lang){
+  const c = ckContent[lang];
+  document.documentElement.lang = lang;
+  document.getElementById('ck-badge').innerHTML = c.badge;
+  document.getElementById('ck-title').innerHTML = c.title;
+  document.getElementById('ck-date').innerHTML = c.date;
+  document.getElementById('toc-title').textContent = c.toc;
+  for(let i=1;i<=8;i++) document.getElementById('toc-'+i).textContent = c['toc'+i];
+  document.getElementById('ck-intro-body').textContent = c.intro;
+  // S1
+  document.getElementById('h-s1-text').textContent = c.s1h;
+  document.getElementById('s1-p1').textContent = c.s1p1;
+  document.getElementById('s1-p2').textContent = c.s1p2;
+  document.getElementById('s1-list').innerHTML = renderList(c.s1li);
+  // S2
+  document.getElementById('h-s2-text').textContent = c.s2h;
+  document.getElementById('s2-p1').textContent = c.s2p1;
+  document.getElementById('th1').textContent = c.th1;
+  document.getElementById('th2').textContent = c.th2;
+  document.getElementById('th3').textContent = c.th3;
+  document.getElementById('th4').textContent = c.th4;
+  document.getElementById('tc1-1').textContent = c.tc11;
+  document.getElementById('tc1-2').textContent = c.tc12;
+  document.getElementById('tc1-3').textContent = c.tc13;
+  document.getElementById('tc1-4').textContent = c.tc14;
+  document.getElementById('tc2-1').textContent = c.tc21;
+  document.getElementById('tc2-2').textContent = c.tc22;
+  document.getElementById('tc2-3').textContent = c.tc23;
+  document.getElementById('tc2-4').textContent = c.tc24;
+  // S3
+  document.getElementById('h-s3-text').textContent = c.s3h;
+  document.getElementById('s3-p1').textContent = c.s3p1;
+  document.getElementById('th-ga-type').textContent = c.thGaType;
+  document.getElementById('th-ga-data').textContent = c.thGaData;
+  document.getElementById('th-ga-purpose').textContent = c.thGaPurpose;
+  document.getElementById('th-ga-exp').textContent = c.thGaExp;
+  document.getElementById('tc-ga1-type').textContent = c.ga1type;
+  document.getElementById('tc-ga1-data').textContent = c.ga1data;
+  document.getElementById('tc-ga1-purpose').textContent = c.ga1purpose;
+  document.getElementById('tc-ga1-exp').textContent = c.ga1exp;
+  document.getElementById('tc-ga2-type').textContent = c.ga2type;
+  document.getElementById('tc-ga2-data').textContent = c.ga2data;
+  document.getElementById('tc-ga2-purpose').textContent = c.ga2purpose;
+  document.getElementById('tc-ga2-exp').textContent = c.ga2exp;
+  document.getElementById('tc-ga3-type').textContent = c.ga3type;
+  document.getElementById('tc-ga3-data').textContent = c.ga3data;
+  document.getElementById('tc-ga3-purpose').textContent = c.ga3purpose;
+  document.getElementById('tc-ga3-exp').textContent = c.ga3exp;
+  document.getElementById('s3-hl').innerHTML = c.s3hl + ' <span id="s3-hl-body">' + c.s3hlBody + '</span>';
+  // S4
+  document.getElementById('h-s4-text').textContent = c.s4h;
+  document.getElementById('s4-p1').textContent = c.s4p1;
+  document.getElementById('s4-list').innerHTML = renderList(c.s4li);
+  document.getElementById('s4-card').innerHTML = c.s4card;
+  // S5
+  document.getElementById('h-s5-text').textContent = c.s5h;
+  document.getElementById('s5-p1').textContent = c.s5p1;
+  document.getElementById('br1-title').textContent = c.br1t;
+  document.getElementById('br1-steps').innerHTML = renderSteps(c.br1s);
+  document.getElementById('br2-title').textContent = c.br2t;
+  document.getElementById('br2-steps').innerHTML = renderSteps(c.br2s);
+  document.getElementById('br3-title').textContent = c.br3t;
+  document.getElementById('br3-steps').innerHTML = renderSteps(c.br3s);
+  document.getElementById('br4-title').textContent = c.br4t;
+  document.getElementById('br4-steps').innerHTML = renderSteps(c.br4s);
+  document.getElementById('s5-hl').innerHTML = c.s5hl + ' <span>' + c.s5hlBody + '</span>';
+  // S6
+  document.getElementById('h-s6-text').textContent = c.s6h;
+  document.getElementById('s6-p1').textContent = c.s6p1;
+  document.getElementById('s6-card').innerHTML = c.s6card;
+  // S7
+  document.getElementById('h-s7-text').textContent = c.s7h;
+  document.getElementById('s7-p1').textContent = c.s7p1;
+  document.getElementById('s7-banner-text').innerHTML = c.s7banner;
+  document.getElementById('btn-accept-label').textContent = c.btnAccept;
+  document.getElementById('btn-reject-label').textContent = c.btnReject;
+  document.getElementById('btn-more-label').textContent = c.btnMore;
+  document.getElementById('s7-hl-title').textContent = c.s7hlTitle;
+  document.getElementById('s7-hl-body').textContent = c.s7hlBody;
+  // S8
+  document.getElementById('h-s8-text').textContent = c.s8h;
+  document.getElementById('s8-p1').textContent = c.s8p1;
+  document.getElementById('s8-p2').textContent = c.s8p2;
+  document.getElementById('s8-p3').textContent = c.s8p3;
+  document.getElementById('s8-card').innerHTML = c.s8card;
+  document.getElementById('footer-copy').innerHTML = c.footer;
+  document.querySelector('.pp-footer a[href="privacy-policy.html"]').textContent = c.ppLink;
+  document.getElementById('ck-btn-en').classList.toggle('active', lang==='en');
+  document.getElementById('ck-btn-es').classList.toggle('active', lang==='es');
+  try{ localStorage.setItem('acs_lang', lang); }catch(e){}
+}
+
+function toggleToc(){
+  const body = document.getElementById('toc-body');
+  const btn = document.getElementById('toc-btn');
+  body.classList.toggle('open');
+  btn.style.transform = body.classList.contains('open') ? 'rotate(180deg)' : '';
+}
+
+const btt = document.getElementById('btt');
+window.addEventListener('scroll', ()=>{ btt.classList.toggle('show', window.scrollY > 300); }, {passive:true});
+btt.addEventListener('click', ()=>{ window.scrollTo({top:0, behavior:'smooth'}); });
+
+(function(){
+  let lang = 'en';
+  const urlLang = new URLSearchParams(window.location.search).get('lang');
+  if(urlLang==='es'||urlLang==='en') lang = urlLang;
+  if(lang==='es') ckSetLang('es');
+})();
+</script>
+</body>
+</html>
