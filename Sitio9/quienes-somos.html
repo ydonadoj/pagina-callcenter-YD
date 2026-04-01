@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';"/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN"/>
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="Alliance Contact Solutions"/>
+<meta name="theme-color" content="#1a2b6d"/>
+<meta name="description" content="Learn about Alliance Contact Solutions — bilingual BPO and contact center operating between Colombia and the United States."/>
+<title>About Us | Alliance Contact Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--blue-dark:#0f2689;--blue-mid:#244bb9;--blue-light:#4a8af4;--red:#d32617;--red-light:#f04030;--gold:#f6b922;--gold-light:#ffd060;--gold-dark:#c47a00;--orange:#db711c;--white:#ffffff;--bg:#f0f4fb;--ink:#0a1640;--muted:#4a5a82;--border:rgba(15,38,137,.1);--navy:#0f2689;--navy-dark:#070e2e}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-size:16px}
+a{color:var(--blue-mid);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
+a:hover{color:var(--red)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* NAV */
+nav{background:var(--white);padding:.75rem 3rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(26,43,109,.1);box-shadow:0 2px 16px rgba(26,43,109,.08)}
+.nav-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;padding:.15rem 0}
+.nav-logo img{height:46px;width:auto;object-fit:contain;background:var(--white);border-radius:4px;max-width:56px}
+.nav-logo-name{display:flex;flex-direction:column;justify-content:center;gap:.08rem;line-height:1}
+.nav-logo-name strong{font-family:'Montserrat','Arial Black',sans-serif;font-size:1.5rem;font-weight:900;letter-spacing:.02em;color:#1a2a5e;display:block;line-height:1}
+.nav-logo-name span{font-family:'Montserrat','Arial',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#5a6070;display:block;line-height:1}
+.nav-right{display:flex;align-items:center;gap:.8rem}
+.nav-links{display:flex;gap:1.8rem;list-style:none;margin:0;padding:0}
+.nav-links a{font-size:.75rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(26,43,109,.55);text-decoration:none;transition:color .2s;position:relative;padding-bottom:4px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--red);transition:width .3s;border-radius:2px}
+.nav-links a:hover,.nav-links a.active{color:var(--navy)!important}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+@media(max-width:768px){.nav-links{display:none}}
+.lang-switcher{display:flex;align-items:center;gap:.25rem;background:rgba(26,43,109,.06);border:1px solid rgba(26,43,109,.14);border-radius:6px;padding:.2rem .3rem}
+.lang-btn{font-size:.7rem;font-weight:800;letter-spacing:.06em;padding:.22rem .55rem;border-radius:4px;border:none;cursor:pointer;background:transparent;color:rgba(26,43,109,.4);transition:all .25s;font-family:inherit}
+.lang-btn.active{background:var(--blue-dark);color:var(--white)!important}
+.lang-btn:hover:not(.active){color:var(--blue-dark)!important}
+
+/* HERO */
+.qs-hero{background:linear-gradient(135deg,#070e2e 0%,#0f2689 55%,#1a3a8f 100%);padding:5rem 3rem;text-align:center;position:relative;overflow:hidden}
+.qs-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.02) 20px,rgba(255,255,255,.02) 40px)}
+.qs-hero h1{font-family:'Montserrat',sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:var(--white);margin-bottom:.6rem;position:relative;line-height:1.15}
+.qs-hero h1 span{color:var(--gold)}
+.qs-hero p{color:rgba(255,255,255,.55);font-size:1rem;position:relative;max-width:600px;margin:0 auto}
+.pp-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,168,0,.15);border:1px solid rgba(245,168,0,.3);border-radius:100px;padding:.35rem 1rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;position:relative}
+
+/* MAIN WRAP */
+.qs-wrap{max-width:940px;margin:0 auto;padding:4rem 2rem 6rem}
+
+/* SECTIONS */
+.qs-section{margin-bottom:3.5rem;scroll-margin-top:100px}
+.qs-section h2{font-family:'Montserrat',sans-serif;font-size:1.25rem;font-weight:800;color:var(--blue-dark);margin-bottom:1.2rem;display:flex;align-items:center;gap:.7rem;padding-bottom:.7rem;border-bottom:2px solid rgba(15,38,137,.12)}
+.qs-section h2 .num{background:linear-gradient(135deg,var(--red),var(--orange));color:var(--white);width:2rem;height:2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;flex-shrink:0}
+.qs-section p{color:var(--muted);margin-bottom:1rem;font-size:.95rem}
+.qs-section ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1rem;padding-left:.5rem}
+.qs-section ul li{font-size:.92rem;color:var(--muted);display:flex;align-items:flex-start;gap:.6rem}
+.qs-section ul li::before{content:'→';color:var(--red);font-weight:700;flex-shrink:0;margin-top:.05rem}
+
+/* MISSION / VISION CARDS */
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:1.2rem 0}
+.mv-card{border-radius:1rem;padding:1.8rem 2rem;position:relative;overflow:hidden}
+.mv-card.mission{background:linear-gradient(135deg,#0f2689,#244bb9);color:var(--white)}
+.mv-card.vision{background:linear-gradient(135deg,#070e2e,#0f2689);color:var(--white)}
+.mv-card .mv-label{font-family:'Montserrat',sans-serif;font-size:.65rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem;display:block}
+.mv-card h3{font-family:'Montserrat',sans-serif;font-size:1.05rem;font-weight:800;color:var(--white);margin-bottom:.7rem;line-height:1.3}
+.mv-card p{font-size:.88rem;color:rgba(255,255,255,.72);margin:0;line-height:1.6}
+.mv-card::after{content:'';position:absolute;bottom:-1.5rem;right:-1.5rem;width:5rem;height:5rem;background:rgba(255,255,255,.05);border-radius:50%}
+
+/* VALUES GRID */
+.val-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1.2rem 0}
+.val-card{background:var(--white);border:1px solid var(--border);border-radius:.9rem;padding:1.3rem 1.5rem;box-shadow:0 2px 12px rgba(26,43,109,.06);display:flex;flex-direction:column;gap:.5rem;transition:transform .25s,box-shadow .25s}
+.val-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(26,43,109,.12)}
+.val-icon{font-size:1.7rem;line-height:1}
+.val-card h3{font-family:'Montserrat',sans-serif;font-size:.85rem;font-weight:800;color:var(--blue-dark)}
+.val-card p{font-size:.8rem;color:var(--muted);margin:0}
+
+/* STATS STRIP */
+.stats-strip{background:linear-gradient(135deg,#0f2689,#244bb9);border-radius:1.2rem;padding:2rem 2.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin:2rem 0;text-align:center}
+.stat-item{}
+.stat-num{font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:900;color:var(--gold);line-height:1;display:block}
+.stat-label{font-size:.75rem;color:rgba(255,255,255,.65);margin-top:.3rem;display:block;letter-spacing:.03em}
+
+/* DIFFERENTIATORS */
+.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.2rem 0}
+.diff-card{background:var(--white);border:1px solid var(--border);border-radius:.9rem;padding:1.3rem 1.5rem;box-shadow:0 2px 12px rgba(26,43,109,.06);display:flex;gap:1rem;align-items:flex-start}
+.diff-icon{font-size:1.6rem;flex-shrink:0;margin-top:.1rem}
+.diff-body h3{font-family:'Montserrat',sans-serif;font-size:.85rem;font-weight:800;color:var(--blue-dark);margin-bottom:.3rem}
+.diff-body p{font-size:.8rem;color:var(--muted);margin:0}
+
+/* SECTORS GRID */
+.sec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin:1.2rem 0}
+.sec-card{background:var(--white);border:1px solid var(--border);border-radius:1rem;padding:1.5rem 1.6rem;box-shadow:0 2px 12px rgba(26,43,109,.06);transition:transform .25s,box-shadow .25s}
+.sec-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(26,43,109,.13)}
+.sec-ico{font-size:2rem;display:block;margin-bottom:.7rem}
+.sec-card h4{font-family:'Montserrat',sans-serif;font-size:.95rem;font-weight:800;color:var(--blue-dark);margin-bottom:.5rem}
+.sec-card p{font-size:.83rem;color:var(--muted);margin:0;line-height:1.55}
+
+/* HIGHLIGHT BOX */
+.qs-highlight{background:rgba(246,185,34,.08);border:1px solid rgba(246,185,34,.28);border-radius:.8rem;padding:1.2rem 1.6rem;margin:1rem 0;font-size:.9rem;color:var(--ink)}
+.qs-highlight strong{color:var(--blue-dark)}
+
+/* CTA */
+.qs-cta{background:linear-gradient(135deg,#070e2e,#0f2689);border-radius:1.2rem;padding:2.5rem 2rem;text-align:center;margin-top:3rem}
+.qs-cta h3{font-family:'Montserrat',sans-serif;font-size:1.4rem;font-weight:900;color:var(--white);margin-bottom:.7rem}
+.qs-cta p{color:rgba(255,255,255,.6);font-size:.92rem;margin-bottom:1.5rem}
+.qs-cta a{display:inline-block;background:linear-gradient(135deg,var(--red),var(--orange));color:var(--white);text-decoration:none;font-family:'Montserrat',sans-serif;font-weight:800;font-size:.95rem;padding:.85rem 2.2rem;border-radius:.6rem;letter-spacing:.04em;transition:all .3s}
+.qs-cta a:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(211,38,23,.4);color:var(--white)}
+
+/* FOOTER */
+.pp-footer{background:#070e2e;padding:2.5rem 3rem;text-align:center}
+.pp-footer-logo{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;margin-bottom:1.2rem;justify-content:center}
+.pp-footer-logo img{height:40px;width:auto;max-width:48px;object-fit:contain;opacity:.9}
+.pp-footer-logo-name{display:flex;flex-direction:column;gap:.06rem;line-height:1;text-align:left}
+.pp-footer-logo-name strong{font-family:'Montserrat','Arial Black',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:.02em;color:var(--white);line-height:1}
+.pp-footer-logo-name span{font-family:'Montserrat','Arial',sans-serif;font-size:.52rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);line-height:1}
+.pp-footer p{color:rgba(255,255,255,.35);font-size:.8rem;margin-bottom:.4rem}
+.pp-footer a{color:var(--gold);text-decoration:none;transition:color .2s}
+.pp-footer a:hover{color:var(--gold-light)}
+.pp-footer-divider{width:40px;height:1px;background:linear-gradient(90deg,var(--red),var(--gold));margin:.9rem auto}
+
+/* BTT */
+#btt{position:fixed;bottom:2rem;right:2rem;width:2.8rem;height:2.8rem;background:linear-gradient(135deg,var(--blue-mid),var(--blue-dark));border:none;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(245,168,0,.4);transition:all .3s;opacity:0;transform:translateY(20px);color:var(--white);font-weight:800;z-index:400}
+#btt.show{opacity:1;transform:translateY(0)}
+#btt:hover{transform:translateY(-4px)}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
+@media(max-width:700px){
+  nav{padding:.9rem 1.2rem}
+  .qs-hero{padding:3rem 1.5rem}
+  .qs-wrap{padding:2.5rem 1.2rem 4rem}
+  .mv-grid{grid-template-columns:1fr}
+  .diff-grid{grid-template-columns:1fr}
+  .stats-strip{grid-template-columns:1fr 1fr;gap:1.2rem;padding:1.5rem}
+}
+</style>
+<script>if('scrollRestoration' in history) history.scrollRestoration='manual';</script>
+</head>
+<body>
+
+<button id="btt" aria-label="Back to top of page">&#8593;</button>
+
+<nav role="navigation" aria-label="About Us navigation">
+  <a href="index.html" class="nav-logo" aria-label="Return to Alliance Contact Solutions main site">
+    <img src="img/logo-icon.png?v=3" alt="Alliance Contact Solutions logo" height="46" loading="eager" decoding="async" onerror="this.style.display='none'"/>
+    <div class="nav-logo-name">
+      <strong>ALLIANCE</strong>
+      <span>Contact Solutions</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="quienes-somos.html" class="active" data-en="About Us" data-es="Quiénes Somos">About Us</a></li>
+    <li><a href="index.html#servicios" data-en="Services" data-es="Servicios">Services</a></li>
+    <li><a href="index.html#modelos" data-en="BPO Models" data-es="Modelos BPO">BPO Models</a></li>
+    <li><a href="index.html#sedes" data-en="Locations" data-es="Sedes">Locations</a></li>
+    <li><a href="index.html#contacto" data-en="Contact Us" data-es="Contáctenos">Contact Us</a></li>
+    <li><a href="trabaje-con-nosotros.html" data-en="Work With Us" data-es="Trabaje con nosotros">Work With Us</a></li>
+    <li><a href="precios.html" data-en="Pricing" data-es="Precios">Pricing</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switcher" role="group" aria-label="Language selector">
+      <button class="lang-btn active" id="qs-btn-en" onclick="qsSetLang('en')" aria-label="English">EN</button>
+      <button class="lang-btn" id="qs-btn-es" onclick="qsSetLang('es')" aria-label="Español">ES</button>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="qs-hero">
+    <div class="pp-badge" aria-hidden="true">&#127970; Alliance Contact Solutions</div>
+    <h1 id="qs-title">About <span id="qs-title-span">Us</span></h1>
+    <p id="qs-subtitle">Bilingual BPO excellence — Colombia &amp; United States</p>
+  </div>
+</header>
+
+<main class="qs-wrap" id="main-content" role="main">
+
+  <!-- 01 WHO WE ARE -->
+  <section class="qs-section" id="s-who" aria-labelledby="s-who-h">
+    <h2 id="s-who-h"><span class="num" aria-hidden="true">01</span><span id="qs-s1-title">Who We Are</span></h2>
+    <p id="qs-s1-p1">Alliance Contact Solutions is a bilingual Business Process Outsourcing (BPO) and contact center company headquartered in Barranquilla, Colombia, with operations serving clients across the United States and Latin America.</p>
+    <p id="qs-s1-p2">We specialize in designing, implementing, and operating customer service, sales, collections, and technical support campaigns for companies that demand excellence, scalability, and cultural alignment. Our teams are trained to the highest US and Colombian service standards, operating 24 hours a day, 7 days a week.</p>
+    <div class="qs-highlight">
+      <strong id="qs-s1-hi-title">Our purpose:</strong> <span id="qs-s1-hi-text">To be the strategic bridge between our clients' business goals and their customers — delivering every interaction with professionalism, empathy, and measurable results.</span>
+    </div>
+  </section>
+
+  <!-- 02 MISSION & VISION -->
+  <section class="qs-section" id="s-mv" aria-labelledby="s-mv-h">
+    <h2 id="s-mv-h"><span class="num" aria-hidden="true">02</span><span id="qs-s2-title">Mission &amp; Vision</span></h2>
+    <div class="mv-grid">
+      <div class="mv-card mission">
+        <span class="mv-label" id="lbl-mission">&#127919; Mission</span>
+        <h3 id="qs-mission-title">Delivering Excellence in Every Interaction</h3>
+        <p id="qs-mission-text">To provide bilingual BPO and contact center services of the highest quality, combining trained human talent, proven processes, and advanced technology to generate real value for our clients and outstanding experiences for their customers — with integrity, efficiency, and measurable results.</p>
+      </div>
+      <div class="mv-card vision">
+        <span class="mv-label" id="lbl-vision">&#128301; Vision</span>
+        <h3 id="qs-vision-title">Leading Bilingual BPO in the Americas</h3>
+        <p id="qs-vision-text">To be recognized by 2030 as the leading nearshore bilingual contact center connecting Colombia and the United States, distinguished by the quality of our talent, the strength of our processes, and our unwavering commitment to client success.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 VALUES -->
+  <section class="qs-section" id="s-values" aria-labelledby="s-values-h">
+    <h2 id="s-values-h"><span class="num" aria-hidden="true">03</span><span id="qs-s3-title">Our Values</span></h2>
+    <p id="qs-s3-intro">Our culture is built on six core values that guide every decision, interaction, and process at Alliance Contact Solutions:</p>
+    <div class="val-grid">
+      <div class="val-card">
+        <span class="val-icon">&#9989;</span>
+        <h3 id="val1-title">Integrity</h3>
+        <p id="val1-desc">We act with honesty and transparency in every client relationship, employee interaction, and business decision.</p>
+      </div>
+      <div class="val-card">
+        <span class="val-icon">&#127775;</span>
+        <h3 id="val2-title">Excellence</h3>
+        <p id="val2-desc">We relentlessly pursue the highest standards of quality in our processes, people, and results.</p>
+      </div>
+      <div class="val-card">
+        <span class="val-icon">&#129309;</span>
+        <h3 id="val3-title">Commitment</h3>
+        <p id="val3-desc">We honor every promise made to our clients, their customers, and our team members.</p>
+      </div>
+      <div class="val-card">
+        <span class="val-icon">&#128200;</span>
+        <h3 id="val4-title">Innovation</h3>
+        <p id="val4-desc">We continuously improve our methods and adopt new technologies to stay ahead of industry demands.</p>
+      </div>
+      <div class="val-card">
+        <span class="val-icon">&#127758;</span>
+        <h3 id="val5-title">Cultural Alignment</h3>
+        <p id="val5-desc">We understand both Colombian and US business cultures, enabling seamless, natural customer experiences.</p>
+      </div>
+      <div class="val-card">
+        <span class="val-icon">&#128101;</span>
+        <h3 id="val6-title">People First</h3>
+        <p id="val6-desc">Our greatest asset is our people. We invest in training, growth, and well-being to build high-performance teams.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 KEY FIGURES -->
+  <section class="qs-section" id="s-stats" aria-labelledby="s-stats-h">
+    <h2 id="s-stats-h"><span class="num" aria-hidden="true">04</span><span id="qs-s4-title">Alliance in Numbers</span></h2>
+    <p id="qs-s4-intro">Figures that reflect our operational capacity and commitment to results:</p>
+    <div class="stats-strip">
+      <div class="stat-item">
+        <span class="stat-num">24/7</span>
+        <span class="stat-label" id="stat1-label">Continuous Operations</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">2</span>
+        <span class="stat-label" id="stat2-label">Countries Served</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">3+</span>
+        <span class="stat-label" id="stat3-label">Industries Covered</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">EN/ES</span>
+        <span class="stat-label" id="stat4-label">Fully Bilingual</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 WHY ALLIANCE -->
+  <section class="qs-section" id="s-why" aria-labelledby="s-why-h">
+    <h2 id="s-why-h"><span class="num" aria-hidden="true">05</span><span id="qs-s5-title">Why Choose Alliance?</span></h2>
+    <p id="qs-s5-intro">What sets us apart from other BPO providers in the market:</p>
+    <div class="diff-grid">
+      <div class="diff-card">
+        <span class="diff-icon">&#127468;&#127463;</span>
+        <div class="diff-body">
+          <h3 id="diff1-title">True Bilingual Operations</h3>
+          <p id="diff1-desc">Our agents are native or advanced-level English speakers, trained with US cultural protocols, accent neutralization, and industry-specific vocabulary.</p>
+        </div>
+      </div>
+      <div class="diff-card">
+        <span class="diff-icon">&#128336;</span>
+        <div class="diff-body">
+          <h3 id="diff2-title">EST-Compatible Time Zone</h3>
+          <p id="diff2-desc">Operating from Barranquilla, Colombia — in the same time zone as the US East Coast — means real-time collaboration with no scheduling friction.</p>
+        </div>
+      </div>
+      <div class="diff-card">
+        <span class="diff-icon">&#128202;</span>
+        <div class="diff-body">
+          <h3 id="diff3-title">Measurable Quality Standards</h3>
+          <p id="diff3-desc">We operate under defined KPIs, QA scorecards, and SLA commitments. Every campaign is monitored, calibrated, and reported transparently.</p>
+        </div>
+      </div>
+      <div class="diff-card">
+        <span class="diff-icon">&#128640;</span>
+        <div class="diff-body">
+          <h3 id="diff4-title">Fast Scalability</h3>
+          <p id="diff4-desc">From startup campaigns to enterprise-scale operations, we adapt quickly to volume changes while maintaining quality and compliance.</p>
+        </div>
+      </div>
+      <div class="diff-card">
+        <span class="diff-icon">&#128176;</span>
+        <div class="diff-body">
+          <h3 id="diff5-title">Significant Cost Savings</h3>
+          <p id="diff5-desc">Nearshore operations in Colombia offer US-quality service at a fraction of onshore costs — without the cultural and time-zone challenges of offshore alternatives.</p>
+        </div>
+      </div>
+      <div class="diff-card">
+        <span class="diff-icon">&#128737;</span>
+        <div class="diff-body">
+          <h3 id="diff6-title">Regulatory Compliance</h3>
+          <p id="diff6-desc">Full compliance with Colombian data protection law (Ley 1581/2012), US TCPA, CAN-SPAM, and applicable FDCPA regulations for collections campaigns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 INDUSTRIES -->
+  <section class="qs-section" id="s-sectors" aria-labelledby="s-sectors-h">
+    <h2 id="s-sectors-h"><span class="num" aria-hidden="true">06</span><span id="qs-s6-title">Industries We Serve</span></h2>
+    <p id="qs-s6-intro">Our agents receive specialized training in each client's industry, enabling them to deliver expert, authentic, and compliant service across multiple verticals:</p>
+    <div class="sec-grid">
+      <div class="sec-card">
+        <span class="sec-ico">&#127973;</span>
+        <h4 id="sec1-title">Healthcare</h4>
+        <p id="sec1-desc">Clinics, insurers, and hospitals. Appointment scheduling, patient guidance, authorization management, and medical inquiry handling with full HIPAA awareness.</p>
+      </div>
+      <div class="sec-card">
+        <span class="sec-ico">&#128737;</span>
+        <h4 id="sec2-title">Insurance</h4>
+        <p id="sec2-desc">Carriers and brokers. Quotes, policy renewals, claims intake, and customer retention campaigns with regulatory compliance.</p>
+      </div>
+      <div class="sec-card">
+        <span class="sec-ico">&#128715;</span>
+        <h4 id="sec3-title">Retail &amp; E-commerce</h4>
+        <p id="sec3-desc">Order tracking, returns, warranties, and online purchase support for US and Latin American retail brands and marketplaces.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="qs-cta">
+    <h3 id="qs-cta-title">Ready to Partner with Alliance?</h3>
+    <p id="qs-cta-text">Tell us about your campaign and receive a customized technical and commercial proposal within 24 hours.</p>
+    <a href="index.html#contacto" id="qs-cta-btn">Request a Proposal →</a>
+  </div>
+
+</main>
+
+<footer class="pp-footer" role="contentinfo">
+  <a href="index.html" class="pp-footer-logo" aria-label="Alliance Contact Solutions homepage">
+    <div class="pp-footer-logo-name">
+      <strong>ALLIANCE</strong>
+      <span>Contact Solutions</span>
+    </div>
+  </a>
+  <div class="pp-footer-divider" aria-hidden="true"></div>
+  <p id="qs-footer-copy">&copy; 2026 Alliance Contact Solutions. All rights reserved.</p>
+  <p>
+    <a href="privacy-policy.html" id="qs-pp-link" target="_blank" rel="noopener">Privacy Policy</a>
+    &nbsp;|&nbsp;
+    <a href="terms-conditions.html" id="qs-tc-link" target="_blank" rel="noopener">Terms &amp; Conditions</a>
+    &nbsp;|&nbsp;
+    <a href="codigo-etica.html" id="qs-ce-link" target="_blank" rel="noopener">Code of Ethics</a>
+  </p>
+</footer>
+
+<script>
+'use strict';
+
+const qsI18n = {
+  en: {
+    title: 'About', titleSpan: 'Us',
+    subtitle: 'Bilingual BPO excellence — Colombia & United States',
+    s1Title: 'Who We Are',
+    s1p1: 'Alliance Contact Solutions is a bilingual Business Process Outsourcing (BPO) and contact center company headquartered in Barranquilla, Colombia, with operations serving clients across the United States and Latin America.',
+    s1p2: 'We specialize in designing, implementing, and operating customer service, sales, collections, and technical support campaigns for companies that demand excellence, scalability, and cultural alignment. Our teams are trained to the highest US and Colombian service standards, operating 24 hours a day, 7 days a week.',
+    s1hiTitle: 'Our purpose:', s1hiText: 'To be the strategic bridge between our clients\' business goals and their customers — delivering every interaction with professionalism, empathy, and measurable results.',
+    s2Title: 'Mission & Vision',
+    lblMission: '🎯 Mission', missionTitle: 'Delivering Excellence in Every Interaction',
+    missionText: 'To provide bilingual BPO and contact center services of the highest quality, combining trained human talent, proven processes, and advanced technology to generate real value for our clients and outstanding experiences for their customers — with integrity, efficiency, and measurable results.',
+    lblVision: '🔭 Vision', visionTitle: 'Leading Bilingual BPO in the Americas',
+    visionText: 'To be recognized by 2030 as the leading nearshore bilingual contact center connecting Colombia and the United States, distinguished by the quality of our talent, the strength of our processes, and our unwavering commitment to client success.',
+    s3Title: 'Our Values',
+    s3Intro: 'Our culture is built on six core values that guide every decision, interaction, and process at Alliance Contact Solutions:',
+    val1Title: 'Integrity', val1Desc: 'We act with honesty and transparency in every client relationship, employee interaction, and business decision.',
+    val2Title: 'Excellence', val2Desc: 'We relentlessly pursue the highest standards of quality in our processes, people, and results.',
+    val3Title: 'Commitment', val3Desc: 'We honor every promise made to our clients, their customers, and our team members.',
+    val4Title: 'Innovation', val4Desc: 'We continuously improve our methods and adopt new technologies to stay ahead of industry demands.',
+    val5Title: 'Cultural Alignment', val5Desc: 'We understand both Colombian and US business cultures, enabling seamless, natural customer experiences.',
+    val6Title: 'People First', val6Desc: 'Our greatest asset is our people. We invest in training, growth, and well-being to build high-performance teams.',
+    s4Title: 'Alliance in Numbers',
+    s4Intro: 'Figures that reflect our operational capacity and commitment to results:',
+    stat1Label: 'Continuous Operations', stat2Label: 'Countries Served', stat3Label: 'Industries Covered', stat4Label: 'Fully Bilingual',
+    s5Title: 'Why Choose Alliance?',
+    s5Intro: 'What sets us apart from other BPO providers in the market:',
+    diff1Title: 'True Bilingual Operations', diff1Desc: 'Our agents are native or advanced-level English speakers, trained with US cultural protocols, accent neutralization, and industry-specific vocabulary.',
+    diff2Title: 'EST-Compatible Time Zone', diff2Desc: 'Operating from Barranquilla, Colombia — in the same time zone as the US East Coast — means real-time collaboration with no scheduling friction.',
+    diff3Title: 'Measurable Quality Standards', diff3Desc: 'We operate under defined KPIs, QA scorecards, and SLA commitments. Every campaign is monitored, calibrated, and reported transparently.',
+    diff4Title: 'Fast Scalability', diff4Desc: 'From startup campaigns to enterprise-scale operations, we adapt quickly to volume changes while maintaining quality and compliance.',
+    diff5Title: 'Significant Cost Savings', diff5Desc: 'Nearshore operations in Colombia offer US-quality service at a fraction of onshore costs — without the cultural and time-zone challenges of offshore alternatives.',
+    diff6Title: 'Regulatory Compliance', diff6Desc: 'Full compliance with Colombian data protection law (Ley 1581/2012), US TCPA, CAN-SPAM, and applicable FDCPA regulations for collections campaigns.',
+    s6Title: 'Industries We Serve',
+    s6Intro: 'Our agents receive specialized training in each client\'s industry, enabling them to deliver expert, authentic, and compliant service across multiple verticals:',
+    sec1Title: 'Healthcare', sec1Desc: 'Clinics, insurers, and hospitals. Appointment scheduling, patient guidance, authorization management, and medical inquiry handling with full HIPAA awareness.',
+    sec2Title: 'Insurance', sec2Desc: 'Carriers and brokers. Quotes, policy renewals, claims intake, and customer retention campaigns with regulatory compliance.',
+    sec3Title: 'Retail & E-commerce', sec3Desc: 'Order tracking, returns, warranties, and online purchase support for US and Latin American retail brands and marketplaces.',
+    ctaTitle: 'Ready to Partner with Alliance?',
+    ctaText: 'Tell us about your campaign and receive a customized technical and commercial proposal within 24 hours.',
+    ctaBtn: 'Request a Proposal →',
+    footerCopy: '© 2026 Alliance Contact Solutions. All rights reserved.'
+  },
+  es: {
+    title: 'Quiénes', titleSpan: 'Somos',
+    subtitle: 'Excelencia BPO bilingüe — Colombia y Estados Unidos',
+    s1Title: 'Quiénes Somos',
+    s1p1: 'Alliance Contact Solutions es una empresa bilingüe de Outsourcing de Procesos de Negocio (BPO) y contact center con sede en Barranquilla, Colombia, con operaciones que atienden clientes en Estados Unidos y América Latina.',
+    s1p2: 'Nos especializamos en diseñar, implementar y operar campañas de atención al cliente, ventas, cobranza y soporte técnico para empresas que exigen excelencia, escalabilidad y alineación cultural. Nuestros equipos están entrenados bajo los más altos estándares de servicio de Colombia y EE.UU., operando las 24 horas del día, los 7 días de la semana.',
+    s1hiTitle: 'Nuestro propósito:', s1hiText: 'Ser el puente estratégico entre los objetivos de negocio de nuestros clientes y sus propios clientes — entregando cada interacción con profesionalismo, empatía y resultados medibles.',
+    s2Title: 'Misión y Visión',
+    lblMission: '🎯 Misión', missionTitle: 'Excelencia en Cada Interacción',
+    missionText: 'Proveer servicios de BPO y contact center bilingüe de la más alta calidad, combinando talento humano capacitado, procesos probados y tecnología avanzada para generar valor real a nuestros clientes y experiencias excepcionales a sus usuarios finales — con integridad, eficiencia y resultados medibles.',
+    lblVision: '🔭 Visión', visionTitle: 'Líder BPO Bilingüe de las Américas',
+    visionText: 'Ser reconocidos en 2030 como el contact center nearshore bilingüe líder que conecta Colombia con Estados Unidos, distinguidos por la calidad de nuestro talento, la solidez de nuestros procesos y el compromiso inquebrantable con el éxito de nuestros clientes.',
+    s3Title: 'Nuestros Valores',
+    s3Intro: 'Nuestra cultura está construida sobre seis valores fundamentales que guían cada decisión, interacción y proceso en Alliance Contact Solutions:',
+    val1Title: 'Integridad', val1Desc: 'Actuamos con honestidad y transparencia en cada relación con clientes, colaboradores y decisiones de negocio.',
+    val2Title: 'Excelencia', val2Desc: 'Perseguimos incansablemente los más altos estándares de calidad en nuestros procesos, personas y resultados.',
+    val3Title: 'Compromiso', val3Desc: 'Honramos cada promesa hecha a nuestros clientes, sus usuarios finales y los miembros de nuestro equipo.',
+    val4Title: 'Innovación', val4Desc: 'Mejoramos continuamente nuestros métodos y adoptamos nuevas tecnologías para mantenernos a la vanguardia de las demandas del sector.',
+    val5Title: 'Alineación Cultural', val5Desc: 'Comprendemos las culturas de negocio colombiana y estadounidense, lo que permite experiencias de cliente naturales y sin fricciones.',
+    val6Title: 'Las Personas Primero', val6Desc: 'Nuestro mayor activo es nuestro equipo. Invertimos en capacitación, crecimiento y bienestar para construir equipos de alto rendimiento.',
+    s4Title: 'Alliance en Cifras',
+    s4Intro: 'Cifras que reflejan nuestra capacidad operativa y compromiso con los resultados:',
+    stat1Label: 'Operación Continua', stat2Label: 'Países Atendidos', stat3Label: 'Sectores Cubiertos', stat4Label: 'Completamente Bilingüe',
+    s5Title: '¿Por qué elegir Alliance?',
+    s5Intro: 'Lo que nos diferencia de otros proveedores BPO en el mercado:',
+    diff1Title: 'Operación Verdaderamente Bilingüe', diff1Desc: 'Nuestros agentes son hablantes nativos o de nivel avanzado de inglés, entrenados con protocolos culturales estadounidenses, neutralización de acento y vocabulario específico por industria.',
+    diff2Title: 'Zona Horaria Compatible con EE.UU.', diff2Desc: 'Operando desde Barranquilla, Colombia — en la misma zona horaria que la Costa Este de EE.UU. — garantiza colaboración en tiempo real sin fricciones de agenda.',
+    diff3Title: 'Estándares de Calidad Medibles', diff3Desc: 'Operamos bajo KPIs definidos, scorecards de QA y compromisos de SLA. Cada campaña es monitoreada, calibrada y reportada con total transparencia.',
+    diff4Title: 'Escalabilidad Rápida', diff4Desc: 'Desde campañas de arranque hasta operaciones a escala empresarial, nos adaptamos rápidamente a cambios de volumen manteniendo calidad y cumplimiento.',
+    diff5Title: 'Ahorro Significativo de Costos', diff5Desc: 'Las operaciones nearshore en Colombia ofrecen calidad de servicio comparable a EE.UU. a una fracción del costo onshore, sin los desafíos culturales y de zona horaria del offshore.',
+    diff6Title: 'Cumplimiento Regulatorio', diff6Desc: 'Cumplimiento total con la Ley 1581/2012 de protección de datos de Colombia, TCPA, CAN-SPAM y regulaciones FDCPA aplicables a campañas de cobranza.',
+    s6Title: 'Sectores que Atendemos',
+    s6Intro: 'Nuestros agentes reciben capacitación especializada en el sector de cada cliente, lo que les permite brindar un servicio experto, auténtico y conforme a las regulaciones en múltiples verticales:',
+    sec1Title: 'Salud', sec1Desc: 'Clínicas, EPS y hospitales. Agendamiento de citas, orientación a pacientes, gestión de autorizaciones y manejo de consultas médicas con plena consciencia HIPAA.',
+    sec2Title: 'Seguros', sec2Desc: 'Aseguradoras y corredores. Cotizaciones, renovaciones de pólizas, recepción de siniestros y campañas de retención con cumplimiento regulatorio.',
+    sec3Title: 'Retail y E-commerce', sec3Desc: 'Rastreo de pedidos, devoluciones, garantías y soporte de compra en línea para marcas de retail y marketplaces de EE.UU. y América Latina.',
+    ctaTitle: '¿Listo para asociarse con Alliance?',
+    ctaText: 'Cuéntenos su campaña y reciba una propuesta técnica y comercial personalizada en 24 horas.',
+    ctaBtn: 'Solicitar una Propuesta →',
+    footerCopy: '© 2026 Alliance Contact Solutions. Todos los derechos reservados.'
+  }
+};
+
+let qsLang = 'en';
+
+function qsSetLang(lang) {
+  qsLang = lang;
+  document.documentElement.lang = lang;
+  const t = qsI18n[lang];
+
+  document.getElementById('qs-title').childNodes[0].textContent = t.title + ' ';
+  document.getElementById('qs-title-span').textContent = t.titleSpan;
+  document.getElementById('qs-subtitle').textContent = t.subtitle;
+
+  document.getElementById('qs-s1-title').textContent = t.s1Title;
+  document.getElementById('qs-s1-p1').textContent = t.s1p1;
+  document.getElementById('qs-s1-p2').textContent = t.s1p2;
+  document.getElementById('qs-s1-hi-title').textContent = t.s1hiTitle;
+  document.getElementById('qs-s1-hi-text').textContent = t.s1hiText;
+
+  document.getElementById('qs-s2-title').innerHTML = t.s2Title;
+  document.getElementById('lbl-mission').textContent = t.lblMission;
+  document.getElementById('qs-mission-title').textContent = t.missionTitle;
+  document.getElementById('qs-mission-text').textContent = t.missionText;
+  document.getElementById('lbl-vision').textContent = t.lblVision;
+  document.getElementById('qs-vision-title').textContent = t.visionTitle;
+  document.getElementById('qs-vision-text').textContent = t.visionText;
+
+  document.getElementById('qs-s3-title').textContent = t.s3Title;
+  document.getElementById('qs-s3-intro').textContent = t.s3Intro;
+  document.getElementById('val1-title').textContent = t.val1Title; document.getElementById('val1-desc').textContent = t.val1Desc;
+  document.getElementById('val2-title').textContent = t.val2Title; document.getElementById('val2-desc').textContent = t.val2Desc;
+  document.getElementById('val3-title').textContent = t.val3Title; document.getElementById('val3-desc').textContent = t.val3Desc;
+  document.getElementById('val4-title').textContent = t.val4Title; document.getElementById('val4-desc').textContent = t.val4Desc;
+  document.getElementById('val5-title').textContent = t.val5Title; document.getElementById('val5-desc').textContent = t.val5Desc;
+  document.getElementById('val6-title').textContent = t.val6Title; document.getElementById('val6-desc').textContent = t.val6Desc;
+
+  document.getElementById('qs-s4-title').textContent = t.s4Title;
+  document.getElementById('qs-s4-intro').textContent = t.s4Intro;
+  document.getElementById('stat1-label').textContent = t.stat1Label;
+  document.getElementById('stat2-label').textContent = t.stat2Label;
+  document.getElementById('stat3-label').textContent = t.stat3Label;
+  document.getElementById('stat4-label').textContent = t.stat4Label;
+
+  document.getElementById('qs-s5-title').textContent = t.s5Title;
+  document.getElementById('qs-s5-intro').textContent = t.s5Intro;
+  document.getElementById('diff1-title').textContent = t.diff1Title; document.getElementById('diff1-desc').textContent = t.diff1Desc;
+  document.getElementById('diff2-title').textContent = t.diff2Title; document.getElementById('diff2-desc').textContent = t.diff2Desc;
+  document.getElementById('diff3-title').textContent = t.diff3Title; document.getElementById('diff3-desc').textContent = t.diff3Desc;
+  document.getElementById('diff4-title').textContent = t.diff4Title; document.getElementById('diff4-desc').textContent = t.diff4Desc;
+  document.getElementById('diff5-title').textContent = t.diff5Title; document.getElementById('diff5-desc').textContent = t.diff5Desc;
+  document.getElementById('diff6-title').textContent = t.diff6Title; document.getElementById('diff6-desc').textContent = t.diff6Desc;
+
+  document.getElementById('qs-s6-title').textContent = t.s6Title;
+  document.getElementById('qs-s6-intro').textContent = t.s6Intro;
+  document.getElementById('sec1-title').textContent = t.sec1Title; document.getElementById('sec1-desc').textContent = t.sec1Desc;
+  document.getElementById('sec2-title').textContent = t.sec2Title; document.getElementById('sec2-desc').textContent = t.sec2Desc;
+  document.getElementById('sec3-title').textContent = t.sec3Title; document.getElementById('sec3-desc').textContent = t.sec3Desc;
+
+  document.getElementById('qs-cta-title').textContent = t.ctaTitle;
+  document.getElementById('qs-cta-text').textContent = t.ctaText;
+  document.getElementById('qs-cta-btn').textContent = t.ctaBtn;
+  document.getElementById('qs-footer-copy').textContent = t.footerCopy;
+
+  // Footer links with lang param
+  document.getElementById('qs-pp-link').href = 'privacy-policy.html?lang=' + lang;
+  document.getElementById('qs-tc-link').href = 'terms-conditions.html?lang=' + lang;
+  document.getElementById('qs-ce-link').href = 'codigo-etica.html?lang=' + lang;
+
+  document.getElementById('qs-btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('qs-btn-es').classList.toggle('active', lang === 'es');
+
+  document.querySelectorAll('.nav-links a[data-' + lang + ']').forEach(function(el) {
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+  try { localStorage.setItem('acs_lang', lang); } catch(e) {}
+}
+
+/* INIT */
+(function(){
+  let lang = 'en';
+  try { const s = localStorage.getItem('acs_lang'); if(s==='es'||s==='en') lang=s; } catch(e){}
+  const urlLang = new URLSearchParams(window.location.search).get('lang');
+  if(urlLang==='es'||urlLang==='en') lang = urlLang;
+  if(lang==='es') qsSetLang('es');
+  else qsSetLang('en');
+})();
+
+/* BACK TO TOP */
+const btt = document.getElementById('btt');
+window.addEventListener('scroll',()=>{ btt.classList.toggle('show',window.scrollY>400); },{passive:true});
+btt.addEventListener('click',()=>{ window.scrollTo({top:0,behavior:'smooth'}); });
+</script>
+<!-- WhatsApp Guided Chat Widget -->
+<script src="widget-whatsapp.js"></script>
+</body>
+</html>
